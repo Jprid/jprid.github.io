@@ -1,0 +1,11 @@
+<header> 
+  <h1>{{header}}</h1>
+  <div class="navigation-outer">
+    <nav class="navigation">
+      <a *ngFor="let item of titles" [routerLink]="[item]">{{item}}</a>
+    </nav>
+  </div>
+</header>
+<section>
+  <router-outlet></router-outlet>
+</section>
