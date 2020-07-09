@@ -23,6 +23,7 @@ p {
     padding-left: 1ch;
     padding-right: 1ch;
     /* min-height: 200px; */
+    min-width: 300px;
     text-align: center;
     max-width: 75%;
 }
