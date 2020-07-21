@@ -1,4 +1,4 @@
-<p *ngFor="let content of contents" 
-    [ngClass]="{'bulleted-list':key === 'Projects', 'contact-info':key === 'Contact'}">
-    {{content}}
-</p>
+<div *ngFor="let content of contents" 
+    [ngClass]="{'card':key === 'Projects'}"
+    [innerHTML]="[content]">
+</div>

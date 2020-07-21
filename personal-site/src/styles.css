@@ -1,21 +1,272 @@
 /* You can add global styles to this file, and also import other style files */
-/* You can add global styles to this file, and also import other style files */
-@primary-color: #004ffc;
-@secondary: #6c6d6d;
 body {
-    background-color: #252827;
+    --primary-color: #004ffc;
+    --secondary-color: #3F4045;
+    /* --secondary-color: #5D737E; */
+    --tertiary-color: #5D737E;
+    --text-color: #211C20;
+    background-color: var(--secondary-color);
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-content: stretch;
-    align-items: stretch;
     height: 100vh;
+    width: 100%;
+    box-sizing: border-box;
+    cursor: default;
+    font-weight: bold;
 }
 
-app-root {
-    order: 0;
-    flex: 1 1 auto;
-    align-self: auto;
-    display: block;
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+a, a:visited {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+h1, h2, h3, h4 {
+    font-family: 'Lato', sans-serif;
+}
+h3 {
+    justify-self: left;
+}
+h2 {
+    color: var(--text-color);
+    text-decoration-color: var(--text-color);
+    text-transform: uppercase;
+}
+a {
+    text-transform: uppercase;
+}
+h2:hover {
+    filter: brightness(110%);
+}
+p {
+    text-transform: none;
+    color: var(--text-color);
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+hr {
+    background-color: var(--secondary-color);
+    margin-left: .25vh;
+    margin-right: .25vh;
+    height: .25vh;
+    border: none;
+}
+
+.title-hr {
+    background-color: white;
+    margin-left: .25vh;
+    margin-right: .25vh;
+    height: .25vh;
+    border: none;
+}
+
+.card {
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    background-color: var(--tertiary-color);
+    color: antiquewhite;
+    border-radius: .75vw;
+    border: #5D737E solid .25vw;
+    opacity: 0.9;
+    cursor: default;
+    margin: 2vw;
+}
+.icon {
+    border-radius: 50%;
+    display: flex;
+    height: 60px;
+    width: 60px;
+    flex: 0 auto;
+    justify-content: center;
+}
+.icon > img {
+    max-width: 40px;
+}
+#linked-in {
+    margin-left: 5px
+}
+.icon:hover {
+    filter: brightness(200%)
+}
+.image {
+    flex: 0 auto;
+    justify-content: center;
+}
+.icon > img {
+    align-self: center;
+}
+app-about-page {
+    height: 100%;
+}
+@supports (grid-area: auto) {
+    @media screen and (min-width: 360px) and (max-width: 700px) {
+        .site {
+            height: 100%;
+            max-width: none;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        header {
+            grid-column: 1/12;
+            grid-row: 1;
+        }
+        .navigation {
+            grid-column: 1/12;
+        }
+        app-about-page {
+            margin-top: 1vh;
+            grid-row: 3/11;
+            grid-column: 1 / span 12;
+        }
+        app-about-page > div {
+            overflow-y: scroll;
+        }
+        router-outlet {
+            display: none;
+        }
+        .content {
+            z-index: 2;
+            display: inherit;
+            grid-template-columns: inherit;
+        }
+        .content > * {
+            grid-column: 2/12;
+        }
+        #about {
+            grid-column: 4/10 !important;
+            display: none;
+            justify-content: center;
+        }
+        #about > img {
+            margin: 1vw;
+        }
+        .center {
+            grid-row: 3;
+            grid-column: 2/12;
+            padding-left: 1vw;
+        }
+        footer {
+            z-index: 1;
+            grid-column: 1/12;
+            grid-row: 12;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+    /* Medium-width layout */
+    @media screen and (min-width: 700px) and (max-width: 1200px) {
+        .site {
+            height: 100%;
+            max-width: none;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        .site > * {
+            display: grid;
+        }
+        header {
+            grid-column: 1/12;
+            grid-row: 1;
+        }
+        .navigation {
+            grid-column: 1/12;
+            grid-row: 2;
+            border: 1px black;
+        }
+        app-about-page {
+            grid-row: 4/12;
+        }
+        router-outlet {
+            display: none;
+        }
+        .content {
+            display: inherit;
+            grid-template-columns: inherit;
+            z-index: 2;
+        }
+        #about {
+            grid-column: 1/4;
+            display: none;
+            justify-content: center;
+            overflow: hidden;
+        }
+        #about > img {
+            margin: 1vw;
+            overflow: none;
+        }
+        #about.center {
+            grid-column: 5/13;
+        }
+        footer {
+            z-index: 1;
+            grid-column: 1/12;
+            grid-row: 12;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+    }
+    /* Large */
+    @media screen and (min-width: 1200px) {
+        
+        .site {
+            height: 100%;
+            max-width: none;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        .site > * {
+            display: inherit;
+            grid-template-columns: inherit;
+            max-width: none;
+        }
+        header {
+            grid-column: 1/12;
+            grid-row: 1;
+            display: grid;
+        }
+        .navigation {
+            grid-column: 1/12;
+            grid-row: 2;
+        }
+        app-about-page {
+            grid-column: 1/12;
+            width: 100%;
+            justify-content: center;
+        }
+        router-outlet {
+        }
+        .content {
+            display: grid;
+            grid-column: 1/12;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        #about {
+            grid-column: 1/5;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+        #about > img {
+            max-width: 500px;
+            margin: 1vw;
+            overflow: none;
+        }
+        .center {
+            grid-column: 5/12;
+            overflow-y: scroll;
+        }
+        footer {
+            grid-column: 1/12;
+            grid-row: 12;
+            justify-content: space-evenly;
+        }
+    }
 }

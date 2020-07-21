@@ -1,56 +1,106 @@
+@use "@material/icon-button";
+@include icon-button.core-styles;
 :host{
     height: 100%;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    /* gap: 10px; */
+    color: #FCFFFD;
 }
 
-section {
-    height: 90%;
-    margin-top: 2px;
+:host > * {
+    grid-column: 1 / span 12;
+}
+
+header > h1 {
+    margin-left: 2vh;
+    grid-column: 1 / span 3;
+}
+
+@media (min-width: 375px) {
+    header > h1 {
+        grid-column: 1 / span 12;
+        align-self: center;
+        justify-self: center;
+    }
 }
 
 header {
     display: flex;
-    flex-direction: column;
-    min-height: 10%;
+    flex: 1 0 auto;
+    flex-direction: row;
     font-family: 'Lato', sans-serif;
-    text-indent: 3ch;
-    color: #43a8fa;
-    font-weight: 400;
+    justify-content: flex-start;
+    background-color :#02111B;
+    padding-left: .5vh;
+    padding-right: .5vh;
+    width: 100%;
  }
-
+ 
 .navigation {
-    justify-content: right;
+    display: flex;
+    flex-direction: row;
     height: 100%;
+    justify-content: flex-end;
+    background-color: #02111B;
+    font-family: 'Lato', sans-serif;
 }
 
-.navigation-outer {
-    display: flex;
-    flex-direction: row-reverse;
-    min-height: 50px;
-    border-bottom: 2px solid red;
-    align-items: center;
-}
-.navigation > a {
+ .navigation > a {
     border-radius: 0;
-    font-size: larger;
-    justify-content: flex-end;
+    font-size: 2vh;
     margin-block-start: 0;
-    margin-right: 2ch;
-    text-align: center;
+    padding: 1vw 2vw 0 1vw;
     height: 100%;
+    text-align: center;
+}
+
+.navigation > a:hover, h2:hover {
+    filter: brightness(210%);
+    background-color: #5D737E;
+    border-color: silver;
+    border-radius: 1px;
+    color:#211C20;
+}
+
+footer {
+    background-color: #02111B;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+
+}
+
+
+
+footer > h1 {
+    margin-left: 1vw;
+    margin-bottom: 2vw;
+}
+footer > a {
+    background-color: var(--tertiary-color);
+    margin: 1vw 1vw 1vw 1vw
+}
+
+a > h2 {
+    justify-items: center;
+    width: fit-content;
+}
+
+.title {
+    text-transform: capitalize;
+}
+
+button {
+    height: 25%;
+    vertical-align: middle;
+    justify-items: center;
 }
 
 a, a:visited {
-    margin-top: 2.5px;
+    margin: auto;
     text-decoration: None;
-    height: 25px;
-    padding: 0% 1% 1%;
     color: inherit;
+    margin: 0;
 }
 
-.navigation > a:hover {
-    /* background-color: #6c6d6d; */
-    /* box-shadow:  1px 1px 1px 1px rgba(138, 134, 128, 0.836); */
-    color: #004ffc;
-    border-left: 1mm ridge #004ffc;
-}

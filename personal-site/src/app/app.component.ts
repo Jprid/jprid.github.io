@@ -8,6 +8,7 @@ import { PageService } from './page.service';
 })
 export class AppComponent {
   titles: string[];
+  selected = '';
   constructor(private service : PageService) {
     this.titles = this.service.getTitles();
   }

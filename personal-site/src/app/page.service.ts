@@ -4,37 +4,48 @@ import { isNull } from 'util';
 @Injectable({
   providedIn: 'root'
 })
+//<img class="image" src="..\\assets\\26850458_10156209328529258_1005804462475089601_o.jpg"/>
+
 export class PageService {
-  links = [{
-      'Key': 'About',
-      'Body': `John Pridmore is a Full-Stack Software Engineer with a focus on highly-distributed, low-latency systems.`,
-    },
+  links = [
+    {'Key': 'About', 'Body': 'bbbb'},
     {
       'Key': 'Projects',
-      'Body': `https://github.com/meganpecho/VendMeUpAutomated Vending Machine
-      Automated vending machine on the Ethereum blockchain. 
-      https://github.com/Jprid/Dynamic-Field-ValidatorDynamic Field Validator
-      Asynchronously accesses JSON API endpoint to collect list of customers through use of multiprocessing library. Compares customers against requirements for each field of customer information.
+      'Body': `
+      <a href="https://github.com/Jprid/Dynamic-Field-Validator"><h2>Dynamic Field Validator<h2/><a/>
+      <hr>
+      <p>Asynchronously accesses JSON API endpoint to collect list of customers through use of multiprocessing library. Compares customers against requirements for each field of customer information.<p/>
+      <break>
+      <a href="https://github.com/meganpecho/VendMeUp"><h2>Automated Vending Machine<h2/><a/>
+      <hr>
+      <p>Automated vending machine back-end logic -- responding to user requests via a REST API<p/>
+      <p>Ethereum blockchain.<p/>
+      <break>
+      <a href="https://github.com/Jprid/Dynamic-Field-Validator"><h2>Dynamic Field Validator<h2/><a/>
+      <hr>
+      <p>Asynchronously accesses JSON API endpoint to collect list of customers through use of multiprocessing library. Compares customers against requirements for each field of customer information.<p/>
+      <break>
       
-      https://github.com/nansta/CSC394-SeniorProjectGraduation Path Scheduler
-      Finds shortest path to graduation for masters students at DePaul under constraints. Added boolean expression tree and scraper modules. 
+      <a href="https://github.com/nansta/CSC394-SeniorProject"><h2>Graduation Path Scheduler<h2/><a/>
+      <hr>
+      <p>Finds shortest path to graduation for masters students at DePaul under constraints.<p/>
+      <p> Designed and implemented a web scraper to gather the information on classes modules. <p/>
+      <p> Designed and implemented a boolean expression tree to store and parse information on graduation paths <p/>
       
-      https://github.com/Jprid/SpaceGraphGame
-      
-      Space Graph Game
-      Finds path from one point in space (NxN array representing the "map" of space) to another, avoiding obstacles on the way. 
-      
-      Dynamic Memory System
-      64-byte aligned heap for dynamic memory allocation. 4x faster than the memory system inherently used by C++.
-      
-      Particle System
-      Refactored legacy code that draws toliet paper roll unravelling in order to optimize performance. Code draws the particles of a toilet paper roll as it unravels. Optimizations made program run 7.82x faster. 
+      <break>
+      <a href="https://github.com/Jprid/SpaceGraphGame"><h2>Space Graph Game<h2/><a/>
+      <hr>
+      <p>Finds path from one point in space (NxN array representing the "map" of space) to another, avoiding obstacles on the way.<p/>
+      <break>
+      <h2>Dynamic Memory System<h2/>
+      <hr>
+      <p>64-byte aligned heap for dynamic memory allocation. 4x faster than the memory system inherently used by C++.<p/>
+      <break>
+      <h2>Particle System<h2/>
+      <hr>
+      <p>Refactored legacy code. Module that draws toliet paper roll unravelling in order to optimize performance. Code draws the particles of a toilet paper roll as it unravels. Optimizations made program run 7.82x faster.<p/>
       `
-    },
-    {
-      'Key': 'Contact',
-      'Body': "Email: Johnpridmore.lit@gmail.com <br> LinkedIn: Jprid<br>Github: Jprid<br>"
-    }
+    }    
   ];
 
   constructor() { }
@@ -55,7 +66,7 @@ export class PageService {
   handleContactPage(key : string)
   {
     let content = this.getContent(key);
-    return this.separate(content, '<br>');
+    return this.separate(content, '<li>').filter(item => item.startsWith("<a"));
   }
 
   // paragraph here denoting an arbitrarily large chunk of sentences
@@ -64,16 +75,24 @@ export class PageService {
     if(key === 'Contact')
     {
       return this.handleContactPage(key);
+    } else if (key === 'Projects')
+    {
+      return this.handleProjectsPage(key);
     }
     let  content = this.getContent(key);
     return this.separateIntoParagraphs(content);
+  }
+
+  handleProjectsPage(key: string) {
+     let content = this.getContent(key);
+    return this.separate(content, '<break>');
   }
 
   separate(content : string, splitter : string)
   {
     const paragraphs = content.split(splitter);
     console.log(paragraphs);
-    return paragraphs;
+    return paragraphs.filter(paragraph => paragraph.length > 0);
   }
 
   separateIntoParagraphs(content : string, max = 5, splitter = '\.')

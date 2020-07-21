@@ -4,10 +4,12 @@ import { AppComponent } from './app.component';
 import { PageComponent } from './page/page.component';
 import { RouterModule } from '@angular/router';
 import { Routing } from './app.routing';
+import { PageElementComponent } from './page-element/page-element.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent,  PageComponent
+    AppComponent,  PageComponent, PageElementComponent, AboutPageComponent
   ],
   imports: [
     BrowserModule, RouterModule, Routing
