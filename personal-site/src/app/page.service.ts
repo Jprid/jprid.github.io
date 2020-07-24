@@ -4,8 +4,6 @@ import { isNull } from 'util';
 @Injectable({
   providedIn: 'root'
 })
-//<img class="image" src="..\\assets\\26850458_10156209328529258_1005804462475089601_o.jpg"/>
-
 export class PageService {
   links = [
     {'Key': 'About', 'Body': 'bbbb'},

@@ -101,22 +101,53 @@ hr {
 .icon > img {
     align-self: center;
 }
-app-about-page {
-    height: 100%;
+
+.center > p {
+    margin: 1vw;
 }
+
 @supports (grid-area: auto) {
+    app-about-page > div {
+        overflow-y: scroll;
+    }
+    .site {
+        grid-template-areas: "header",
+                             "nav",
+                             "router-outlet",
+                             "footer";
+        max-width: none;
+
+    }
+    header {
+        grid-area: header;
+        grid-row: 1;
+    }
+    .navigation {
+        grid-area: nav;
+        grid-row: 2;
+    }
+    router-outlet {
+        grid-area: router-outlet;
+    }
+    footer {
+        grid-area: footer;
+    }
+    .site > header, .navigation, router-outlet {
+        display: inherit;
+        grid-template-columns: repeat(12, 1fr);
+    }
     @media screen and (min-width: 360px) and (max-width: 700px) {
         .site {
             height: 100%;
-            max-width: none;
             display: grid;
             grid-template-columns: repeat(12, 1fr);
         }
         header {
+            display: grid;
             grid-column: 1/12;
-            grid-row: 1;
         }
         .navigation {
+            display: grid;
             grid-column: 1/12;
         }
         app-about-page {
@@ -124,11 +155,9 @@ app-about-page {
             grid-row: 3/11;
             grid-column: 1 / span 12;
         }
-        app-about-page > div {
-            overflow-y: scroll;
-        }
+        
         router-outlet {
-            display: none;
+            display: grid;
         }
         .content {
             z-index: 2;
@@ -168,9 +197,7 @@ app-about-page {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
         }
-        .site > * {
-            display: grid;
-        }
+       
         header {
             grid-column: 1/12;
             grid-row: 1;
@@ -181,15 +208,24 @@ app-about-page {
             border: 1px black;
         }
         app-about-page {
-            grid-row: 4/12;
+            display: grid;
+            grid-column: 1/12;
         }
         router-outlet {
-            display: none;
+            display: grid;
+            grid-column: 1/12;
+        }
+        .center {
+
+        }
+
+        .center > p {
+            margin:1vw;
         }
         .content {
-            display: inherit;
-            grid-template-columns: inherit;
             z-index: 2;
+            width: 100%;
+            display: flex;
         }
         #about {
             grid-column: 1/4;
@@ -197,15 +233,15 @@ app-about-page {
             justify-content: center;
             overflow: hidden;
         }
-        #about > img {
+        #about > * {
             margin: 1vw;
             overflow: none;
         }
         #about.center {
-            grid-column: 5/13;
+            grid-column: 1/11;
         }
         footer {
-            z-index: 1;
+            z-index:3;
             grid-column: 1/12;
             grid-row: 12;
             display: flex;
@@ -222,7 +258,7 @@ app-about-page {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
         }
-        .site > * {
+        .site > header, .navigation, app-about-page {
             display: inherit;
             grid-template-columns: inherit;
             max-width: none;
@@ -233,15 +269,18 @@ app-about-page {
             display: grid;
         }
         .navigation {
+            display: grid;
             grid-column: 1/12;
             grid-row: 2;
         }
         app-about-page {
+            display: grid;
             grid-column: 1/12;
             width: 100%;
-            justify-content: center;
         }
         router-outlet {
+            display: grid;
+            grid-column: 1/12;
         }
         .content {
             display: grid;
@@ -254,19 +293,30 @@ app-about-page {
             justify-content: center;
             overflow: hidden;
         }
+        
         #about > img {
             max-width: 500px;
             margin: 1vw;
             overflow: none;
         }
         .center {
+            display: flex;
+            flex-flow: column nowrap;
             grid-column: 5/12;
             overflow-y: scroll;
+            justify-content: center;
+            font-size: 1vw;
         }
         footer {
             grid-column: 1/12;
             grid-row: 12;
-            justify-content: space-evenly;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: right;
+            align-items: center;
+        }
+        footer > * {
+            margin: 1vw;
         }
     }
 }
