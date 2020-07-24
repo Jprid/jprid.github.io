@@ -43,7 +43,6 @@ h2:hover {
 }
 p {
     text-transform: none;
-    color: var(--text-color);
 }
 
 ul, li {
@@ -70,7 +69,7 @@ hr {
     font-family: 'Roboto', sans-serif;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     background-color: var(--tertiary-color);
-    color: antiquewhite;
+    color: white;
     border-radius: .75vw;
     border: #5D737E solid .25vw;
     opacity: 0.9;
@@ -102,10 +101,16 @@ hr {
     align-self: center;
 }
 
-.center > p {
+.center > p, .card > * {
     margin: 1vw;
+    text-shadow: 1px 2px black;
+}
+.card > *{
+    color:white;
 }
 
+.card {
+}
 @supports (grid-area: auto) {
     app-about-page > div {
         overflow-y: scroll;
@@ -135,6 +140,9 @@ hr {
     .site > header, .navigation, router-outlet {
         display: inherit;
         grid-template-columns: repeat(12, 1fr);
+    }
+    .site > * {
+        
     }
     @media screen and (min-width: 360px) and (max-width: 700px) {
         .site {
