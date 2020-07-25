@@ -33,7 +33,6 @@ h3 {
 h2 {
     color: var(--text-color);
     text-decoration-color: var(--text-color);
-    text-transform: uppercase;
 }
 a {
     text-transform: uppercase;
@@ -103,7 +102,7 @@ hr {
 
 .center > p, .card > * {
     margin: 1vw;
-    text-shadow: 1px 2px black;
+    text-shadow: 1px 2px var(--text-color);
 }
 .card > *{
     color:white;
@@ -198,7 +197,7 @@ hr {
         }
     }
     /* Medium-width layout */
-    @media screen and (min-width: 700px) and (max-width: 1200px) {
+    @media screen and (min-width: 700px) and (max-width: 1900px) {
         .site {
             height: 100%;
             max-width: none;
@@ -258,7 +257,7 @@ hr {
         }
     }
     /* Large */
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1900px) {
         
         .site {
             height: 100%;
