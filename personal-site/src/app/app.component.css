@@ -1,29 +1,39 @@
-@use "@material/icon-button";
-@include icon-button.core-styles;
-:host{
-    height: 100%;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: repeat(12, 1fr);
-    /* gap: 10px; */
-    color: #FCFFFD;
+.site {
+  width: 100vw;
 }
 
-:host > * {
-    grid-column: 1 / span 12;
+.contact-card {
+    background-color: #ccc;
+    padding: 0.7vw;
+    animation: 1s rise;
+}
+
+.contact-card:hover {
+    background-color: var(--secondary-color);
+    animation: 1s nudge-down;
+}
+
+.box-shadow {
+    box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+.quote-text {
+  font-family: 'Permanent Marker', cursive;
+  color: #ccc;
+  text-align: justify;
+}
+
+.rounded-border {
+    border-radius: 0.25vw;
+}
+
+:host {
+    display: grid;
 }
 
 header > h1 {
     margin-left: 2vh;
     grid-column: 1 / span 3;
-}
-
-@media (min-width: 375px) {
-    header > h1 {
-        grid-column: 1 / span 12;
-        align-self: center;
-        justify-self: center;
-    }
 }
 
 header {
@@ -32,75 +42,120 @@ header {
     flex-direction: row;
     font-family: 'Lato', sans-serif;
     justify-content: flex-start;
-    background-color :#02111B;
-    padding-left: .5vh;
-    padding-right: .5vh;
+    background-color: #02111B;
+    padding-left: 0.5vh;
+    padding-right: 0.5vh;
     width: 100%;
- }
- 
-.navigation {
-    display: flex;
-    flex-direction: row;
-    height: 100%;
-    justify-content: flex-end;
-    background-color: #02111B;
-    font-family: 'Lato', sans-serif;
-}
-
- .navigation > a {
-    border-radius: 0;
-    font-size: 2vh;
-    margin-block-start: 0;
-    padding: 1vw 2vw 0 1vw;
-    height: 100%;
-    text-align: center;
-}
-
-.navigation > a:hover, h2:hover {
-    filter: brightness(210%);
-    background-color: #5D737E;
-    border-color: silver;
-    border-radius: 1px;
-    color:#211C20;
-}
-
-footer {
-    background-color: #02111B;
-    font-family: 'Lato', sans-serif;
-    text-transform: uppercase;
-
-}
-
-
-
-footer > h1 {
-    margin-left: 1vw;
-    margin-bottom: 2vw;
-}
-footer > a {
-    background-color: var(--tertiary-color);
-    margin: 1vw 1vw 1vw 1vw
-}
-
-a > h2 {
-    justify-items: center;
-    width: fit-content;
 }
 
 .title {
     text-transform: capitalize;
 }
 
-button {
-    height: 25%;
-    vertical-align: middle;
-    justify-items: center;
+.contact-card-container {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-top: 6vh;
 }
 
-a, a:visited {
-    margin: auto;
-    text-decoration: None;
-    color: inherit;
-    margin: 0;
-}
+@supports (grid-area: auto) {
+  .contact-footer {
+    display: grid;
+    grid-template-areas: "contact footer-title  footer-right" "contact footer-center footer-right" "contact footer-center footer-right";
+    grid-auto-rows: minmax(25vh, auto);
+    grid-template-columns: repeat(3, 1fr);
+  }
 
+  .contact-card-container > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5vw;
+    animation: 4s separate;
+  }
+
+  .footer-left {
+    grid-area: contact;
+    grid-row: 2/3;
+    min-width: 30%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: space-around;
+    flex-flow: column nowrap;
+  }
+
+  .footer-right {
+    grid-area: footer-right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .contact-card-container >
+  .footer-bottom {
+    grid-area: footer-bottom;
+    grid-column: 1/3;
+  }
+
+  .footer-center-body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: var(--secondary-color);
+    font-family: 'Roboto Slab', serif;
+    font-size: 2.5vh;
+    padding: 1vw;
+    color: #ccc;
+    text-align: center;
+  }
+  /* Medium */
+  @media screen and (min-width: 1440px) and (max-width: 1899px) {
+    .quote-text {
+      font-size: 0.5vh;
+    }
+  }
+
+  /* Large */
+  @media screen and (min-width: 1900px) {
+
+    .contact-card-container > div:first-of-type {
+      margin-left: 0;
+      margin-right: 0.5vw;
+      margin-left: 0.5vw;
+    }
+
+    .footer-center {
+      grid-area: footer-center;
+      display: grid;
+      grid-template-rows: repeat(8, 1fr);
+    }
+
+    .about-photo {
+      animation: nudge-down 3s;
+      max-width: 25vw;
+    }
+
+    .footer-title {
+      grid-area: footer-title;
+      display: flex;
+      background-color: #5D737E;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Lato', sans-serif;
+    }
+
+    .footer-title-text {
+      color: white;
+      font-size: 5vh;
+    }
+
+    .quote-text {
+      font-size: 2vh;
+    }
+  }
+  /* End Large */
+} /* End Grid-Area support query */

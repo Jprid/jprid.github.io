@@ -1,0 +1,148 @@
+.relativity {
+  background-color: darkorange;
+  max-width: 300px;
+}
+
+#experience {
+  background-color: var(--secondary-color);
+}
+
+.content {
+  background-color: var(--welcome-background-color);
+}
+
+@supports (grid-area: auto) {
+  .content-wrapper {
+    width: 100vw;
+  }
+
+  .card-picture-container {
+    grid-area: pc;
+    grid-row: span 2;
+    grid-column: span 3;
+  }
+
+  .relativity.card-picture {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .relativity.card-picture > img {
+    width: 100%;
+    height: 100%;
+    padding: 1vw;
+  }
+
+  .card-meta {
+    grid-area: cm;
+  }
+
+  .placeholder {
+    grid-area: pp;
+  }
+
+  .project-title {
+    grid-area: tt;
+  }
+
+  .project-content {
+    grid-area: cc;
+  }
+
+  .content-wrapper {
+    display: grid;
+    height: 100vh;
+  }
+
+  .welcome-linktree {
+    color: #FFF;
+  }
+
+  .welcome-image > img {
+    height: 100%;
+  }
+
+  #relativity-experience-one {
+    display: grid;
+    grid-template: "cm cm cm tt tt tt" "pc pc pc cc cc cc" "pc pc pc cc cc cc" "pp pp pp pp pp pp" / 0.4fr 0.4fr 0.4fr 1.1fr 2fr 0fr;
+  }
+
+  #relativity-experience-two {
+    display: grid;
+    grid-template: "cm cm cm tt tt tt" auto "pc pc pc cc cc cc" auto "pc pc pc cc cc cc" auto "pp pp pp pp pp pp" auto / 0.4fr 0.4fr 0.4fr 1.1fr 2fr 0fr;
+  }
+
+  @media screen and (min-width:1440px) and (max-width: 1899px) {
+    .welcome-menu,
+    .welcome-linktree {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      line-height: 1vh;
+    }
+
+    .linktree {
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    ul.linktree > * {
+      padding-top: 1vh;
+      padding-left: 1vw;
+      padding-right: 1vw;
+      padding-bottom: 2vh;
+    }
+
+    .content {
+      display: grid;
+      grid-template: "wi wi wi wi" "wi wi wi wi" "wl wl wl wl" / auto auto auto auto;
+    }
+
+    .welcome-image {
+      grid-area: wi;
+      height: 83vh;
+    }
+
+    .welcome-linktree {
+      grid-area: wl;
+    }
+  }
+
+  @media screen and (min-width: 1900px) {
+    .welcome-menu,
+    .welcome-linktree {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      line-height: 3vh;
+    }
+
+    .content-wrapper {
+      display: grid;
+    }
+
+    .content {
+      display: grid;
+      grid-template: "wi wi wl" / 1fr 1fr 1fr;
+    }
+
+    .welcome-image {
+      grid-area: wi;
+      width: 100%;
+      overflow: none;
+    }
+
+    .welcome-linktree {
+      grid-area: wl;
+    }
+
+    .experience-list {
+      margin: 1.25vw;
+      line-height: 2.5ch;
+    }
+  }
+}

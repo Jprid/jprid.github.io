@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { PageService } from './page.service';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +8,6 @@ import { PageService } from './page.service';
 export class AppComponent {
   titles: string[];
   selected = '';
-  constructor(private service : PageService) {
-    this.titles = this.service.getTitles();
-  }
   header = 'John M. Pridmore';
   title = 'J.M.P.';
 }
