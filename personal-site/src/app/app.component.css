@@ -60,6 +60,7 @@ header {
 
 @supports (grid-area: auto) {
   .contact-footer {
+    background-color: #5D737E;
     display: grid;
     grid-template-areas: "contact footer-title  footer-right" "contact footer-center footer-right" "contact footer-center footer-right";
     grid-auto-rows: minmax(25vh, auto);
@@ -118,7 +119,6 @@ header {
       font-size: 0.5vh;
     }
   }
-
   /* Large */
   @media screen and (min-width: 1900px) {
 
