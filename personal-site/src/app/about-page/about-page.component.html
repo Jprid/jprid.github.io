@@ -1,36 +1,40 @@
-<div class="content-wrapper">
 
   <div class="content">
     <div class="welcome-image column-flexed-center">
       <img src="../assets/welcomePhoto.jpeg"
+           class="splash-photo"
            loading="lazy" />
     </div>
     <div class="welcome-linktree title-font">
+      <h4>Hi, I'm</h4>
+      <h1 class="title-font-size">John</h1>
+      <h1 class="title-font-size">Pridmore</h1>
+      <p>A Software Engineer living in Chicago, IL.</p>
       <div class="welcome-menu">
-        <h1>John Pridmore</h1>
-        <h5>Jump To:</h5>
+        <h5>Take a look:</h5>
         <ul class="linktree">
-          <li>Experience</li>
-          <li>Projects</li>
-          <li>Contacts</li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </div>
-</div>
 <!--
    Experience
  -->
 <div id="experience">
+  <h1 class="experience-title column-flexed-center title-font white">
+    Experience
+  </h1>
   <div class="experience-list">
-    <h1 class="experience-title column-flexed-center title-font white">Experience</h1>
     <!--
-      Relativity
-  -->
+        Relativity
+    -->
     <div id="relativity-experience-one"
          href="#"
-         class="no-text-decoration box-shadow">
-      <div class="project-title title-font rounded-border">
+         class="multi-role-experience-card no-text-decoration rounded-border white">
+      <div class="project-title title-font">
         <h2 class="head">Software Engineer | Relativity Processing</h2>
       </div>
       <div class="card-meta row-flexed-left">
@@ -40,7 +44,8 @@
       <div class="card-picture-container">
         <div class="relativity card-picture">
           <img src="../../assets/relativity-logo-white.png"
-               alt="I have worked at Relativity as a software engineer since August 2018" loading="lazy">
+               alt="I have worked at Relativity as a software engineer since August 2018"
+               loading="lazy">
         </div>
       </div>
       <div class="project-content">
@@ -49,9 +54,8 @@
         <p>Consisted of several nunit test fixtures to automate common performance testing workflows.</p>
         <p>automation assets necessary to deploy and run against servers under test.</p>
       </div>
-
     </div>
-    <div id="relativity-experience-two" class="rounded-border">
+    <div id="relativity-experience-two" class="experience-card">
       <div class="project-title title-font">
         <h2 class="head">
           Software Engineer Intern
@@ -69,10 +73,10 @@
       </div>
     </div>
     <a id="rmark-bio"
-       class="experience-card white-border-box">
+       class="media-card white-border-box">
       <!--
-        rMark Bio
-    -->
+          rMark Bio
+      -->
       <div class="card-picture-container">
         <div class="card-picture">
           <img href="https://rmarkbio.com"
@@ -98,3 +102,56 @@
     </a>
   </div>
 </div>
+<!--
+PROJECTS
+<div id="projects" class="project-list">
+  <!--
+         PROJECTS
+<div class="project-title">
+  <h1 class="title-font">Projects</h1>
+</div>
+<div class="experience-list experience-right">
+  <div class="project-card white-border-box">
+    <div class="project-title title-font">
+      Automated Vending Machine
+    </div>
+    <div class="project-content">
+      <p>
+        Responds to user requests to vend arbitrary items via a REST API.
+        Ethereum was used to maintain a distributed ledger of transactions that were easily verifiable.
+      </p>
+    </div>
+  </div>
+  <div class="project-card white-border-box">
+    <div class="project-title title-font">
+      <a class="class-identifier"
+         href="https://github.com/nansta/CSC394-SeniorProject">
+        Graduation Path Scheduler
+      </a>
+    </div>
+    <div class="project-content">
+      <p>Finds shortest path to graduation for masters students at DePaul under constraints</p>
+      <p>Implemented a web scraper to gather the information on classes, modules, and requirements for graduation.</p>
+      <p>Implemented a boolean expression tree to store course requirements.</p>
+    </div>
+  </div>
+  <div class="project-card white-border-box">
+    <div class="project-title title-font">
+      <a class="class-identifier"
+         href="https://github.com/Jprid/SpaceGraphGame">
+        Space Graph Game
+      </a>
+    </div>
+    <div class="card-meta">
+      <!--
+          TODO: add icon (?)
+    </div>
+<div class="project-content">
+  <p>Finds path from one point in space to another, avoiding obstacles on the way</p>
+  <p>An application of Djikstra's Single Source Path algorithm. "spacecraft" begins at a coordinate on the NxN array representing the "map" of space</p>
+</div>
+  </div>
+</div>
+</div>
+  -->
+
