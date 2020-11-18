@@ -22,6 +22,7 @@ li.welcome-btn {
   width: 100%;
   height: 100%;
 }
+
 button.welcome-btn {
   background-color: var(--welcome-background-color);
   color: #FFF;

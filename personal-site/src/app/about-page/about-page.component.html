@@ -34,7 +34,7 @@
            class="no-text-decoration white">
         <header class="project-title title-font">
           <h2 class="head">Relativity</h2>
-          <p>Processing | Export | Full-Stack Software Engineer </p>
+          <p>Processing | Load | Full-Stack Software Engineer </p>
         </header>
         <div class="card-meta row-flexed-left">
           <p>Current Employment</p>
@@ -47,13 +47,14 @@
           </div>
         </div>
         <div class="project-content">
-          <p> Implemented the long sought "Post-Publish Delete" feature. This feature allows clients to keep deduplication in sync after documents have been exported out of the processing engine. Furthermore, I refactored the feature for performance--Discovered the need to batch delete queries for documents. This reduced the amount of calls being made to the SQL server by an order of roughly 10,000 -- the maximum size of a given batch; Eliminated time spent waiting for statistics to be aggregated on deleted documents by reporting asynchronously.</p>
-          <p> Implemented a feature to allow clients to re-run the Extract Transform Load pipeline with updated settings, and therefore modify/update the metadata itself or how it's calculated. </p>
-          <p> Implemented an API that would query and calculate the number of documents related to the given one.</p>
+          <p> Implemented the long sought "Post-Publish Delete" feature. This feature allows clients to keep deduplication in sync after documents have been exported out of the processing engine. Furthermore, I refactored the feature for performance by: executing delete queries in batches of 10,000; eliminated time spent waiting for statistics to be aggregated on deleted documents by reporting asynchronously. With these and other enhancements we were able to bring the time to delete 2k documents down by 3900%</p>
+          <p> Implemented a feature that enables clients to re-run the Extract-Transform-Load pipeline with updated settings, allowing for new metadata to be extracted and loaded into relativity easier. </p>
+          <p> Enabled calculation of the number of documents related to the given one.</p>
           <p> Updated the functional test framework to be environment-aware: testing environments now clean up debug-resources that could cause noisy neighbor issues and/or potentially prevent full/accurate coverage of the codebase.</p>
-          <p> I Was recognized for going above and beyond by handling the majority of the On-Call incidents during my shift unassisted by Level 2 support. Due to this I was promoted to Level 1 Support so that I can help mentor more junior members of the department in supporting the application.</p>
-          <p> Eliminated duplicate code paths, in the functional tests that cover Export, by a factor of 4.</p>
-          <p> Extended the nightly functional test pipeline and jobs to run in phases so as to eliminate noisy neighbor issues caused by disparate functionalities being tested against the same environment. Over time I have updated the existing timeouts for different phases--to more accurately account for the durations of each phase. Additionally, a timeout was added to the final phase of the nightly pipelines so that we can guarantee a given run doesn't interfere with the next.</p>
+          <p> I Was recognized for going above and beyond by handling the majority of the On-Call incidents during my shift unassisted by Level 2 support. Due to this I was promoted to Level 1 Support wherein I will mentor more junior members of the department.</p>
+          <p> Eliminated duplicate functional tests code paths covering the Load feature, by a factor of 4. This was accomplished by refactoring duplications of logic into several general template methods that can be re-used.</p>
+          <p> Implemented a disposable pattern for databases to ensure they are cleaned up on functional test teardown.</p>
+          <p> Extended the nightly functional test pipeline and jobs to run in phases so as to eliminate noisy neighbor issues. Over time the timeouts for different phases have been updated to--to more accurately account for the needs of each feature/phase. Additionally, a timeout was added to the final phase of the nightly pipelines so that we can guarantee a given run doesn't interfere with the next.</p>
           <p> Implemented the ability for end users to query, pivot, and group by the aforementioned API(s) regarding whether or not a given document has been exported.</p>
           <p> Implemented the ability for end users to pivot, group by, and create graphs and widgets on the results of the queries returned from the API(s) mentioned in the previous bullet.</p>
           <p> Increased transparency into the processing engine. Implemented a feature that allowed users to see all of the files extracted and transformed by the engine. Driven by modular apis that allow users to create expressions to narrow down their searches, this API has become the main method by which Relativity queries for document metadata.</p>
@@ -70,14 +71,13 @@
           <p>From May<br />to<br />August 2018</p>
         </div>
         <div class="project-content">
-          <p>API Performance Testing framework</p>
-          <p>Consisted of several nunit test fixtures to automate common performance testing workflows.</p>
-          <p>automation assets necessary to deploy and run against servers under test.</p>
+          <p>During my internship in Processing, I developed an API Performance Testing framework.</p>
+          <p>Consisted of several nunit test fixtures to automate common performance testing workflows and the assets necessary to deploy and run the tests.</p>
         </div>
       </div>
     </button>
     
-    <a href="#rmark"
+    <button href="#rmark"
        id="rmark-bio"
        class="media-card white-border-box">
       <!--
@@ -105,59 +105,7 @@
         <p>Used RESTful APIs to send and receive messages using google cloud's publication/subscription modules and documented and tested accordingly.</p>
         <p>Formatted production server to take appropriate HTTP calls via NGINX configuration and developed individualized Pub/Sub connections to pipeline specific data to users.</p>
       </div>
-    </a>
+    </button>
   </div>
 </div>
-<!--
-PROJECTS
-<div id="projects" class="project-list">
-  <!--
-         PROJECTS
-<div class="project-title">
-  <h1 class="title-font">Projects</h1>
-</div>
-<div class="experience-list experience-right">
-  <div class="project-card white-border-box">
-    <div class="project-title title-font">
-      Automated Vending Machine
-    </div>
-    <div class="project-content">
-      <p>
-        Responds to user requests to vend arbitrary items via a REST API.
-        Ethereum was used to maintain a distributed ledger of transactions that were easily verifiable.
-      </p>
-    </div>
-  </div>
-  <div class="project-card white-border-box">
-    <div class="project-title title-font">
-      <a class="class-identifier"
-         href="https://github.com/nansta/CSC394-SeniorProject">
-        Graduation Path Scheduler
-      </a>
-    </div>
-    <div class="project-content">
-      <p>Finds shortest path to graduation for masters students at DePaul under constraints</p>
-      <p>Implemented a web scraper to gather the information on classes, modules, and requirements for graduation.</p>
-      <p>Implemented a boolean expression tree to store course requirements.</p>
-    </div>
-  </div>
-  <div class="project-card white-border-box">
-    <div class="project-title title-font">
-      <a class="class-identifier"
-         href="https://github.com/Jprid/SpaceGraphGame">
-        Space Graph Game
-      </a>
-    </div>
-    <div class="card-meta">
-      <!--
-          TODO: add icon (?)
-    </div>
-<div class="project-content">
-  <p>Finds path from one point in space to another, avoiding obstacles on the way</p>
-  <p>An application of Djikstra's Single Source Path algorithm. "spacecraft" begins at a coordinate on the NxN array representing the "map" of space</p>
-</div>
-  </div>
-</div>
-</div>
-  -->
 

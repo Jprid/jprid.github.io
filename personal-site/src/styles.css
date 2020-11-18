@@ -150,6 +150,7 @@ body {
     width: inherit;
     height: inherit;
     letter-spacing: inherit;
+    color: inherit;
   }
   a,
   a:visited {
