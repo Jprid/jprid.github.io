@@ -15,13 +15,13 @@
 }
 
 * {
-    transition: all 1s;
+  transition: all 1s;
 }
 
 *,
 *::before,
 *::after {
-    box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 a > * {
@@ -40,17 +40,17 @@ a > * {
 }
 
 .row-flexed-center {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .row-flexed-left {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .card-meta > p {
@@ -69,12 +69,33 @@ body {
   .experience-card,
   .project-card {
     display: grid;
-    box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
+    box-shadow: -4px 4px 2px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .multi-role-experience-card {
+    box-shadow: -4px 0px 0px 0px rgba(0, 0, 0, 0.3);
   }
 }
-
   
   /* Animations */
+  @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 100px;
+    }
+  }
+
+  @-webkit-keyframes action {
+      0% , 100%{ transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+  }
+  @keyframes action {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+  }
+
   @keyframes nudge-down {
     from {
       margin: initial;
@@ -120,25 +141,21 @@ body {
     height: 20px;
     background-color: black;
   }
-
+  button {
+    appearance: inherit;
+    border: inherit;
+    background-color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    width: inherit;
+    height: inherit;
+    letter-spacing: inherit;
+  }
   a,
   a:visited {
     cursor: pointer;
     text-decoration: none;
     color: inherit;
-  }
-
-  h2:hover {
-    filter: brightness(110%);
-  }
-
-  ul {
-    padding: 0;
-  }
-
-  ul,
-  li {
-    list-style-type: none;
   }
 
   hr {
@@ -165,23 +182,6 @@ body {
     cursor: default;
   }
 
-  .icon {
-    border-radius: 50%;
-    display: flex;
-    height: 200px;
-    width: 200px;
-    flex: 0 auto;
-    justify-content: center;
-  }
-
-  .icon > * { /*Don't allow contact icons to out size their container*/
-    max-width: 160px;
-  }
-    /*
-  .white-border-box:active {
-       box-shadow: -4px 4px 2px 0 rgba(0,0,0,0.3);
-  }
-  */
   .white-border-box {
     border: 1px solid #ccc;
     box-shadow: 0 2px 4px -4px rgba(0, 0, 0, 0.3);
@@ -209,7 +209,6 @@ body {
   .center > p,
   .card > * {
     margin: 1vw;
-    /* text-shadow: 1px 2px var(--text-color); */
   }
 
   .no-text-decoration,
@@ -231,13 +230,10 @@ body {
 
     @media screen and (min-width: 360px) and (max-width: 700px) {
 
-
       header {
         display: grid;
         grid-column: 1/12;
       }
-      
-     
 
       router-outlet {
         display: grid;
@@ -263,9 +259,7 @@ body {
 
       .site {
         width: 100%;
-        /*max-width: none;*/
-        /*display: grid;*/
-        /*grid-template-columns: repeat(12, 1fr);*/
+       
       }
 
       header {
@@ -293,22 +287,6 @@ body {
         margin: 1vw;
       }
 
-      /*#about {
-        grid-column: 1/4;
-        display: none;
-        justify-content: center;
-        overflow: hidden;
-      }
-
-        #about > * {
-          margin: 1vw;
-          overflow: hidden;
-        }
-
-        #about.center {
-          grid-column: 1/ 11;
-        }*/
-
       footer {
         z-index: 3;
         grid-column: 1/ 12;
@@ -321,131 +299,11 @@ body {
     /* Large */
     @media screen and (min-width: 1900px) {
 
-      .body {
-        background-color: white !important;
-      }
+   
 
-      .site {
-        display: grid;
-      }
+     
 
-      .experience-title {
-        display: flex;
-        justify-content: center;
-        grid-row: 1;
-        color: black;
-        z-index: 2;
-      }
 
-      .white {
-        color: #ccc;
-      }
-
-      .list-repeatable-item {
-        background-color: var(--tertiary-color);
-        grid-column: 2/span 2;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        color: white;
-      }
-
-      .item-right {
-        display: grid;
-        grid-column: 2/ span 4;
-        justify-content: left;
-        align-items: center;
-        padding: 1ch;
-        color: white;
-        font-family: 'Roboto', sans-serif;
-      }
-
-      .item-title {
-        grid-column: 2/ span 4;
-        align-items: center;
-        display: flex;
-        flex-direction: row;
-        padding: .5ch;
-      }
-
-      .item-meta {
-        grid-column: span 3;
-        grid-row: span 1;
-        padding: 1ch;
-      }
-
-      .item-contents {
-        grid-column: span 3;
-        list-style: none;
-        padding: 2ch;
-      }
-
-        .item-contents > * {
-          grid-column: span 3;
-          line-height: 3ch;
-        }
-
-      .item-left {
-        display: flex;
-        flex-flow: column;
-        justify-content: space-evenly;
-        align-items: center;
-        flex: 0 auto;
-        grid-column: 1;
-        grid-row: 1/ span 2;
-      }
-
-      .list-repeatable {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        z-index: 1;
-      }
-
-      .next-button {
-        width: 100vw;
-        color: black;
-        display: flex;
-        grid-row: 12;
-        grid-column: 1;
-        align-items: flex-end;
-        justify-content: center;
-      }
-
-      .quote-text div {
-        position: relative;
-        display: grid;
-        font-style: italic;
-        font-size: 2.5rem;
-        grid-column: 1/ span 3;
-        grid-template-rows: auto 1fr 1fr;
-        grid-template-columns: repeat(3, 1fr);
-        margin-bottom: 4rem;
-      }
-
-      blockquote::before {
-        position: absolute;
-        content: "''";
-        font-style: italic;
-        font-size: 7rem;
-        color: #ccc;
-        margin-top: -2.75rem;
-        margin-left: -4rem;
-        opacity: 0.4;
-        grid-row: 1;
-        grid-column: 1;
-      }
-
-      #welcome {
-        font-family: 'Lato', sans-serif;
-        color: black;
-        grid-row: 2;
-        grid-column: 2;
-        animation: 3s slide-right;
-      }
-
-      #about {
-        display: flex;
-        justify-content: flex-end;
-        overflow: hidden;
-      }
+      
     }
   }

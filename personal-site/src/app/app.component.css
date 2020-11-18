@@ -2,15 +2,67 @@
   width: 100vw;
 }
 
+/* Footer -- Contact Card Container */
 .contact-card {
-    background-color: #ccc;
-    padding: 0.7vw;
-    animation: 1s rise;
+  background-color: #ccc;
+  padding: 1vw;
+  /*animation: 1s rise;*/
+}
+
+.footer-title {
+  grid-area: footer-title;
+  display: flex;
+  background-color: #5D737E;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
 }
 
 .contact-card:hover {
-    background-color: var(--secondary-color);
-    animation: 1s nudge-down;
+  background-color: var(--secondary-color);
+  animation: action 1.5s infinite linear;
+  -webkit-animation: action 1.5s infinite linear;
+}
+
+.contact-card-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-top:10vh;
+  width: 100vw;
+}
+
+.contact-card {
+  max-width: 15vw;
+  box-shadow: -4px 4px rgba(0, 0, 0, 0.3);
+}
+
+/*.icon:hover {
+  animation: action 1s infinite linear;
+  -webkit-animation: action 1s infinite linear;
+}*/
+
+.icon {
+    border-radius: 50%;
+    display: flex;
+    height: 200px;
+    width: 200px;
+    flex: 0 auto;
+    justify-content: center;
+  }
+ 
+
+
+footer {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100vw;
+  height: 100vh;
+}
+
+.footer-center {
+  width: 100vw;
+ 
 }
 
 .box-shadow {
@@ -52,10 +104,24 @@ header {
     text-transform: capitalize;
 }
 
-.contact-card-container {
-    display: flex;
-    flex-flow: row nowrap;
-    margin-top: 6vh;
+.card-meta {
+  line-height: 1vh;
+}
+
+.footer-center {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+}
+
+.icon > * { /*Don't allow contact icons to out size their container*/
+  max-width: 100%;
+}
+
+.contact-table-header {
+  border-bottom: 1px solid #FFF;
 }
 
 @supports (grid-area: auto) {
@@ -63,16 +129,17 @@ header {
     background-color: #5D737E;
     display: grid;
     grid-template-areas: "contact footer-title  footer-right" "contact footer-center footer-right" "contact footer-center footer-right";
-    grid-auto-rows: minmax(25vh, auto);
+    /*grid-auto-rows: minmax(25vh, auto);*/
     grid-template-columns: repeat(3, 1fr);
+    height: 100vh;
   }
 
   .contact-card-container > * {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: .5vw;
-    animation: 4s separate;
+    margin: 1.5vw;
+    /*animation: 4s separate;*/
   }
 
   .footer-left {
@@ -112,15 +179,53 @@ header {
     padding: 1vw;
     color: #ccc;
     text-align: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    box-shadow: -4px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  .footer-center {
+    grid-area: footer-center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+  }
+
+  .footer-title {
+    grid-area: footer-title;
+    text-shadow: -4px 4px rgba(0, 0, 0, 0.3);
   }
   /* Medium */
-  @media screen and (min-width: 1440px) and (max-width: 1899px) {
+  @media screen and (min-width: 700px) and (max-width: 1499px) {
     .quote-text {
-      font-size: 0.5vh;
+      font-size: 3vh;
+    }
+
+    .icon > * { /*Don't allow contact icons to out size their container*/
+      width: 100px;
+    }
+
+    .footer-center-body {
+      margin-top: 10vh;
+    }
+
+    .footer-title-text {
+      color: white;
+      font-size: 5vh;
+    }
+
+    .contact-card {
+      margin-left: 0;
+      margin-right: 1vw;
+      margin-left: 0.5vw;
+      height: 150px;
     }
   }
   /* Large */
-  @media screen and (min-width: 1900px) {
+  @media screen and (min-width: 1500px) {
+    .icon > img {
+      width: 150px;
+    }
 
     .contact-card-container > div:first-of-type {
       margin-left: 0;
@@ -128,24 +233,24 @@ header {
       margin-left: 0.5vw;
     }
 
+    .contact-card-container > * {
+      margin-bottom: 5vh;
+    }
+
     .footer-center {
       grid-area: footer-center;
-      display: grid;
-      grid-template-rows: repeat(8, 1fr);
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+    }
+
+    .footer-center-body {
+      max-width: 66vw;
     }
 
     .about-photo {
       animation: nudge-down 3s;
       max-width: 25vw;
-    }
-
-    .footer-title {
-      grid-area: footer-title;
-      display: flex;
-      background-color: #5D737E;
-      justify-content: center;
-      align-items: center;
-      font-family: 'Lato', sans-serif;
     }
 
     .footer-title-text {

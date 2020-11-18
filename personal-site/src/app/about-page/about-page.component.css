@@ -5,21 +5,158 @@
 
 #experience {
   background-color: var(--secondary-color);
-  height: 100vh;
   padding-top: 5vh;
+  padding-bottom: 5vh;
 }
 
 #experience > * {
   color: #FFF;
 }
 
-.content {
-  background-color: var(--welcome-background-color);
+li.welcome-btn {
+  color: var(--welcome-background-color);
+  background-color: #FFF;
 }
 
+.welcome-btn {
+  width: 100%;
+  height: 100%;
+}
+button.welcome-btn {
+  background-color: var(--welcome-background-color);
+  color: #FFF;
+  border: 1px solid #FFF;
+  appearance: none;
+  font-family: 'Lato', sans-serif;
+}
 
+.welcome-btn > button:hover {
+  color: #FFF;
+}
+
+.welcome-btn:hover,
+.welcome-btn:active {
+  background-color: var(--welcome-background-color);
+  color: #FFF;
+  border: 1px solid #FFF;
+}
+
+.content {
+  background-color: var(--welcome-background-color);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.project-title {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-content {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: start;
+  margin-left: 2vw;
+  flex-basis: auto;
+  font-family: 'Lato', sans-serif;
+}
+
+.project-content > * {
+  max-width: 95%;
+}
+
+.project-bullets > * {
+  list-style: circle;
+  text-decoration: solid;
+}
+
+.project-bullets {
+  margin: 0.4vh 0.2vw 0.2vw 0.4vh;
+}
+
+#experience {
+  width: 100vw;
+}
+
+.experience-title {
+  text-shadow: -4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.experience-list {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-list > * {
+  max-width: 90vw;
+}
+
+ @media screen and (max-width: 700px) {
+    .welcome-image {
+      max-height: 50vh;
+    }
+
+    .welcome-image > img {
+      border-radius: 50%;
+      width: 50vh;
+      height: 50vh;
+    }
+ }
+
+.media-card {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.welcome-linktree,
+.welcome-image {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-linktree {
+  color: #FFF;
+  line-height: 1.5vh;
+}
+
+.linktree {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
+}
+
+.linktree > *:first-child {
+  margin-top: 1vh;
+}
+
+.linktree > * {
+  margin-top: 1vh;
+}
+
+.card-picture > img {
+  width: 100%;
+}
+
+.relativity-experience-card {
+  border: 1px solid #FFF;
+  box-shadow: -4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.welcome-linktree > h1,h4,h5 {
+  text-shadow: -4px 4px rgba(0, 0, 0, 0.3);
+}
+      
 @supports (grid-area: auto) {
-
   .card-picture-container {
     grid-area: pc;
     grid-row: span 2;
@@ -27,6 +164,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    align-items: center;
   }
 
   .relativity.card-picture {
@@ -36,16 +174,11 @@
     align-items: center;
   }
 
-  .relativity.card-picture > img {
-    width: 90%;
-    height: 65%;
-    padding: 2vw;
-  }
-
   .card-meta {
     grid-area: cm;
     display: flex;
     flex-flow: column nowrap;
+    justify-content: flex-start;
   }
 
   .placeholder {
@@ -59,53 +192,80 @@
 
   .project-content {
     grid-area: cc;
-    padding-left: 1vw;
   }
 
-  .welcome-linktree {
-    color: #FFF;
+  .project-content,
+  .project-title,
+  .card-meta {
+    text-shadow: -2px 2px rgba(0, 0, 0, 0.3);
   }
 
   #relativity-experience-one,
   #relativity-experience-two {
     color: #FFF;
-    padding-left: 1vw;
-    padding-right: 1vw;
+    padding-left: 0.66vw;
+    paddint-top:  0.66vw;
   }
 
   #relativity-experience-one {
     display: grid;
-    grid-template: "cm cm cm tt tt tt" "pc pc pc cc cc cc" "pc pc pc cc cc cc" "pp pp pp pp pp pp" / 0.4fr 0.4fr 0.4fr 1.1fr 1fr 1fr;
+    grid-template:
+      "cm cm cm tt tt tt" auto
+      "pc pc pc cc cc cc" auto
+      "pc pc pc cc cc cc" auto
+      "pp pp pp pp pp pp" auto
+      / 0.3fr 0.3fr 0.3fr 1.2fr 1.2fr 1.2fr;
     margin-bottom: 0;
     padding-bottom: 0;
-    border-left: 1px solid #FFF;
-    border-right: 1px solid #FFF;
-    border-top: 1px solid #FFF;
   }
 
   #relativity-experience-two {
-    border-left: 1px solid #FFF;
-    border-right: 1px solid #FFF;
-    border-bottom: 1px solid #FFF;
     display: grid;
-    grid-template: "cm cm cm tt tt tt" auto "pc pc pc cc cc cc" auto "pc pc pc cc cc cc" auto "pp pp pp pp pp pp" auto / 0.4fr 0.4fr 0.4fr 1.1fr 1fr 1fr;
+    grid-template:
+      "cm cm cm tt tt tt" auto
+      "pc pc pc cc cc cc" auto
+      "pc pc pc cc cc cc" auto
+      "pp pp pp pp pp pp" auto
+      / 0.3fr 0.3fr 0.3fr 1.2fr 1.2fr 1.2fr;
     margin-top: 0;
     padding-top: 0;
   }
 
   .media-card {
     display: grid;
-    grid-template: "cm cm cm tt tt tt" "pc pc pc cc cc cc" "pc pc pc cc cc cc" "pp pp pp pp pp pp" / 0.4fr 0.4fr 0.4fr 1.1fr 1fr 1fr;
+    grid-template:
+      "cm cm cm tt tt tt"
+      "pc pc pc cc cc cc"
+      "pc pc pc cc cc cc"
+      "pp pp pp pp pp pp"
+      / 0.3fr 0.3fr 0.3fr 1.2fr 1.2fr 1.2fr;
     box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
+    margin-top: 1vh;
+    padding-left: 1vw;
   }
 
-  @media screen and (min-width: 700px) and (max-width: 1199px) {
+  .relativity.card-picture > img {
+    width: 100%;
+    height: 65%;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    padding-left:0.5vw;
+    padding-right:0.5vw;
+  }
+
+  @media screen and (min-width: 700px) and (max-width: 1199px)
+  {
+    #experience {
+      padding-top: 0.5vh;
+      padding-bottom: 0.5vh;
+    }
+
     .content {
       display: grid;
       grid-template:
         "wi wi wi wi"
         "wi wi wi wi"
-        "wl wl wl wl"
+        "wi wi wi wi"
         "wl wl wl wl"
         / 1fr 1fr 1fr 1fr;
       height: 100vh;
@@ -115,13 +275,49 @@
       display: grid;
     }
 
+    .project-content {
+      padding-left: 2vw;
+      font-size: 1vw;
+    }
+
+    .project-title {
+      border-bottom: 1px solid #FFF;
+    }
+
+    .card-picture-container {
+      padding-top: 2vh;
+    }
+
+    .card-meta {
+      border-bottom: 1px solid #FFF;
+    }
+
+    .card-picture,
+    .card-picture > img {
+      width: 100%;
+    }
+
     .welcome-image {
       grid-area: wi;
+    }
+
+    .relativity.card-picture
+    {
+      max-height: 190px;
+      max-width: 190px;
+    }
+
+    .relativity.card-picture > img
+    {
+      width: 100%;
+      height: 60%;
+      padding: 2vw;
     }
 
     .welcome-image > img {
       max-height: 500px;
       border-radius: 50%;
+      width: 50vw;
     }
 
     .welcome-linktree {
@@ -135,84 +331,50 @@
       justify-content: center;
       align-items: center;
       line-height: 1vh;
+      width: 100%;
+      text-shadow: -4px 4px rgba(0, 0, 0, 0.3);
     }
 
     .linktree {
       display: flex;
       flex-flow: row nowrap;
-    }
-
-    .linktree > *:first-child {
-      padding-left: 0;
+      justify-content: center;
+      align-items: center;
+      font-size: 5vh;
     }
 
     .linktree > * {
-      padding-right: 1vw;
-      padding-left: 1vw;
-    }
-  }
-
-  @media screen and (min-width:1200px) and (max-width: 1499px) {
-    .content-wrapper {
-      display: grid;
-      height: 100vh;
-    }
-    
-    .welcome-image > img {
-      border-radius: 60%;
-      height: 40%;
-    }
-    .content {
-      display: grid;
-      grid-template: "wi wi wi wi" "wi wi wi wi" "wl wl wl wl" / auto auto auto auto;
-    }
-
-    .title-font-size {
-      font-size: 2vh;
-    }
-
-    .welcome-menu,
-    .welcome-linktree {
-      display: flex;
-      flex-flow: column nowrap;
+      display:flex;
+      flex-flow: row nowrap;
       justify-content: center;
       align-items: center;
-      line-height: 1vh;
-    }
-
-    .linktree {
-      display: flex;
-      flex-flow: row nowrap;
-      font-size: 2vh;
-    }
-
-    ul.linktree > * {
+      text-align: center;
       padding-top: 1vh;
-      padding-left: 1vw;
-      padding-right: 1vw;
-      padding-bottom: 2vh;
-    }
-
-    .welcome-image {
-      grid-area: wi;
-      height: 83vh;
-    }
-
-    .welcome-linktree {
-      grid-area: wl;
+      padding: 1vw;
+      margin: 1vw;
+      text-shadow: none;
+      min-height: 50px;
     }
 
     .experience-list {
-      padding-left: 1.25vw;
-      padding-right: 1.25vw;
+      padding-left: 10.25vw;
+      padding-right: 10.25vw;
       padding-top: 1.25vh;
       line-height: 2.5ch;
       margin-top: 1vh;
-      padding-bottom: 2vh;
+      margin-bottom: 2vh;
+    }
+
+    .experience-list > * {
+      width: 66vw;
     }
   }
-
-  @media screen and (min-width: 1500px) {
+  
+  @media screen and (min-width: 1200px) and (max-width: 1599px) {
+    .welcome-btn {
+      width: 430px;
+      height: 130px;
+    }
     .title-font-size {
       font-size: 6vh;
       letter-spacing: 1.5vw;
@@ -225,50 +387,71 @@
       justify-content: center;
       align-items: center;
       line-height: 3vh;
+      height: 100%;
       width: 100%;
+
     }
 
     .linktree {
       display: flex;
       flex-flow: column nowrap;
-      font-size: 2vh;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 3vw;
       line-height: 10vh;
       text-align: center;
-      letter-spacing: 0.5vw;
-      initial-letter: 3;
+      letter-spacing: 1.5vw;
+      height: 100%;
+      width: 100%;
     }
 
-    .content-wrapper {
+    .linktree > li {
+       padding: 0.5vw;
+       border-radius: 5px;
+       width: 90%;
+    }
+
+    .content-wrapper
+    {
       display: grid;
     }
 
-    .content {
+    .content
+    {
       display: grid;
       grid-template: "wi wi wl" / 1fr 1fr 1fr;
     }
 
+    .welcome-image
+    {
+      grid-area: wi;
+      overflow: hidden;
+      width: 100%;
+    }
+
     .welcome-image > img {
       width: 100%;
-      height: 100vh;
     }
 
-    .welcome-image {
-      grid-area: wi;
-      overflow: none;
-      height: 100vh;
-    }
-
-    .welcome-linktree {
+    .welcome-linktree
+    {
       grid-area: wl;
     }
 
-    .experience-list {
-      padding-left: 1.25vw;
-      padding-right: 1.25vw;
+    .experience-list
+    {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
       padding-top: 1.25vh;
       line-height: 2.5ch;
       margin-top: 1vh;
       padding-bottom: 2vh;
+    }
+
+    .experience-list > * {
+      width: 75vw;
     }
 
     .media-card {
@@ -276,10 +459,111 @@
     }
   }
 
-  @media screen and (min-width: 1900px) {
-    .content {
+  @media screen and (min-width: 1600px)
+  {
+    .welcome-btn {
+      width: 29vw;
+      height: 12vh;
+    }
+    .splash-photo {
+      height: 100%;
+      border-radius: 50%;
+    }
+
+    .experience-list {
+      padding-left: 10.25vw;
+      padding-right: 10.25vw;
+      padding-top: 1.25vh;
+      line-height: 2.5ch;
+      margin-top: 1vh;
+      margin-bottom: 2vh;
+    }
+
+    .experience-list > * {
+      width: 50vw;
+    }
+
+    .media-card {
+      display: grid;
+      grid-template:
+        "cm cm cm tt tt tt"
+        "pc pc pc cc cc cc"
+        "pc pc pc cc cc cc"
+        "pp pp pp pp pp pp"
+        / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
+      box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
+      margin-top: 1vh;
+      padding-left: 1vw;
+    }
+
+    #relativity-experience-one {
+      display: grid;
+      grid-template:
+        "cm cm cm tt tt tt" auto
+        "pc pc pc cc cc cc" auto
+        "pc pc pc cc cc cc" auto
+        "pp pp pp pp pp pp" auto
+        / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    #relativity-experience-two {
+      display: grid;
+      grid-template:
+        "cm cm cm tt tt tt" auto
+        "pc pc pc cc cc cc" auto
+        "pc pc pc cc cc cc" auto
+        "pp pp pp pp pp pp" auto
+        / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
+      margin-top: 0;
+      padding-top: 0;
+    }
+
+    .content
+    {
       display: grid;
       grid-template: "wi wi wl wl" / 1fr 1fr 1fr 1fr;
+    }
+
+    .welcome-linktree
+    {
+      grid-area: wl;
+      font-size: 1.5vw;
+      justify-content: center;
+    }
+
+    .welcome-linktree > h1
+    {
+      letter-spacing: 1vw;
+    }
+
+    .welcome-image {
+      grid-area: wi;
+      overflow: hidden;
+    }
+
+    .welcome-linktree,
+    .welcome-menu
+    {
+      align-items: center;
+      display: flex;
+      flex-flow: column nowrap;
+      line-height: 1vh;
+      width: 100%;
+    }
+
+    .linktree
+    {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      font-size: 2vw;
+      line-height: 10vh;
+      text-align: center;
+      letter-spacing: 2vw;
+      initial-letter: 3;
     }
   }
 }

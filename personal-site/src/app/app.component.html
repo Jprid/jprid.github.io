@@ -1,32 +1,40 @@
 <router-outlet>
   <!-- Router Outlet -->
 </router-outlet>
-<footer id="contact" class="contact-footer">
+<footer id="contact"  class="contact-footer">
   <div class="footer-title">
-    <span class="heading-bar"></span><h2 class="footer-title-text">Contact<span class="heading-bar"></span></h2>
+    <h2 class="footer-title-text">Contact</h2>
   </div>
   <div class="footer-center">
-    <a href="#" class="footer-center-body white-border-box">
-      <p>The best way to get a hold of me is through LinkedIn (JPrid) and my Email (Johnpridmore.lit@gmail.com)</p>
-      <div class="quote-text">
-        <blockquote>
-          <p>You want my phone number?</p> It’s useless. The best way to contact me is to fill a human skull with acorns and vigorously shake it into the night. I will hear you eventually.
-          <p class="quote-footer" cite="">- YungTerra</p>
-        </blockquote>
-      </div>
-    </a>
+    <div href="#contact-information" class="footer-center-body white-border-box">
+      <p>
+        The best way to get a hold of me is through LinkedIn and my Email.
+      </p>
+      <table>
+        <thead>
+          <tr class="contact-table-header">
+            <th>Email</th>
+            <th>LinkedIn</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>Johnpridmore.lit@gmail.com</td>
+          <td>JPrid</td>
+        </tr>
+      </table>
+    </div>
     <div class="contact-card-container">
-      <a class="contact-card white-border-box" href="mailto:johnpridmore.lit@gmail.com">
+      <button class="contact-card white-border-box" href="mailto:johnpridmore.lit@gmail.com">
         <div class="icon">
           <img loading="lazy" src="../assets/Gmail.png" />
         </div>
-      </a>
-      <a class="contact-card white-border-box" href="https://LinkedIn.com/in/JPrid">
+      </button>
+      <button class="contact-card white-border-box" href="https://LinkedIn.com/in/JPrid">
         <div class="icon">
           <img id="linked-in" src="../assets/LI-In-Bug.png" alt="https://LinkedIn.com/in/JPrid">
         </div>
-      </a>
-      <a class="contact-card white-border-box" href="https://Github.com/JPrid">
+      </button>
+      <button class="contact-card white-border-box" href="https://Github.com/JPrid">
         <div class="icon" id="github">
           <img src="../assets/GitHub-Mark-32px.png"
                alt="My Github Profile can be found at https://Github.com/JPrid"
@@ -37,7 +45,7 @@
               60px"
                loading="lazy">
         </div>
-      </a>
+      </button>
     </div>
   </div>
 </footer>
