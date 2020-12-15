@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-
 :root {
   --code-font-family: 'Consolas', monospace;
   --primary-color: #004ffc;
@@ -7,30 +6,38 @@
   /* --secondary-color: #5D737E; */
   --tertiary-color: #5D737E;
   --text-color: #211C20;
+  --experience-background-color: #384558;
+  --welcome-accent-color: #CCC;
   --welcome-background-color: #0D1D4E;
   --code-background: rgb(48, 48, 48);
   --title-font: 'Lato', sans-serif;
   --subhead-font-size: 1vw;
   --head-font-size: 2vw;
+  box-sizing: content-box;
+}
+
+.site {
+  height: 100%;
+  width: 100%;
 }
 
 * {
   transition: all 1s;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
 
 a > * {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .title-font,
 .title-font > * {
-    font-family: var(--title-font);
+  font-family: var(--title-font);
 }
 
 .column-flexed-center {
@@ -53,9 +60,6 @@ a > * {
   align-items: flex-start;
 }
 
-.card-meta > p {
-  font-family: 'Roboto Slab', serif;
-}
 body {
   padding: 0;
   margin: 0;
@@ -65,246 +69,66 @@ body {
   cursor: default;
   font-weight: bold;
 }
-@supports (grid-area: auto) {
-  .experience-card,
-  .project-card {
-    display: grid;
-    box-shadow: -4px 4px 2px 0px rgba(0, 0, 0, 0.3);
-  }
 
-  .multi-role-experience-card {
-    box-shadow: -4px 0px 0px 0px rgba(0, 0, 0, 0.3);
-  }
+button {
+  appearance: inherit;
+  border: inherit;
+  background-color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  width: inherit;
+  height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
 }
-  
-  /* Animations */
-  @keyframes MoveUpDown {
-    0%, 100% {
-      bottom: 0;
-    }
-    50% {
-      bottom: 100px;
-    }
-  }
 
-  @-webkit-keyframes action {
-      0% , 100%{ transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-  }
-  @keyframes action {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
-  }
+a,
+a:visited {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
 
-  @keyframes nudge-down {
-    from {
-      margin: initial;
-    }
+hr {
+  background-color: var(--secondary-color);
+  margin-left: 0.25vh;
+  margin-right: 0.25vh;
+  height: 0.25vh;
+  width: 100%;
+}
 
-    to {
-      margin-bottom: 2vw;
-    }
-  }
+.title-hr {
+  background-color: white;
+  margin-left: 0.25vh;
+  margin-right: 0.25vh;
+  height: 0.25vh;
+  border: none;
+}
 
-  @keyframes separate {
-    from {
-      margin: 0;
-    }
+.white-border-box {
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 4px -4px rgba(0, 0, 0, 0.3);
+}
 
-    to {
-      margin: 0.5vw;
-    }
-  }
+.content-wrapper > * {
+  display: grid;
+}
 
-  @keyframes rise {
-    from {
-      box-shadow: none;
-    }
+.icon:hover,
+#github:hover {
+  filter: brightness(200%);
+}
 
-    to {
-      box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
-    }
-  }
-  /* TODO: remove */
-  @keyframes slide-right {
-    from {
-      margin-left: -100%;
-      width: 300%;
-    }
+.icon > img {
+  align-self: center;
+}
 
-    to {
-      margin-left: 0%;
-    }
-  }
+.center > p,
+.card > * {
+  margin: 1vw;
+}
 
-  .heading-bar {
-    height: 20px;
-    background-color: black;
-  }
-  button {
-    appearance: inherit;
-    border: inherit;
-    background-color: inherit;
-    font-size: inherit;
-    font-family: inherit;
-    width: inherit;
-    height: inherit;
-    letter-spacing: inherit;
-    color: inherit;
-  }
-  a,
-  a:visited {
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  hr {
-    background-color: var(--secondary-color);
-    margin-left: 0.25vh;
-    margin-right: 0.25vh;
-    height: 0.25vh;
-    width: 100%;
-  }
-
-  .title-hr {
-    background-color: white;
-    margin-left: 0.25vh;
-    margin-right: 0.25vh;
-    height: 0.25vh;
-    border: none;
-  }
-
-  .card {
-    font-family: 'Roboto', sans-serif;
-    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-    border: #5D737E solid;
-    opacity: 0.9;
-    cursor: default;
-  }
-
-  .white-border-box {
-    border: 1px solid #ccc;
-    box-shadow: 0 2px 4px -4px rgba(0, 0, 0, 0.3);
-  }
-
-  #linked-in {
-    margin-left: 5px;
-  }
-
-  .content-wrapper > *{
-    display: grid;
-  }
-  .icon:hover {
-    filter: brightness(200%);
-  }
-
-  #github:hover {
-    filter: brightness(200%);
-  }
-
-  .icon > img {
-    align-self: center;
-  }
-
-  .center > p,
-  .card > * {
-    margin: 1vw;
-  }
-
-  .no-text-decoration,
-  .no-text-decoration > * {
-    text-decoration: none;
-  }
-
-  @supports (grid-area: auto) {
-
-    footer {
-      grid-area: footer;
-    }
-
-    .site > header,
-    .navigation {
-      display: inherit;
-      grid-template-columns: repeat(12, 1fr);
-    }
-
-    @media screen and (min-width: 360px) and (max-width: 700px) {
-
-      header {
-        display: grid;
-        grid-column: 1/12;
-      }
-
-      router-outlet {
-        display: grid;
-      }
-      
-      .center {
-        grid-row: 3;
-        grid-column: 2/12;
-        padding-left: 1vw;
-      }
-
-      footer {
-        z-index: 1;
-        grid-column: 1/12;
-        grid-row: 12;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-    }
-    /* Medium-width layout */
-    @media screen and (min-width: 1440px) and (max-width: 1900px) {
-
-      .site {
-        width: 100%;
-       
-      }
-
-      header {
-        grid-column: 1/12;
-        grid-row: 1;
-      }
-
-      .navigation {
-        grid-column: 1/12;
-        grid-row: 2;
-        border: 1px black;
-      }
-
-      app-about-page {
-        width: 100vw;
-      }
-
-
-      router-outlet {
-        display: grid;
-        grid-column: 1/12;
-      }
-
-      .center > p {
-        margin: 1vw;
-      }
-
-      footer {
-        z-index: 3;
-        grid-column: 1/ 12;
-        grid-row: 12;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-      }
-    }
-    /* Large */
-    @media screen and (min-width: 1900px) {
-
-   
-
-     
-
-
-      
-    }
-  }
+.no-text-decoration,
+.no-text-decoration > * {
+  text-decoration: none;
+}

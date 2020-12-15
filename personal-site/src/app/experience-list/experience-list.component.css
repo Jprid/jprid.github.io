@@ -1,0 +1,313 @@
+:host(),
+.experience-title,
+#relativity-experience-one,
+#relativity-experience-two {
+  color: var(--welcome-accent-color);
+}
+
+.experience-list {
+  justify-content: center;
+  align-items: center;
+}
+
+.experience-list,
+.experience-title,
+.experience-list > * {
+  text-shadow: -4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.experience-list,
+.project-content {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.experience-title {
+  max-height: 5vh;
+}
+
+.experience-list > *:first-of-type {
+  margin-top: 0;
+}
+
+.experience-list > * {
+  background-color: #3F4045;
+  width: 75vw;
+  max-width: 90vw;
+  padding-bottom: 1.25vh;
+}
+
+#Relativity {
+  box-sizing: content-box;
+  background-color: orange;
+  min-height: 1vh;
+}
+
+.card-meta {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+.card-meta > * {
+  width: 100%;
+}
+
+.card-meta > p {
+  font-family: 'Roboto Slab', serif;
+}
+
+.project-content {
+  text-align: start;
+  margin-left: 2vw;
+  flex-basis: auto;
+  font-family: 'Roboto Slab', serif;
+}
+
+.project-content > * {
+  max-width: 95%;
+  margin: 0;
+  margin-top: 1vh;
+}
+
+.card-picture > img {
+  max-height: 50px;
+}
+
+.relativity-experience-card {
+  border: 1px solid #FFF;
+  box-shadow: -4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-picture {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+@supports (grid-area: auto) {
+  .card-meta {
+    grid-area: cm;
+  }
+
+  .placeholder {
+    grid-area: pp;
+  }
+
+  .project-title {
+    grid-area: tt;
+    padding-left: 0.5vw;
+    color: #FFF;
+  }
+
+  .project-content {
+    grid-area: cc;
+  }
+
+  .project-content,
+  .project-title,
+  .card-meta {
+    text-shadow: -2px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  .relativity-experience-card {
+    padding-left: 0.66vw;
+    padding-top: 0.66vw;
+  }
+
+  .relativity-experience-card {
+    display: grid;
+    grid-template: "cm cm tt tt tt tt" auto "pc pc cc cc cc cc" auto "pc pc cc cc cc cc" auto "pc pc cc cc cc cc" auto / 0.3fr 0.3fr 0.3fr 1.2fr 1.2fr 1.2fr;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .relativity.card-picture > img {
+    height: 65%;
+    padding: 2vh 2vw;
+  }
+
+  @media screen and (min-width: 300px) and (max-width: 699px) {
+    .relativity-experience-card {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    .project-content {
+      font-size: 1.25vh;
+    }
+
+    .experience-list > * {
+      width: 95vw;
+    }
+  }
+
+  @media screen and (min-width: 700px) and (max-width: 1199px) {
+    .card-meta {
+      grid-area: cm;
+    }
+
+    .project-content {
+      padding-left: 1vw;
+      font-size: 1vh;
+      line-height: 1vh;
+    }
+
+    .project-title {
+      /*border-bottom: 1px solid var(--welcome-accent-color);*/
+
+    }
+
+    .card-picture-container {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      grid-area: pc;
+    }
+
+    #Relativity {
+      padding: 0.25vh 0.25vw;
+    }
+
+    #rMarkBioLLC {
+      margin: 1vh 1vw;
+    }
+
+    .relativity.card-picture {
+      max-height: 190px;
+      max-width: 190px;
+    }
+
+    .card-picture,
+    .card-picture > img,
+    .relativity.card-picture > img {
+      width: 100%;
+    }
+
+    .relativity.card-picture > img {
+      height: 60%;
+      padding: 2vw;
+    }
+
+    .experience-list {
+      padding-left: 10.25vw;
+      padding-right: 10.25vw;
+      padding-top: 1.25vh;
+      line-height: 2.5ch;
+      margin-top: 1vh;
+      margin-bottom: 2vh;
+    }
+
+    .experience-list > * {
+      width: 95vw;
+      margin-top: 1vh;
+    }
+
+    .experience-list > *:first-child {
+      margin-top: 0;
+    }
+
+    .card-picture > img {
+      min-width: 20vw;
+    }
+
+    .relativity-experience-card {
+      display: grid;
+      grid-template:
+          "cm cm cm tt tt tt" auto
+          "pc pc pc cc cc cc" auto
+          "pc pc pc cc cc cc" auto
+          "pc pc pc cc cc cc" auto
+          / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) and (max-width: 1599px) {
+    .experience-list {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      padding-top: 1.25vh;
+      line-height: 2.5ch;
+      margin-top: 1vh;
+      padding-bottom: 2vh;
+    }
+
+      .experience-list > * {
+        width: 75vw;
+      }
+
+    .media-card {
+      margin-top: 1vh;
+    }
+
+    .relativity-experience-card {
+      display: grid;
+      grid-template: "cm cm cm tt tt tt" auto "pc pc pc cc cc cc" auto "pc pc pc cc cc cc" auto "pc pc pc cc cc cc" auto / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      padding-right: 1vw;
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .media-card {
+      display: grid;
+      grid-template: "cm cm cm tt tt tt" "pc pc pc cc cc cc" "pc pc pc cc cc cc" "pp pp pp pp pp pp" / 0.3fr 0.3fr 0.3fr 1.2fr 1.2fr 1.2fr;
+      box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
+      margin-top: 1vh;
+      padding-left: 1vw;
+    }
+
+    .card-meta {
+      grid-area: cm;
+    }
+
+    .project-title {
+      grid-area: tt;
+    }
+
+    #Relativity {
+      padding: 0.75vh 0.5vw;
+    }
+
+    .experience-list > * {
+      margin-top: 2.5vh;
+    }
+
+    .project-content {
+      grid-area: cc;
+    }
+
+    #rMarkBioLLC {
+      margin: 0.75vh 0.5vw;
+    }
+
+    .card-picture-container {
+      grid-area: pc;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+    }
+
+    .relativity-experience-card {
+      display: grid;
+      grid-template: "cm cm tt tt tt tt" auto "cm cm cc cc cc cc" auto "pc pc cc cc cc cc" auto "pc pc cc cc cc cc" auto / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .project-content {
+      font-size: 1.25vh !important;
+    }
+  }
+}

@@ -3,11 +3,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { Routing } from './app.routing';
-import { AboutPageComponent } from './about-page/about-page.component';
+import { TrimPipe } from './trim.pipe';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
+import { ExperienceListComponent } from './experience-list/experience-list.component';
 
 @NgModule({
   declarations: [
-    AppComponent, AboutPageComponent
+    AppComponent, TrimPipe, WelcomePageComponent, ContactPageComponent, ExperienceListComponent
   ],
   imports: [
     BrowserModule, RouterModule, Routing

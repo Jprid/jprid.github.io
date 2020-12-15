@@ -1,0 +1,33 @@
+<h1 class="experience-title column-flexed-center title-font white">
+  Experience
+</h1>
+<div class="experience-list">
+  <!--LIST START-->
+  <div id="{{i}}" tabindex="{{i}}" *ngFor="let item of EXPERIENCE; index as i" class="relativity-experience-card">
+    <!--TITLE-->
+    <header class="project-title title-font">
+      <!-- <h2 class="head">{{item.company}}</h2> -->
+      <h3>{{item.title}}</h3>
+    </header>
+    <!--CARD METADATA-->
+    <div class="card-meta row-flexed-left">
+      <p>From {{item.start}} until {{item.end}}</p>
+    </div>
+    <!--PICTURE-->
+    <div class="card-picture-container">
+      <a href="{{item.url}}" class="card-picture">
+        <img id="{{item.company | trim}}"
+             src="{{item.imgReference}}"
+             alt="{{item.summary}}"
+             loading="lazy">
+      </a>
+    </div>
+    <!--PROJECT CONTENT-->
+    <div class="project-content">
+      <p title="project content part {{i}}"
+         *ngFor="let paragraph of item.experienceContent; index as i">
+        {{paragraph}}
+      </p>
+    </div>
+  </div>
+</div>
