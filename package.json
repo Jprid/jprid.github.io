@@ -2,12 +2,12 @@
   "name": "personal-site",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "ng": "cd ./personal-site && ng",
+    "start": "cd ./personal-site && ng serve",
+    "build": "cd ./personal-site && ng build",
+    "test": "cd ./personal-site && ng test",
+    "lint": "cd ./personal-site && ng lint",
+    "e2e": "cd ./personal-site && ng e2e"
   },
   "private": true,
   "dependencies": {
