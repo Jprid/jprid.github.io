@@ -142,6 +142,11 @@
 
     .experience-list > * {
       width: 95vw;
+      margin-top: 1vh;
+    }
+
+    .experience-list > *:first-child {
+      margin-top: 0;
     }
   }
 

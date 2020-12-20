@@ -70,7 +70,8 @@ li.welcome-btn {
 .contact-card-container {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
@@ -116,9 +117,6 @@ li.welcome-btn {
   align-items: flex-start;
 }
 
-.linktree > *:first-child {
-}
-
 .linktree > * {
   background-color: var(--welcome-accent-color);
 }
@@ -142,13 +140,19 @@ li.welcome-btn {
 
   @media screen and (min-width: 300px) and (max-width: 699px) {
     .welcome-image > img {
-      max-height: 500px;
       border-radius: 50%;
-      max-width: 100%;
+      width: 90vw;
+      height: 350px;
+    }
+
+    .welcome-image {
+      grid-area: wi;
     }
 
     .welcome-menu {
+      display: grid;
       justify-content: center;
+      height: 100%;
     }
 
     .welcome-menu,
@@ -173,6 +177,18 @@ li.welcome-btn {
 
     .icon {
       height: 2vh;
+    }
+
+    .contact-card-container {
+      height: 100%;
+    }
+
+    .contact-card-container > * {
+      margin-left: 1vw;
+    }
+
+    .contact-card-container > *:first-child {
+      margin-left: 0; 
     }
 
     .contact-card {

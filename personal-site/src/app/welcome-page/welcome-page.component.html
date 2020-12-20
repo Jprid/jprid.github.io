@@ -7,8 +7,8 @@
 <div class="welcome-linktree title-font">
   <h4>Hi, I'm</h4>
   <h1 *ngFor="let item of ['John', 'Pridmore']" class="title-font-size title-font">{{item}}</h1>
+  <h4 class="welcome-spacing">A Software Engineer, located in Chicago, IL.</h4>
   <div class="welcome-menu">
-    <h4 class="welcome-spacing">A Software Engineer, located in Chicago, IL.</h4>
     <!--<h5 class="welcome-spacing">Navigate To:</h5>-->
     <nav class="linktree">
       <a *ngFor="let item of LINKS; index as i" tabindex="{{i}}" href="{{item.link}}">{{item.description}}</a>

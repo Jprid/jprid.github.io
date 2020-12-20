@@ -206,6 +206,22 @@ header {
       max-width: 100%;
       overflow: scroll;
     }
+
+    .contact-card-container {
+      grid-area: footer-bottom;
+      margin-top: 0;
+      justify-content: space-around;
+    }
+
+    .contact-card {
+      margin-right: 1vw;
+      margin-left: 0.5vw;
+      height: 25vw;
+      width: 25vw;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+    }
   }
   /* Medium */
   @media screen and (min-width: 700px) and (max-width: 1499px) {
