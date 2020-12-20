@@ -3,7 +3,7 @@ import { Experience, Link, Contact } from './models';
 export const EXPERIENCE: Experience[] = [
  {
     company: 'Relativity',
-    title: 'Processing | Full-Stack Software Engineer',
+    title: 'Processing | Software Engineer',
     start: 'August 2018',
     end: 'now',
     imgReference: '../../assets/relativity-logo-white.png',
@@ -24,7 +24,7 @@ export const EXPERIENCE: Experience[] = [
   },
   {
     company: 'Relativity',
-    title: 'Processing | Software Engineer Intern',
+    title: 'Software Engineer Intern',
     start: 'May 2018',
     end: 'August 2018',
     url: 'https://www.relativity.com/',
@@ -37,7 +37,7 @@ export const EXPERIENCE: Experience[] = [
   },
   {
     company: 'rMark Bio, LLC',
-    title: 'Software Engineer Intern | Remote from Chicago',
+    title: 'Software Engineer Intern',
     start: 'January 2017',
     end: 'May 2017',
     url: 'https://rmarkbio.com',

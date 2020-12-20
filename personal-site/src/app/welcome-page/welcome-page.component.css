@@ -12,7 +12,6 @@ li.welcome-btn {
 }
 
 .linktree > * {
-  height: 100%;
   border: 1px solid #CCC;
   background-color: #384558;
   color: var(--welcome-background-color);
@@ -201,7 +200,7 @@ li.welcome-btn {
     }
   }
 
-  @media screen and (min-width: 700px) and (max-width: 1199px) {
+  @media screen and (min-width: 700px) and (max-width: 1023px) {
     :host() {
       display: grid;
       grid-template: "wi wi wi wi" "wl wl wl wl" "wl wl wl wl" "wl wl wl wl" / 1fr 1fr 1fr 1fr;
@@ -293,7 +292,7 @@ li.welcome-btn {
     }
   }
 
- @media screen and (min-width: 1200px) and (max-width: 1599px) {
+ @media screen and (min-width: 1024px) and (max-width: 1599px) {
     .welcome-btn {
       width: 430px;
       height: 130px;
@@ -331,6 +330,11 @@ li.welcome-btn {
       padding: 0.5vw;
       border-radius: 5px;
       width: 90%;
+      margin-top: 1vh;
+    }
+
+    .linktree > li:first-child {
+      margin-top: 0;
     }
 
     :host() {
@@ -360,6 +364,14 @@ li.welcome-btn {
 
     .project-content {
       font-size: 1.5vh;
+    }
+
+    .contact-card-container {
+      justify-content: space-around;
+    }
+
+    .contact-card-container > * {
+      width: 150px;
     }
   }
 
@@ -442,6 +454,11 @@ li.welcome-btn {
     .linktree > * {
       padding: 0.5vh 0.5vw;
       text-align: center;
+      margin: 0.5vh 0.5vw;
+    }
+
+    .linktree > *:first-child {
+      margin-top: 0;
     }
   }
 }

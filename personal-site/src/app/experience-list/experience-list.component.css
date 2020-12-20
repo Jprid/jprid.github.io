@@ -34,7 +34,7 @@
   background-color: #3F4045;
   width: 75vw;
   max-width: 90vw;
-  padding-bottom: 1.25vh;
+  padding: 1vh 1vw;
 }
 
 #Relativity {
@@ -148,6 +148,10 @@
     .experience-list > *:first-child {
       margin-top: 0;
     }
+
+    #Relativity {
+      padding: 10px;
+    }
   }
 
   @media screen and (min-width: 700px) and (max-width: 1199px) {
@@ -156,7 +160,6 @@
     }
 
     .project-content {
-      padding-left: 1vw;
       font-size: 1vh;
       line-height: 1vh;
     }
@@ -235,6 +238,7 @@
     }
   }
 
+  /* Normal Sized Laptop */
   @media screen and (min-width: 1200px) and (max-width: 1599px) {
     .experience-list {
       display: flex;
@@ -282,7 +286,7 @@
     }
 
     #Relativity {
-      padding: 0.75vh 0.5vw;
+      padding: 10px;
     }
 
     .experience-list > * {

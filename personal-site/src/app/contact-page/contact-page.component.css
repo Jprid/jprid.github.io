@@ -97,7 +97,7 @@ header {
 }
 
 .title {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 
 .footer-center {
@@ -108,12 +108,17 @@ header {
   cursor: default;
 }
 
-.icon > * { /*Don't allow contact icons to out size their container*/
+.icon > * { /* Don't allow contact icons to out size their container */
   max-width: 100%;
 }
 
 .contact-table-header {
   border-bottom: 1px solid #FFF;
+}
+
+.footer-title-text {
+  color: white;
+  font-size: 5vh;
 }
 
 @supports (grid-area: auto) {
@@ -229,7 +234,7 @@ header {
       font-size: 3vh;
     }
 
-    .icon > * { /*Don't allow contact icons to out size their container*/
+    .icon > * { /* Don't allow contact icons to out size their container */
       width: 100px;
     }
 

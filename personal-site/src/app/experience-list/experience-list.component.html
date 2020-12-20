@@ -17,6 +17,7 @@
     <div class="card-picture-container">
       <a href="{{item.url}}" class="card-picture">
         <img id="{{item.company | trim}}"
+             title="{{item.company | trim }} image"
              src="{{item.imgReference}}"
              alt="{{item.summary}}"
              loading="lazy">
@@ -24,7 +25,7 @@
     </div>
     <!--PROJECT CONTENT-->
     <div class="project-content">
-      <p title="project content part {{i}}"
+      <p title="{{item.company | trim }} {{item.title | trim}} part {{i}}"
          *ngFor="let paragraph of item.experienceContent; index as i">
         {{paragraph}}
       </p>
