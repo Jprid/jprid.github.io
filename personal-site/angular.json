@@ -121,10 +121,11 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "name": "John Pridmore",
+            "name": "JPrid",
             "email": "mackattack.bg@gmail.com",
-            "baseHref": "/jprid.github.io/",
-            "branch": "master"
+            "branch": "master",
+            "cname": "www.jprid.com",
+            "noSilent": true
           }
         }
       }
