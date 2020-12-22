@@ -1,4 +1,4 @@
-import { Experience, Link, Contact } from './models';
+import { Experience, Link, Contact, Quote } from './models';
 
 export const EXPERIENCE: Experience[] = [
  {
@@ -61,3 +61,7 @@ export const CONTACTS: Contact[] = [
   { description: 'LinkedIn', link: 'https://LinkedIn.com/in/JPrid', imgRef: '../assets/LI-In-Bug.png' },
   { description: 'Github', link: 'https://www.github.com/JPrid', imgRef: '../assets/GitHub-Mark-120px-plus.png' },
 ];
+
+export const QUOTES: Quote[] = [
+  {author: 'Seneca', quote: 'aa'}
+].map((i,id) => ({id: id + 1, author: i.author, quote: i.quote}))

@@ -2,12 +2,10 @@
   width: 100vw;
 }
 
-/* Footer -- Contact Card Container */
 .contact-card {
   background-color: #ccc;
   padding: 1vw;
   box-shadow: -4px 4px rgba(0, 0, 0, 0.3);
-  /*animation: 1s rise;*/
 }
 
 .footer-title {
@@ -33,11 +31,6 @@
   width: 100vw;
 }
 
-/*.icon:hover {
-  animation: action 1s infinite linear;
-  -webkit-animation: action 1s infinite linear;
-}*/
-
 .icon {
   border-radius: 50%;
   display: flex;
@@ -46,8 +39,6 @@
   flex: 0 auto;
   justify-content: space-evenly;
 }
- 
-
 
 footer {
   display: flex;
@@ -58,7 +49,6 @@ footer {
 
 .footer-center {
   width: 100vw;
- 
 }
 
 .box-shadow {
@@ -80,8 +70,8 @@ footer {
 }
 
 header > h1 {
-    margin-left: 2vh;
-    grid-column: 1 / span 3;
+  margin-left: 2vh;
+  grid-column: 1 / span 3;
 }
 
 header {
@@ -142,25 +132,6 @@ header {
     align-items: center;
     margin: 1.5vw;
     /*animation: 4s separate;*/
-  }
-
-  .footer-left {
-    grid-area: contact;
-    grid-row: 2/3;
-    min-width: 30%;
-    min-height: 50vh;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: space-around;
-    flex-flow: column nowrap;
-  }
-
-  .footer-right {
-    grid-area: footer-right;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .contact-card-container >
@@ -299,11 +270,6 @@ header {
 
     .footer-center-body {
       max-width: 66vw;
-    }
-
-    .about-photo {
-      animation: nudge-down 3s;
-      max-width: 25vw;
     }
 
     .footer-title-text {

@@ -8,6 +8,7 @@ export interface Experience {
   summary: string;
   experienceContent: string[];
 }
+
 export interface Link {
   description: string;
   link: string;
@@ -17,4 +18,10 @@ export interface Contact {
   description: string;
   link: string;
   imgRef: string;
+}
+
+export interface Quote {
+  id: number;
+  quote: string;
+  author: string;
 }

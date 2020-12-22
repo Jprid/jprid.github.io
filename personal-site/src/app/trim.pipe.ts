@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class TrimPipe implements PipeTransform {
 
   transform(value: string, ...args: string[]): unknown {
-    return value.replace(/[., ?\{\}]/g, '');
+    return value.replace(/[., ?\{\}:\;]/g, '');
   }
 
 }

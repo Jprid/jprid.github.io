@@ -84,7 +84,6 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  
 }
 
 @supports (grid-area: auto) {
@@ -153,6 +152,7 @@
     #Relativity {
       padding: 10px;
     }
+
   }
 
   @media screen and (min-width: 700px) and (max-width: 1199px) {
@@ -165,11 +165,6 @@
       line-height: 1vh;
     }
 
-    .project-title {
-      /*border-bottom: 1px solid var(--welcome-accent-color);*/
-
-    }
-
     .card-picture-container {
       display: flex;
       flex-flow: column nowrap;
@@ -178,6 +173,7 @@
       height: 100%;
       width: 100%;
       grid-area: pc;
+      margin-bottom: 1vh;
     }
 
     #Relativity {
@@ -252,6 +248,10 @@
       padding-bottom: 2vh;
     }
 
+    .card-picture > img {
+      max-height: 50px;
+    }
+
       .experience-list > * {
         width: 75vw;
       }
@@ -260,12 +260,22 @@
       margin-top: 1vh;
     }
 
+    .project-content {
+      font-size: 1.5vh;
+      line-height: 2vh;
+    }
+
+
     .relativity-experience-card {
       display: grid;
       grid-template: "cm cm cm tt tt tt" auto "pc pc pc cc cc cc" auto "pc pc pc cc cc cc" auto "pc pc pc cc cc cc" auto / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
       margin-bottom: 0;
       padding-bottom: 0;
       padding-right: 1vw;
+    }
+
+    .card-picture-container {
+      margin-bottom: 1vh;
     }
   }
 
@@ -277,7 +287,10 @@
       margin-top: 1vh;
       padding-left: 1vw;
     }
-    
+
+    .card-picture > img {
+      max-height: 50px;
+    }
 
     .card-meta {
       grid-area: cm;
@@ -308,6 +321,7 @@
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
+      margin-bottom: 1vh;
     }
 
     .relativity-experience-card {

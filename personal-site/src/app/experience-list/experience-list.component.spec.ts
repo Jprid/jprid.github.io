@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TrimPipe } from '../trim.pipe';
 
 import { ExperienceListComponent } from './experience-list.component';
 
@@ -8,7 +9,7 @@ describe('ExperienceListComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ExperienceListComponent ]
+      declarations: [ ExperienceListComponent, TrimPipe ]
     })
     .compileComponents();
   }));

@@ -154,6 +154,10 @@ li.welcome-btn {
       height: 100%;
     }
 
+    .title-font-size {
+      letter-spacing: 20px;
+    }
+
     .welcome-menu,
     .welcome-linktree {
       width: 100%;
