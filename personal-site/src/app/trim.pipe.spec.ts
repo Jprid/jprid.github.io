@@ -11,5 +11,5 @@ describe('TrimPipe', () => {
     const result = pipe.transform(' ..,, ..,;3::;;; ; :');
     const expectedResult = '3';
     expect(result).toEqual(expectedResult);
-  })
+  });
 });

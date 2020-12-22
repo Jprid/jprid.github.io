@@ -64,4 +64,4 @@ export const CONTACTS: Contact[] = [
 
 export const QUOTES: Quote[] = [
   {author: 'Seneca', quote: 'aa'}
-].map((i,id) => ({id: id + 1, author: i.author, quote: i.quote}))
+].map((i, id) => ({ id: id + 1, author: i.author, quote: i.quote}));
