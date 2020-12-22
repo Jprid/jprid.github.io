@@ -349,7 +349,8 @@ li.welcome-btn {
     }
 
     .welcome-image > img {
-      width: 100%;
+      width: 50vw;
+      border-radius: 50%;
     }
 
     .welcome-linktree {

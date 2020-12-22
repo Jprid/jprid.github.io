@@ -84,6 +84,7 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  
 }
 
 @supports (grid-area: auto) {
@@ -276,6 +277,7 @@
       margin-top: 1vh;
       padding-left: 1vw;
     }
+    
 
     .card-meta {
       grid-area: cm;
@@ -311,8 +313,9 @@
     .relativity-experience-card {
       display: grid;
       grid-template: "cm cm tt tt tt tt" auto "cm cm cc cc cc cc" auto "pc pc cc cc cc cc" auto "pc pc cc cc cc cc" auto / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
-      margin-bottom: 0;
       padding-bottom: 0;
+      margin-left: 1vw;
+      margin-bottom: 1vh;
     }
 
     .project-content {
