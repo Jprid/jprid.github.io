@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
+import { TRACKING_ID } from './constants';
+
+declare let gtag: Function;
 
 @Component({
   selector: 'app-root',
@@ -7,7 +11,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   titles: string[];
-  selected = '';
   header = 'John M. Pridmore';
   title = 'J.M.P.';
+
+  constructor(private router: Router) {
+    this.router.events.subscribe(event => {
+      if(event instanceof NavigationEnd) {
+        gtag(
+          'config',
+          TRACKING_ID,
+          {
+            'page_path': event.urlAfterRedirects
+          }
+        );
+      }
+    })
+  }
 }
