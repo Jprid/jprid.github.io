@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TRACKING_ID } from './constants';
 
-declare let gtag: Function;
+declare let gtag: any;
 
 @Component({
   selector: 'app-root',
@@ -16,15 +16,15 @@ export class AppComponent {
 
   constructor(private router: Router) {
     this.router.events.subscribe(event => {
-      if(event instanceof NavigationEnd) {
+      if (event instanceof NavigationEnd) {
         gtag(
           'config',
           TRACKING_ID,
           {
-            'page_path': event.urlAfterRedirects
+            page_path: event.urlAfterRedirects
           }
         );
       }
-    })
+    });
   }
 }

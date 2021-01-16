@@ -66,4 +66,4 @@ export const QUOTES: Quote[] = [
   {author: 'Seneca', quote: 'aa'}
 ].map((i, id) => ({ id: id + 1, author: i.author, quote: i.quote}));
 
-export const TRACKING_ID : string = "G-R2TEH07MYV";
+export const TRACKING_ID = 'G-R2TEH07MYV';
