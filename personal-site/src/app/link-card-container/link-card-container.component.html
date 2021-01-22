@@ -1,0 +1,7 @@
+<div class="contact-card-container">
+    <a *ngFor="let contact of contacts" class="contact-card" href="{{contact.link}}">
+        <div class="icon" [ngStyle]="{'background-color': contrast ? contrastBackgroundColor : 'transparent'}">
+            <img alt="{{contact.description}}" loading="lazy" src="{{contact.imgRef}}" />
+        </div>
+    </a>
+</div>

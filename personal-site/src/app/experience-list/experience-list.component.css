@@ -1,8 +1,6 @@
 :host(),
-.experience-title,
-#relativity-experience-one,
-#relativity-experience-two {
-  color: var(--welcome-accent-color);
+.experience-title {
+  color: #FFF;
 }
 
 .experience-list {
@@ -13,7 +11,7 @@
 .experience-list,
 .experience-title,
 .experience-list > * {
-  text-shadow: -4px 4px rgba(0, 0, 0, 0.3);
+  /* text-shadow: -4px 4px rgba(0, 0, 0, 0.3); */
 }
 
 .experience-list,
@@ -31,7 +29,7 @@
 }
 
 .experience-list > * {
-  background-color: #3F4045;
+  /* background-color: #3F4045; */
   width: 75vw;
   max-width: 90vw;
   padding: 1vh 1vw;
@@ -72,11 +70,13 @@
 
 .card-picture > img {
   max-height: 50px;
+  max-width: 90%;
 }
 
 .relativity-experience-card {
-  border: 1px solid #FFF;
-  box-shadow: -4px 4px rgba(0, 0, 0, 0.3);
+  /* border-bottom: 1px solid #FFF; */
+  /* box-shadow: 0px 4px rgba(0, 0, 0, 0.3); */
+  padding-bottom: 2vh;
 }
 
 .card-picture {
@@ -84,11 +84,13 @@
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 @supports (grid-area: auto) {
   .card-meta {
     grid-area: cm;
+    margin-top: 1vh;
   }
 
   .placeholder {
@@ -97,7 +99,7 @@
 
   .project-title {
     grid-area: tt;
-    padding-left: 0.5vw;
+    padding-left: 1.25vw;
     color: #FFF;
   }
 
@@ -105,27 +107,20 @@
     grid-area: cc;
   }
 
-  .project-content,
-  .project-title,
-  .card-meta {
-    text-shadow: -2px 2px rgba(0, 0, 0, 0.3);
-  }
-
-  .relativity-experience-card {
-    padding-left: 0.66vw;
-    padding-top: 0.66vw;
-  }
-
   .relativity-experience-card {
     display: grid;
-    grid-template: "cm cm tt tt tt tt" auto "pc pc cc cc cc cc" auto "pc pc cc cc cc cc" auto "pc pc cc cc cc cc" auto / 0.3fr 0.3fr 0.3fr 1.2fr 1.2fr 1.2fr;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    grid-template: 
+      "cm cm tt tt tt tt" auto
+      "pc pc cc cc cc cc" auto
+      "pc pc cc cc cc cc" auto
+      "pc pc cc cc cc cc" auto
+      / 0.3fr 0.3fr 0.3fr 1.2fr 1.2fr 1.2fr;
   }
 
-  .relativity.card-picture > img {
-    height: 65%;
-    padding: 2vh 2vw;
+  @media screen and (orientation: portrait) {
+    .project-content {
+      font-size: 0.66vh;
+    }
   }
 
   @media screen and (min-width: 300px) and (max-width: 699px) {
@@ -152,7 +147,6 @@
     #Relativity {
       padding: 10px;
     }
-
   }
 
   @media screen and (min-width: 700px) and (max-width: 1199px) {
@@ -177,27 +171,16 @@
     }
 
     #Relativity {
-      padding: 0.25vh 0.25vw;
+      padding: 0.5vh 0.5vw;
     }
 
     #rMarkBioLLC {
       margin: 1vh 1vw;
     }
 
-    .relativity.card-picture {
-      max-height: 190px;
-      max-width: 190px;
-    }
-
-    .card-picture,
-    .card-picture > img,
-    .relativity.card-picture > img {
-      width: 100%;
-    }
-
-    .relativity.card-picture > img {
-      height: 60%;
-      padding: 2vw;
+    .card-picture > img {
+      width: 90%;
+      height: 90%;
     }
 
     .experience-list {
@@ -226,6 +209,7 @@
       display: grid;
       grid-template:
           "cm cm cm tt tt tt" auto
+          "cm cm cm tt tt tt" auto
           "pc pc pc cc cc cc" auto
           "pc pc pc cc cc cc" auto
           "pc pc pc cc cc cc" auto
@@ -252,9 +236,9 @@
       max-height: 50px;
     }
 
-      .experience-list > * {
-        width: 75vw;
-      }
+    .experience-list > * {
+      width: 75vw;
+    }
 
     .media-card {
       margin-top: 1vh;
@@ -264,7 +248,6 @@
       font-size: 1.5vh;
       line-height: 2vh;
     }
-
 
     .relativity-experience-card {
       display: grid;
@@ -282,7 +265,12 @@
   @media screen and (min-width: 1600px) {
     .media-card {
       display: grid;
-      grid-template: "cm cm cm tt tt tt" "pc pc pc cc cc cc" "pc pc pc cc cc cc" "pp pp pp pp pp pp" / 0.3fr 0.3fr 0.3fr 1.2fr 1.2fr 1.2fr;
+      grid-template: 
+      "cm cm cm tt tt tt"
+      "pc pc pc cc cc cc"
+      "pc pc pc cc cc cc"
+      "pp pp pp pp pp pp"
+      / 0.3fr 0.3fr 0.3fr 1.2fr 1.2fr 1.2fr;
       box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
       margin-top: 1vh;
       padding-left: 1vw;
@@ -326,8 +314,13 @@
 
     .relativity-experience-card {
       display: grid;
-      grid-template: "cm cm tt tt tt tt" auto "cm cm cc cc cc cc" auto "pc pc cc cc cc cc" auto "pc pc cc cc cc cc" auto / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
-      padding-bottom: 0;
+      grid-template: 
+        "cm cm tt tt tt tt" auto
+        "cm cm tt tt tt tt" auto
+        "pc pc cc cc cc cc" auto
+        "pc pc cc cc cc cc" auto
+        "pc pc cc cc cc cc" auto
+        / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
       margin-left: 1vw;
       margin-bottom: 1vh;
     }

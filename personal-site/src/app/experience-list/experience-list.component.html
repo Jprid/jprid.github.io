@@ -7,7 +7,7 @@
     <!--TITLE-->
     <header class="project-title title-font">
       <!-- <h2 class="head">{{item.company}}</h2> -->
-      <h3>{{item.title}}</h3>
+      <h2>{{item.title}}</h2>
     </header>
     <!--CARD METADATA-->
     <div class="card-meta row-flexed-left">
@@ -25,7 +25,7 @@
     </div>
     <!--PROJECT CONTENT-->
     <div class="project-content">
-      <p title="{{item.company | trim }} {{item.title | trim}} part {{i}}"
+      <p title="{{item.company | trim }} {{item.title | trim}} part {{i}}" 
          *ngFor="let paragraph of item.experienceContent; index as i">
         {{paragraph}}
       </p>

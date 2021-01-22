@@ -9,13 +9,8 @@
       </p>
     </div>
   </div>
-  <div class="contact-card-container">
-    <a *ngFor="let contact of CONTACTS"
-       class="contact-card white-border-box"
-       href="{{contact.link}}">
-      <div class="icon">
-        <img alt="{{contact.description}}" loading="lazy" src="{{contact.imgRef}}" />
-      </div>
-    </a>
+  <div class="footer-bottom">
+    <app-link-card-container id="bottom-contact-card-container" [contacts]="CONTACTS">
+    </app-link-card-container>
   </div>
 </footer>

@@ -1,24 +1,15 @@
 <div class="welcome-image">
-  <img src="../assets/DSC04172.jpg"
-       alt="A photograph taken of me in 2020, behind a sunny though obscured, chicago skyline"
-       class="splash-photo"
-       loading="lazy" />
+    <img src="../assets/DSC04172.jpg" alt="A photograph taken of me in 2020, behind a sunny though obscured, chicago skyline" class="splash-photo" loading="lazy" />
 </div>
 <div class="welcome-linktree title-font">
-  <h4>Hi, I'm</h4>
-  <h1 *ngFor="let item of ['John', 'Pridmore']" class="title-font-size title-font">{{item}}</h1>
-  <h4 class="welcome-spacing">A Software Engineer, located in Chicago, IL.</h4>
-  <div class="welcome-menu">
-    <!--<h5 class="welcome-spacing">Navigate To:</h5>-->
-    <nav class="linktree">
-      <a *ngFor="let item of LINKS; index as i" tabindex="{{i}}" href="{{item.link}}">{{item.description}}</a>
-    </nav>
-    <div class="contact-card-container">
-      <a *ngFor="let contact of CONTACTS" class="contact-card white-border-box" href="{{contact.link}}">
-        <div class="icon">
-          <img alt="{{contact.description}}" loading="lazy" src="{{contact.imgRef}}" />
-        </div>
-      </a>
+    <h4>Hi, I'm</h4>
+    <h1 *ngFor="let item of ['John', 'Pridmore']" class="title-font-size title-font">{{item}}</h1>
+    <h4 class="welcome-spacing">A Software Engineer, located in Chicago, IL.</h4>
+    <div class="welcome-menu">
+        <!--<h5 class="welcome-spacing">Navigate To:</h5>-->
+        <nav class="linktree">
+            <a *ngFor="let item of LINKS; index as i" tabindex="{{i}}" href="{{item.link}}">{{item.description}}</a>
+        </nav>
+        <app-link-card-container [contrast]="true" [contacts]="CONTACTS"></app-link-card-container>
     </div>
-  </div>
 </div>
