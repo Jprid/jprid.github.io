@@ -5,4 +5,4 @@ const appRoutes: Routes = [
     {path: '', redirectTo: 'About', pathMatch: 'full'}
 ];
 
-export const Routing = RouterModule.forRoot(appRoutes);
+export const Routing = RouterModule.forRoot(appRoutes, { relativeLinkResolution: 'legacy' });

@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { LinkCardContainerComponent } from './link-card-container.component';
 
@@ -6,7 +6,7 @@ describe('LinkCardContainerComponent', () => {
   let component: LinkCardContainerComponent;
   let fixture: ComponentFixture<LinkCardContainerComponent>;
   let icons: HTMLDivElement[];
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ LinkCardContainerComponent ]
     })
