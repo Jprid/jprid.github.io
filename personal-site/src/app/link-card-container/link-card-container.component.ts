@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { GoogleAnalyticsService } from '../google-analytics.service';
 import { Contact } from '../models';
 
 @Component({
@@ -13,8 +14,13 @@ export class LinkCardContainerComponent implements OnInit {
   contacts: Contact[];
   public contrastBackgroundColor = 'var(--welcome-accent-color)';
 
-  constructor() { }
+  constructor(public analytics : GoogleAnalyticsService) { }
 
   ngOnInit(): void {
+  }
+
+  public logLinkCardClick(cardUrl : string) {
+    console.log(cardUrl);
+    this.analytics.emitEventUrl('click_on_card', 'engagement', 'contact', 'click', cardUrl);
   }
 }
