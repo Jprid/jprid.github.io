@@ -117,6 +117,9 @@
     .project-content {
       font-size: 1.25vh;
     }
+    .project-content>p {
+      line-height: 2vh;
+    }
     .experience-list>* {
       width: 95vw;
       margin-top: 1vh;

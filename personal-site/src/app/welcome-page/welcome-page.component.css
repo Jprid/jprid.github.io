@@ -1,393 +1,397 @@
 :host() {
-    background-color: var(--welcome-background-color);
-    height: 100vh;
-    width: 100vw;
-    display: flex;
-    flex-flow: column nowrap;
+  background-color: var(--welcome-background-color);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 li.welcome-btn {
-    color: var(--welcome-background-color);
-    background-color: #FFF;
+  color: var(--welcome-background-color);
+  background-color: #FFF;
 }
 
 .linktree>* {
-    border: 1px solid #CCC;
-    background-color: #384558;
-    color: var(--welcome-background-color);
-    appearance: none;
-    font-family: 'Lato', sans-serif;
+  border: 1px solid #CCC;
+  background-color: #384558;
+  color: var(--welcome-background-color);
+  appearance: none;
+  font-family: 'Lato', sans-serif;
 }
 
 .linktree>* {
-    background-color: var(--welcome-accent-color);
+  background-color: var(--welcome-accent-color);
 }
 
 .linktree>*:hover,
 .linktree>*:active,
 .linktree>*:focus,
 .linktree>*::selection {
-    background-color: var(--welcome-background-color);
-    color: var(--welcome-accent-color);
-    border: 1px solid var(--welcome-accent-color);
-    letter-spacing: 2vw;
+  background-color: var(--welcome-background-color);
+  color: var(--welcome-accent-color);
+  border: 1px solid var(--welcome-accent-color);
+  letter-spacing: 2vw;
 }
 
 .relativity {
-    background-color: darkorange;
-    max-width: 300px;
+  background-color: darkorange;
+  max-width: 300px;
 }
 
 #experience {
-    background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
 #experience>* {
-    color: #FFF;
+  color: #FFF;
 }
 
 .project-title {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-card {
-    background-color: var(--welcome-accent-color);
-    padding: 1vw;
-    box-shadow: -4px 4px rgba(0, 0, 0, 0.3);
+  background-color: var(--welcome-accent-color);
+  padding: 1vw;
+  box-shadow: -4px 4px rgba(0, 0, 0, 0.3);
 }
 
 .contact-card:hover {
-    background-color: var(--welcome-background-color);
-    animation: action 1.5s infinite linear;
-    -webkit-animation: action 1.5s infinite linear;
+  background-color: var(--welcome-background-color);
+  animation: action 1.5s infinite linear;
+  -webkit-animation: action 1.5s infinite linear;
 }
 
 .contact-card-container {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 @media screen and (max-width: 700px) {
-    .welcome-image {
-        max-height: 50vh;
-    }
-    .welcome-image>img {
-        border-radius: 50%;
-        width: 50vh;
-        height: 50vh;
-    }
+  .welcome-image {
+    max-height: 50vh;
+  }
+  .welcome-image>img {
+    border-radius: 50%;
+    width: 50vh;
+    height: 50vh;
+  }
 }
 
 .welcome-linktree,
 .welcome-image {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .welcome-linktree {
-    color: var(--welcome-accent-color);
+  color: var(--welcome-accent-color);
 }
 
 .linktree {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-content: center;
-    align-items: flex-start;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: flex-start;
 }
 
 .welcome-linktree>h1,
 .welcome-linktree>h4,
 .welcome-linktree>h5 {
-    text-shadow: -4px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: -4px 4px rgba(0, 0, 0, 0.3);
 }
 
 @supports (grid-area: auto) {
-    .card-picture-container {
-        grid-area: pc;
-        grid-row: span 2;
-        grid-column: span 3;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
+  .card-picture-container {
+    grid-area: pc;
+    grid-row: span 2;
+    grid-column: span 3;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  @media screen and (orientation: portrait) {
+     :host() {
+      display: flex;
+      flex-flow: column nowrap;
     }
-    @media screen and (orientation: portrait) {
-         :host() {
-            display: flex;
-            flex-flow: column nowrap;
-        }
-        .welcome-image {
-            grid-area: wi;
-            overflow: hidden;
-            width: 100%;
-        }
-        .welcome-image>img {
-            width: 66vw;
-            border-radius: 50%;
-        }
-        .welcome-linktree {
-            grid-area: wl;
-        }
-        .welcome-menu {
-            display: grid;
-            justify-content: center;
-            height: 100%;
-            width: 100vw;
-        }
-        .linktree {
-            flex-flow: column nowrap;
-            display: flex;
-            align-items: center;
-        }
-        .linktree>* {
-            width: 45vw;
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
-            height: 10vh;
-            margin-left: 1vw;
-            margin-right: 1vw;
-            margin-top: 1vh;
-            font-size: 3vh;
-        }
-        .linktree>*:first-child {
-            margin-top: 0;
-        }
-        .title-font-size {
-            font-size: 2vh;
-        }
-        app-link-card-container {
-            height: 100%;
-        }
+    .welcome-image {
+      grid-area: wi;
+      overflow: hidden;
+      width: 100%;
     }
-    @media screen and (min-width: 300px) and (max-width: 699px) {
-        .welcome-image>img {
-            border-radius: 50%;
-            width: 90vw;
-            height: 350px;
-        }
-        .welcome-image {
-            grid-area: wi;
-        }
-        .welcome-menu {
-            display: grid;
-            justify-content: center;
-            height: 100%;
-        }
-        .title-font-size {
-            letter-spacing: 20px;
-        }
-        .welcome-menu,
-        .welcome-linktree {
-            width: 100%;
-        }
-        .welcome-linktree {
-            height: 100%;
-        }
-        .linktree>* {
-            width: 45vw;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content: center;
-            align-items: center;
-            height: 25px;
-            margin-left: 1vw;
-            margin-right: 1vw;
-        }
+    .welcome-image>img {
+      width: 66vw;
+      border-radius: 50%;
     }
-    @media screen and (min-width: 700px) and (max-width: 1023px) {
-         :host() {
-            display: grid;
-            grid-template: "wi wi wi wi" "wl wl wl wl" "wl wl wl wl" "wl wl wl wl" "wl wl wl wl" / 1fr 1fr 1fr 1fr;
-            height: 100vh;
-            width: 100vw;
-        }
-        .title-font-size {
-            letter-spacing: 45px;
-        }
-        .welcome-spacing {
-            letter-spacing: 5px;
-        }
-        .welcome-image {
-            grid-area: wi;
-        }
-        .welcome-image>img {
-            max-height: 500px;
-            border-radius: 50%;
-            height: 25vh;
-            width: 25vh;
-        }
-        .welcome-linktree {
-            grid-area: wl;
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
-        }
-        .welcome-menu {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: flex-start;
-            align-items: center;
-            padding-left: 1vw;
-            padding-right: 1vw;
-        }
-        .welcome-menu,
-        .welcome-linktree {
-            line-height: 1vh;
-            width: 100%;
-            height: 100%;
-            text-shadow: -4px 4px rgba(0, 0, 0, 0.3);
-        }
-        .linktree {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-around;
-            align-items: center;
-            font-size: 3vh;
-            width: 100%;
-        }
-        .linktree>* {
-            display: flex;
-            flex-flow: row nowrap;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 2vh 1vw;
-            margin: 1vh 1vw;
-            text-shadow: none;
-            height: 6vh;
-            min-width: fit-content;
-            letter-spacing: 11px;
-        }
+    .welcome-linktree {
+      grid-area: wl;
     }
-    @media screen and (min-width: 1024px) and (max-width: 1599px) and (max-height: 1900px) {
-        .welcome-btn {
-            width: 430px;
-            height: 130px;
-        }
-        .title-font-size {
-            font-size: 6vh;
-            letter-spacing: 1.5vw;
-        }
-        .welcome-menu,
-        .welcome-linktree {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: center;
-            align-items: center;
-            line-height: 3vh;
-            height: 100%;
-        }
-        .linktree {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-evenly;
-            align-items: center;
-            font-size: 3vw;
-            line-height: 10vh;
-            text-align: center;
-            letter-spacing: 1.5vw;
-            height: 100%;
-            width: 100%;
-        }
-        .linktree>li {
-            padding: 0.5vw;
-            border-radius: 5px;
-            width: 90%;
-            margin-top: 1vh;
-        }
-        .linktree>li:first-child {
-            margin-top: 0;
-        }
-         :host() {
-            display: grid;
-            grid-template: "wi wi wi wl" / 1fr 1fr 1fr 1fr;
-        }
-        .welcome-image {
-            grid-area: wi;
-            overflow: hidden;
-            width: 100%;
-        }
-        .welcome-image>img {
-            width: 50vw;
-            border-radius: 50%;
-        }
-        .welcome-linktree {
-            grid-area: wl;
-        }
-        .contact-card {
-            margin-right: 1vw;
-            margin-left: 0.5vw;
-            height: 150px;
-        }
-        .project-content {
-            font-size: 1.5vh;
-        }
+    .welcome-menu {
+      display: grid;
+      justify-content: center;
+      height: 100%;
+      width: 100vw;
     }
-    @media screen and (min-width: 1600px) {
-         :host() {
-            display: grid;
-            grid-template: "wi wi wl wl" / 1fr 1fr 1fr 1fr;
-        }
-        .welcome-btn {
-            width: 29vw;
-            height: 12vh;
-        }
-        .splash-photo {
-            height: 100%;
-            border-radius: 50%;
-        }
-        .welcome-linktree {
-            grid-area: wl;
-            font-size: 1.5vw;
-            justify-content: center;
-            line-height: 1.5vh;
-        }
-        .welcome-linktree>h1 {
-            letter-spacing: 1vw;
-        }
-        .welcome-image {
-            grid-area: wi;
-            height: 100vh;
-        }
-        .welcome-linktree,
-        .welcome-menu {
-            align-items: center;
-            display: flex;
-            flex-flow: column nowrap;
-            line-height: 1vh;
-            width: 100%;
-        }
-        .linktree {
-            display: flex;
-            flex-flow: column nowrap;
-            justify-content: space-evenly;
-            align-items: center;
-            font-size: 2vw;
-            line-height: 10vh;
-            text-align: center;
-            letter-spacing: 1.5vw;
-            initial-letter: 3;
-        }
-        .linktree>* {
-            padding: 0.5vh 0.5vw;
-            text-align: center;
-            margin: 0.5vh 0.5vw;
-        }
-        .linktree>*:first-child {
-            margin-top: 0;
-        }
+    .linktree {
+      flex-flow: column nowrap;
+      display: flex;
+      align-items: center;
     }
+    .linktree>* {
+      width: 45vw;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      height: 10vh;
+      margin-left: 1vw;
+      margin-right: 1vw;
+      margin-top: 1vh;
+      font-size: 3vh;
+    }
+    .linktree>*:first-child {
+      margin-top: 0;
+    }
+    .title-font-size {
+      font-size: 2vh;
+    }
+    app-link-card-container {
+      height: 100%;
+    }
+  }
+  @media screen and (min-width: 300px) and (max-width: 699px) {
+    .welcome-image>img {
+      border-radius: 50%;
+      width: 90vw;
+      height: 350px;
+    }
+    .welcome-image {
+      grid-area: wi;
+    }
+    .welcome-menu {
+      display: grid;
+      justify-content: center;
+      height: 100%;
+    }
+    .title-font-size {
+      letter-spacing: 20px;
+      font-size: 4vh;
+    }
+    .welcome-menu,
+    .welcome-linktree {
+      width: 100%;
+    }
+    .welcome-linktree {
+      height: 100%;
+    }
+    .linktree>* {
+      width: fit-content;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      padding: 1vh 1vw;
+      height: 25px;
+      margin-left: 1vw;
+      margin-right: 1vw;
+      letter-spacing: 10px;
+      font-weight: bolder;
+    }
+  }
+  @media screen and (min-width: 700px) and (max-width: 1023px) {
+     :host() {
+      display: grid;
+      grid-template: "wi wi wi wi" "wl wl wl wl" "wl wl wl wl" "wl wl wl wl" "wl wl wl wl" / 1fr 1fr 1fr 1fr;
+      height: 100vh;
+      width: 100vw;
+    }
+    .title-font-size {
+      letter-spacing: 45px;
+    }
+    .welcome-spacing {
+      letter-spacing: 5px;
+    }
+    .welcome-image {
+      grid-area: wi;
+    }
+    .welcome-image>img {
+      max-height: 500px;
+      border-radius: 50%;
+      height: 25vh;
+      width: 25vh;
+    }
+    .welcome-linktree {
+      grid-area: wl;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+    .welcome-menu {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      padding-left: 1vw;
+      padding-right: 1vw;
+    }
+    .welcome-menu,
+    .welcome-linktree {
+      line-height: 1vh;
+      width: 100%;
+      height: 100%;
+      text-shadow: -4px 4px rgba(0, 0, 0, 0.3);
+    }
+    .linktree {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 3vh;
+      width: 100%;
+    }
+    .linktree>* {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2vh 1vw;
+      margin: 1vh 1vw;
+      text-shadow: none;
+      height: 6vh;
+      min-width: fit-content;
+      letter-spacing: 11px;
+    }
+  }
+  @media screen and (min-width: 1024px) and (max-width: 1599px) and (max-height: 1900px) {
+    .welcome-btn {
+      width: 430px;
+      height: 130px;
+    }
+    .title-font-size {
+      font-size: 6vh;
+      letter-spacing: 1.5vw;
+    }
+    .welcome-menu,
+    .welcome-linktree {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: center;
+      line-height: 3vh;
+      height: 100%;
+    }
+    .linktree {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 3vw;
+      line-height: 10vh;
+      text-align: center;
+      letter-spacing: 1.5vw;
+      height: 100%;
+      width: 100%;
+    }
+    .linktree>li {
+      padding: 0.5vw;
+      border-radius: 5px;
+      width: 90%;
+      margin-top: 1vh;
+    }
+    .linktree>li:first-child {
+      margin-top: 0;
+    }
+     :host() {
+      display: grid;
+      grid-template: "wi wi wi wl" / 1fr 1fr 1fr 1fr;
+    }
+    .welcome-image {
+      grid-area: wi;
+      overflow: hidden;
+      width: 100%;
+    }
+    .welcome-image>img {
+      width: 50vw;
+      border-radius: 50%;
+    }
+    .welcome-linktree {
+      grid-area: wl;
+    }
+    .contact-card {
+      margin-right: 1vw;
+      margin-left: 0.5vw;
+      height: 150px;
+    }
+    .project-content {
+      font-size: 1.5vh;
+    }
+  }
+  @media screen and (min-width: 1600px) {
+     :host() {
+      display: grid;
+      grid-template: "wi wi wl wl" / 1fr 1fr 1fr 1fr;
+    }
+    .welcome-btn {
+      width: 29vw;
+      height: 12vh;
+    }
+    .splash-photo {
+      height: 100%;
+      border-radius: 50%;
+    }
+    .welcome-linktree {
+      grid-area: wl;
+      font-size: 1.5vw;
+      justify-content: center;
+      line-height: 1.5vh;
+    }
+    .welcome-linktree>h1 {
+      letter-spacing: 1vw;
+    }
+    .welcome-image {
+      grid-area: wi;
+      height: 100vh;
+    }
+    .welcome-linktree,
+    .welcome-menu {
+      align-items: center;
+      display: flex;
+      flex-flow: column nowrap;
+      line-height: 1vh;
+      width: 100%;
+    }
+    .linktree {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+      font-size: 2vw;
+      line-height: 10vh;
+      text-align: center;
+      letter-spacing: 1.5vw;
+      initial-letter: 3;
+    }
+    .linktree>* {
+      padding: 0.5vh 0.5vw;
+      text-align: center;
+      margin: 0.5vh 0.5vw;
+    }
+    .linktree>*:first-child {
+      margin-top: 0;
+    }
+  }
 }

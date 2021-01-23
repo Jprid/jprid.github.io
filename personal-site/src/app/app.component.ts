@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterEvent } from '@angular/router';
-import { TRACKING_ID } from './constants';
 
 declare let gtag: any;
 
@@ -38,7 +37,7 @@ export class AppComponent {
 
   private logRouterEvent(event: RouterEvent) {
     gtag(
-      'event', 
+      'event',
       'router_event_url',
       {
         page_path: event.url,

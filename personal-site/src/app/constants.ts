@@ -3,7 +3,7 @@ import { Experience, Link, Contact, Quote } from './models';
 export const EXPERIENCE: Experience[] = [
  {
     company: 'Relativity',
-    title: 'Processing | Software Engineer',
+    title: 'Software Engineer',
     start: 'August 2018',
     end: 'now',
     imgReference: '../../assets/relativity-logo-white.png',
