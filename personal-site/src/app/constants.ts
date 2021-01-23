@@ -9,6 +9,7 @@ export const EXPERIENCE: Experience[] = [
     imgReference: '../../assets/relativity-logo-white.png',
     url: 'https://www.relativity.com/',
     summary: '',
+    tags: ['C#', 'C++/CLI', 'MS-SQL', 'Powershell', 'Jenkins', 'Python', 'Azure', '.NET', 'Groovy'],
     experienceContent: [
       'Implemented the ability to remove documents from review, and re-calculate de-duplication for affected data sources.',
       'Designed, delivered, and Implemented a feature that enables clients to re-run the ETL pipeline. This allows them to process documents with updated settings, allowing for the extraction of new metadata, and easing a common client pain point.',
@@ -30,6 +31,7 @@ export const EXPERIENCE: Experience[] = [
     url: 'https://www.relativity.com/',
     imgReference: '../../assets/relativity-logo-white.png',
     summary: '',
+    tags: [],
     experienceContent: [
       'During my internship in Processing, I developed an API Performance Testing framework.',
       'Consisted of several nunit test fixtures to automate common performance testing workflows and the assets necessary to deploy and run the tests.'
@@ -42,6 +44,7 @@ export const EXPERIENCE: Experience[] = [
     end: 'May 2017',
     url: 'https://rmarkbio.com',
     imgReference: 'https://rmarkbio.com/wp-content/themes/rmark/assets/logo.svg',
+    tags: ['Python', 'Google Cloud Platform', 'REST APIs'],
     summary: '',
     experienceContent: [
       'Built publish / subscription system to allow clients to subscribe to new pharmaceutical publications',

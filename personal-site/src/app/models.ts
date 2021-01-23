@@ -5,6 +5,7 @@ export interface Experience {
   end: string;
   imgReference: string;
   url: string;
+  tags: string[];
   summary: string;
   experienceContent: string[];
 }
