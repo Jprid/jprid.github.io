@@ -28,8 +28,8 @@ export class AppComponent {
 
   private logNavigationEnd(event: NavigationEnd) {
     gtag(
-      'config',
-      TRACKING_ID,
+      'event',
+      'router_navigation_end_url_after_redirects',
       {
         page_path: event.urlAfterRedirects,
       }
@@ -38,8 +38,8 @@ export class AppComponent {
 
   private logRouterEvent(event: RouterEvent) {
     gtag(
-      'config',
-      TRACKING_ID,
+      'event', 
+      'router_event_url',
       {
         page_path: event.url,
       }
