@@ -16,23 +16,10 @@ export class AppComponent {
   constructor(public router: Router) {
     this.router.events.subscribe(event => {
       if (event instanceof RouterEvent) {
-        if (event instanceof NavigationEnd) {
-          this.logNavigationEnd(event);
-        } else {
+          console.log(event.url);
           this.logRouterEvent(event);
-        }
       }
     });
-  }
-
-  private logNavigationEnd(event: NavigationEnd) {
-    gtag(
-      'event',
-      'router_navigation_end_url_after_redirects',
-      {
-        page_path: event.urlAfterRedirects,
-      }
-    );
   }
 
   private logRouterEvent(event: RouterEvent) {
