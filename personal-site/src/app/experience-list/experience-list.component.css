@@ -9,12 +9,6 @@
 }
 
 .experience-list,
-.experience-title,
-.experience-list > * {
-  /* text-shadow: -4px 4px rgba(0, 0, 0, 0.3); */
-}
-
-.experience-list,
 .project-content {
   display: flex;
   flex-flow: column nowrap;
@@ -24,12 +18,11 @@
   max-height: 5vh;
 }
 
-.experience-list > *:first-of-type {
+.experience-list>*:first-of-type {
   margin-top: 0;
 }
 
-.experience-list > * {
-  /* background-color: #3F4045; */
+.experience-list>* {
   width: 75vw;
   max-width: 90vw;
   padding: 1vh 1vw;
@@ -47,35 +40,33 @@
   justify-content: flex-start;
 }
 
-.card-meta > * {
+.card-meta>* {
   width: 100%;
 }
 
-.card-meta > p {
+.card-meta>p {
   font-family: 'Roboto Slab', serif;
 }
 
 .project-content {
   text-align: start;
+  /* padding-right: 2vw; */
   margin-left: 2vw;
   flex-basis: auto;
   font-family: 'Roboto Slab', serif;
 }
 
-.project-content > * {
-  max-width: 95%;
+.project-content>* {
   margin: 0;
   margin-top: 1vh;
 }
 
-.card-picture > img {
+.card-picture>img {
   max-height: 50px;
   max-width: 90%;
 }
 
 .relativity-experience-card {
-  /* border-bottom: 1px solid #FFF; */
-  /* box-shadow: 0px 4px rgba(0, 0, 0, 0.3); */
   padding-bottom: 2vh;
 }
 
@@ -92,37 +83,30 @@
     grid-area: cm;
     margin-top: 1vh;
   }
-
   .placeholder {
     grid-area: pp;
   }
-
   .project-title {
     grid-area: tt;
     padding-left: 1.25vw;
     color: #FFF;
   }
-
   .project-content {
     grid-area: cc;
   }
-
   .relativity-experience-card {
     display: grid;
-    grid-template: 
-      "cm cm tt tt tt tt" auto
-      "pc pc cc cc cc cc" auto
-      "pc pc cc cc cc cc" auto
-      "pc pc cc cc cc cc" auto
-      / 0.3fr 0.3fr 0.3fr 1.2fr 1.2fr 1.2fr;
+    grid-template: "cm cm tt tt tt tt" auto "pc pc cc cc cc cc" auto "pc pc cc cc cc cc" auto "pc pc cc cc cc cc" auto / 0.3fr 0.3fr 0.3fr 1.2fr 1.2fr 1.2fr;
   }
-
   @media screen and (orientation: portrait) {
     .project-content {
-      font-size: 0.66vh;
+      line-height: 0.25vh;
+    }
+    .project-content>p {
+      font-size: 12px;
+      line-height: 1vh;
     }
   }
-
   @media screen and (min-width: 300px) and (max-width: 699px) {
     .relativity-experience-card {
       display: flex;
@@ -130,35 +114,31 @@
       justify-content: space-evenly;
       align-items: center;
     }
-
     .project-content {
       font-size: 1.25vh;
     }
-
-    .experience-list > * {
+    .experience-list>* {
       width: 95vw;
       margin-top: 1vh;
     }
-
-    .experience-list > *:first-child {
+    .experience-list>*:first-child {
       margin-top: 0;
     }
-
     #Relativity {
       padding: 10px;
     }
+    .tag-container {
+      grid-area: tg;
+    }
   }
-
   @media screen and (min-width: 700px) and (max-width: 1199px) {
     .card-meta {
       grid-area: cm;
     }
-
     .project-content {
       font-size: 1vh;
       line-height: 1vh;
     }
-
     .card-picture-container {
       display: flex;
       flex-flow: column nowrap;
@@ -169,20 +149,16 @@
       grid-area: pc;
       margin-bottom: 1vh;
     }
-
     #Relativity {
       padding: 0.5vh 0.5vw;
     }
-
     #rMarkBioLLC {
       margin: 1vh 1vw;
     }
-
-    .card-picture > img {
+    .card-picture>img {
       width: 90%;
       height: 90%;
     }
-
     .experience-list {
       padding-left: 10.25vw;
       padding-right: 10.25vw;
@@ -191,34 +167,26 @@
       margin-top: 1vh;
       margin-bottom: 2vh;
     }
-
-    .experience-list > * {
+    .experience-list>* {
       width: 95vw;
       margin-top: 1vh;
     }
-
-    .experience-list > *:first-child {
+    .experience-list>*:first-child {
       margin-top: 0;
     }
-
-    .card-picture > img {
+    .card-picture>img {
       min-width: 20vw;
     }
-
     .relativity-experience-card {
       display: grid;
-      grid-template:
-          "cm cm cm tt tt tt" auto
-          "cm cm cm tt tt tt" auto
-          "pc pc pc cc cc cc" auto
-          "pc pc pc cc cc cc" auto
-          "pc pc pc cc cc cc" auto
-          / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
+      grid-template: "cm cm cm tt tt tt" auto "cm cm cm tg tg tg" auto "pc pc pc cc cc cc" auto "pc pc pc cc cc cc" auto "pc pc pc cc cc cc" auto / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
       margin-bottom: 0;
       padding-bottom: 0;
     }
+    .tag-container {
+      grid-area: tg;
+    }
   }
-
   /* Normal Sized Laptop */
   @media screen and (min-width: 1200px) and (max-width: 1599px) {
     .experience-list {
@@ -231,79 +199,62 @@
       margin-top: 1vh;
       padding-bottom: 2vh;
     }
-
-    .card-picture > img {
+    .card-picture>img {
       max-height: 50px;
     }
-
-    .experience-list > * {
+    .experience-list>* {
       width: 75vw;
     }
-
     .media-card {
       margin-top: 1vh;
     }
-
     .project-content {
       font-size: 1.5vh;
       line-height: 2vh;
     }
-
     .relativity-experience-card {
       display: grid;
-      grid-template: "cm cm cm tt tt tt" auto "pc pc pc cc cc cc" auto "pc pc pc cc cc cc" auto "pc pc pc cc cc cc" auto / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
+      grid-template: "cm cm cm tt tt tt" auto "pc pc pc tg tg tg" auto "pc pc pc tg tg tg" auto "pc pc pc cc cc cc" auto "pc pc pc cc cc cc" auto / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
       margin-bottom: 0;
       padding-bottom: 0;
       padding-right: 1vw;
     }
-
     .card-picture-container {
       margin-bottom: 1vh;
     }
+    .tag-container {
+      grid-area: tg;
+    }
   }
-
   @media screen and (min-width: 1600px) {
     .media-card {
       display: grid;
-      grid-template: 
-      "cm cm cm tt tt tt"
-      "pc pc pc cc cc cc"
-      "pc pc pc cc cc cc"
-      "pp pp pp pp pp pp"
-      / 0.3fr 0.3fr 0.3fr 1.2fr 1.2fr 1.2fr;
+      grid-template: "cm cm cm tt tt tt" "pc pc pc cc cc cc" "pc pc pc cc cc cc" "pc pc pc cc cc cc" "pp pp pp pp pp pp" / 0.3fr 0.3fr 0.3fr 1.2fr 1.2fr 1.2fr;
       box-shadow: -4px 4px 2px 0 rgba(0, 0, 0, 0.3);
       margin-top: 1vh;
       padding-left: 1vw;
     }
-
-    .card-picture > img {
+    .card-picture>img {
       max-height: 50px;
     }
-
     .card-meta {
       grid-area: cm;
     }
-
     .project-title {
       grid-area: tt;
     }
-
     #Relativity {
       padding: 10px;
     }
-
-    .experience-list > * {
+    .experience-list>* {
       margin-top: 2.5vh;
     }
-
     .project-content {
       grid-area: cc;
     }
-
     #rMarkBioLLC {
       margin: 0.75vh 0.5vw;
     }
-
     .card-picture-container {
       grid-area: pc;
       display: flex;
@@ -311,20 +262,15 @@
       justify-content: center;
       margin-bottom: 1vh;
     }
-
     .relativity-experience-card {
       display: grid;
-      grid-template: 
-        "cm cm tt tt tt tt" auto
-        "cm cm tt tt tt tt" auto
-        "pc pc cc cc cc cc" auto
-        "pc pc cc cc cc cc" auto
-        "pc pc cc cc cc cc" auto
-        / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
+      grid-template: "cm cm tt tt tt tt" auto "cm cm tt tg tg tg" auto "pc pc cc tg tg tg" auto "pc pc cc cc cc cc" auto "pc pc cc cc cc cc" auto / 0.4fr 0.4fr 0.4fr 1.1fr 1.1fr 1.1fr;
       margin-left: 1vw;
       margin-bottom: 1vh;
     }
-
+    .tag-container {
+      grid-area: tg;
+    }
     .project-content {
       font-size: 1.25vh !important;
     }

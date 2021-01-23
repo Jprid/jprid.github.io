@@ -8,7 +8,9 @@
     <div class="welcome-menu">
         <!--<h5 class="welcome-spacing">Navigate To:</h5>-->
         <nav class="linktree">
-            <a *ngFor="let item of LINKS; index as i" tabindex="{{i}}" href="{{item.link}}">{{item.description}}</a>
+            <a *ngFor="let item of LINKS; index as i" tabindex="{{i}}" href="{{item.link}}">
+                {{item.description}}
+            </a>
         </nav>
         <app-link-card-container [contrast]="true" [contacts]="CONTACTS"></app-link-card-container>
     </div>

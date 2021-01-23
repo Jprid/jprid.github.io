@@ -1,5 +1,10 @@
 .site {
   width: 100vw;
+  height: 100vh;
+}
+
+:host() {
+  height: 100vh;
 }
 
 .contact-card {
@@ -21,7 +26,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  margin-top:10vh;
+  margin-top: 10vh;
   width: 100vw;
 }
 
@@ -56,14 +61,14 @@ footer {
 }
 
 .rounded-border {
-    border-radius: 0.25vw;
+  border-radius: 0.25vw;
 }
 
 :host {
-    display: grid;
+  display: grid;
 }
 
-header > h1 {
+header>h1 {
   margin-left: 2vh;
   grid-column: 1 / span 3;
 }
@@ -92,7 +97,8 @@ header {
   cursor: default;
 }
 
-.icon > * { /* Don't allow contact icons to out size their container */
+.icon>* {
+  /* Don't allow contact icons to out size their container */
   max-width: 100%;
 }
 
@@ -114,24 +120,20 @@ header {
     grid-template-columns: repeat(3, 1fr);
     height: 100vh;
   }
-
   .contact-card-container {
     align-items: center;
   }
-
-  #bottom-contact-card-container > * {
+  #bottom-contact-card-container>* {
     grid-area: footer-bottom;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 1.5vw;
   }
-
   .footer-bottom {
     grid-area: footer-bottom;
     grid-column: span 3;
   }
-
   .footer-center-body {
     display: flex;
     flex-flow: column nowrap;
@@ -148,20 +150,17 @@ header {
     margin-right: 10vw;
     box-shadow: -4px 4px rgba(0, 0, 0, 0.3);
   }
-
   .footer-center {
     grid-area: footer-center;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
   }
-
   .footer-title {
     color: #FFF;
     grid-area: footer-title;
     text-shadow: -4px 4px rgba(0, 0, 0, 0.3);
   }
-
   @media screen and (min-width: 300px) and (max-width: 699px) {
     .footer-center-body {
       display: flex;
@@ -174,13 +173,11 @@ header {
       max-width: 100%;
       overflow: scroll;
     }
-
     .contact-card-container {
       grid-area: footer-bottom;
       margin-top: 0;
       justify-content: space-around;
     }
-
     .contact-card {
       margin-right: 1vw;
       margin-left: 0.5vw;
@@ -196,26 +193,22 @@ header {
     .quote-text {
       font-size: 3vh;
     }
-
-    .icon > * { /* Don't allow contact icons to out size their container */
+    .icon>* {
+      /* Don't allow contact icons to out size their container */
       width: 100px;
     }
-
     .footer-center-body {
       grid-area: footer-center;
     }
-
     .footer-title-text {
       color: white;
       font-size: 5vh;
     }
-
     .contact-card-container {
       grid-area: footer-bottom;
       margin-top: 0;
       justify-content: space-around;
     }
-
     .contact-card {
       margin-right: 1vw;
       margin-left: 0.5vw;
@@ -228,50 +221,44 @@ header {
     .footer-title {
       grid-area: footer-title;
     }
-
-    .icon > img {
+    .icon>img {
       width: 150px;
     }
-
     .contact-card-container {
       grid-area: footer-bottom;
       margin-top: 0;
       justify-content: space-around;
     }
-
-    .contact-card-container > div:first-of-type {
+    .contact-card-container>div:first-of-type {
       margin-right: 0.5vw;
       margin-left: 0.5vw;
     }
-
-    .contact-card-container > * {
+    .contact-card-container>* {
       margin-bottom: 5vh;
     }
-
     .contact-card {
       height: 10vw;
       width: 10vw;
     }
-
     .footer-center {
       grid-area: footer-center;
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
     }
-
     .footer-center-body {
       max-width: 66vw;
     }
-
     .footer-title-text {
       color: white;
       font-size: 5vh;
     }
-
     .quote-text {
       font-size: 2vh;
     }
   }
   /* End Large */
-} /* End Grid-Area support query */
+}
+
+
+/* End Grid-Area support query */
