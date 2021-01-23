@@ -8,10 +8,12 @@ import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 import { ContactPageComponent } from './contact-page/contact-page.component';
 import { ExperienceListComponent } from './experience-list/experience-list.component';
 import { LinkCardContainerComponent } from './link-card-container/link-card-container.component';
+import { PositionTagContainerComponent } from './position-tag-container/position-tag-container.component';
 
 @NgModule({
   declarations: [
-    AppComponent, TrimPipe, WelcomePageComponent, ContactPageComponent, ExperienceListComponent, LinkCardContainerComponent
+    AppComponent, TrimPipe, WelcomePageComponent, ContactPageComponent, ExperienceListComponent,
+    LinkCardContainerComponent, PositionTagContainerComponent
   ],
   imports: [
     BrowserModule, RouterModule, Routing
