@@ -79,7 +79,6 @@
     justify-content: center;
   }
   .contact-card-container {
-    margin: 1vh 1vw;
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -115,9 +114,7 @@
   .icon>img {
     width: 150px;
   }
-  .contact-card-container {
-    padding-top: 5vh;
-  }
+  .contact-card-container {}
   .contact-card-container>div:first-of-type {
     margin-right: 0.5vw;
     margin-left: 0.5vw;

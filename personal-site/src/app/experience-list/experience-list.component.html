@@ -1,34 +1,32 @@
-<h1 class="experience-title column-flexed-center title-font white">
-  Experience
-</h1>
-<div class="experience-list">
-  <!--LIST START-->
-  <div id="{{i}}" tabindex="{{i}}" *ngFor="let item of EXPERIENCE; index as i" class="relativity-experience-card">
-    <!--TITLE-->
-    <header class="project-title title-font">
-      <!-- <h2 class="head">{{item.company}}</h2> -->
-      <h2>{{item.title}}</h2>
-    </header>
-    <!--CARD METADATA-->
-    <div class="card-meta row-flexed-left">
-      <p>From {{item.start}} until {{item.end}}</p>
+<div class="list-container">
+    <h1 class="experience-title column-flexed-center title-font white">
+        Experience
+    </h1>
+    <div class="experience-list">
+        <!--LIST START-->
+        <div id="{{i}}" tabindex="{{i}}" *ngFor="let item of EXPERIENCE; index as i" class="relativity-experience-card">
+            <!--TITLE-->
+            <header class="project-title title-font">
+                <!-- <h2 class="head">{{item.company}}</h2> -->
+                <h2>{{item.title}}</h2>
+            </header>
+            <!--CARD METADATA-->
+            <div class="card-meta row-flexed-left">
+                <p>From {{item.start}} until {{item.end}}</p>
+            </div>
+            <!--PICTURE-->
+            <div class="card-picture-container">
+                <a href="{{item.url}}" class="card-picture">
+                    <img id="{{item.company | trim}}" title="{{item.company | trim }} image" src="{{item.imgReference}}" alt="{{item.summary}}" loading="lazy">
+                </a>
+            </div>
+            <app-position-tag-container *ngIf="!(item.company == 'Relativity' && item.title == 'Software Engineer Intern')" class="tag-container" title="Technologies" [tags]="item.tags"></app-position-tag-container>
+            <!--PROJECT CONTENT-->
+            <div class="project-content">
+                <p title="{{item.company | trim }} {{item.title | trim}} part {{i}}" *ngFor="let paragraph of item.experienceContent; index as i">
+                    {{paragraph}}
+                </p>
+            </div>
+        </div>
     </div>
-    <!--PICTURE-->
-    <div class="card-picture-container">
-      <a href="{{item.url}}" class="card-picture">
-        <img id="{{item.company | trim}}"
-             title="{{item.company | trim }} image"
-             src="{{item.imgReference}}"
-             alt="{{item.summary}}"
-             loading="lazy">
-      </a>
-    </div>
-    <!--PROJECT CONTENT-->
-    <div class="project-content">
-      <p title="{{item.company | trim }} {{item.title | trim}} part {{i}}" 
-         *ngFor="let paragraph of item.experienceContent; index as i">
-        {{paragraph}}
-      </p>
-    </div>
-  </div>
 </div>

@@ -26,3 +26,8 @@ export interface Quote {
   quote: string;
   author: string;
 }
+
+export interface Tag {
+  name: string;
+  color: string;
+}

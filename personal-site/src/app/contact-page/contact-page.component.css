@@ -128,7 +128,6 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1.5vw;
   }
   .footer-bottom {
     grid-area: footer-bottom;
@@ -207,6 +206,7 @@ header {
     .contact-card-container {
       grid-area: footer-bottom;
       margin-top: 0;
+      margin-left: 0;
       justify-content: space-around;
     }
     .contact-card {
@@ -214,6 +214,9 @@ header {
       margin-left: 0.5vw;
       height: 200px;
       width: 200px;
+    }
+    .contact-card-container:first-child {
+      margin-left: 0;
     }
   }
   /* Large */

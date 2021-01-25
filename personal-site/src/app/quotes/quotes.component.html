@@ -1,0 +1,11 @@
+<ul class="quote-container">
+    <button class="back-button" [routerLink]="['']">&laquo;</button>
+    <li *ngFor="let item of quotes">
+        <blockquote tabindex="{{item.id}}">
+            <p>{{item.quote}}</p>
+            <footer>
+                <cite>-{{item.author}}</cite>
+            </footer>
+        </blockquote>
+    </li>
+</ul>

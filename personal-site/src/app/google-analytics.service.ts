@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-declare let gtag:Function;
+declare let gtag: (...args) => void;
 
 @Injectable({
   providedIn: 'root'
@@ -14,14 +14,13 @@ export class GoogleAnalyticsService {
     eventCategory: string,
     eventAction: string,
     eventLabel: string = null,
-    eventValue: number = null
-  ){
-    gtag('event', eventName, {
-      eventCategory: eventCategory,
-      eventLabel: eventLabel,
-      eventAction: eventAction,
-      eventValue: eventValue
-    })
+    eventValue: number = null) {
+    gtag( 'event', eventName, {
+      eventCategory,
+      eventLabel,
+      eventAction,
+      eventValue
+    });
   }
 
   public emitEventUrl(
@@ -29,13 +28,12 @@ export class GoogleAnalyticsService {
     eventCategory: string,
     eventAction: string,
     eventLabel: string = null,
-    destinationUrl:  string = null
-  ){
-    gtag('event', eventName, {
-      eventCategory: eventCategory,
-      eventLabel: eventLabel,
-      eventAction: eventAction,
-      destinationUrl: destinationUrl
-    })
+    destinationUrl: string = null) {
+      gtag('event', eventName, {
+        eventCategory,
+        eventLabel,
+        eventAction,
+        destinationUrl
+      });
   }
 }
