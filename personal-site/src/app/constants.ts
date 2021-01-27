@@ -62,7 +62,7 @@ export const LINKS: Link[] = [
 ];
 
 export const CONTACTS: Contact[] = [
-  { description: 'Email', link: 'mailto:johnpridmore.lit@gmail.com', imgRef: '../assets/Gmail.png' },
+  { description: 'Email', link: 'mailto:johnpridmore.lit@gmail.com', imgRef: '../assets/GmailLogo.png' },
   { description: 'LinkedIn', link: 'https://LinkedIn.com/in/JPrid', imgRef: '../assets/LI-In-Bug.png' },
   { description: 'Github', link: 'https://www.github.com/JPrid', imgRef: '../assets/GitHub-Mark-120px-plus.png' },
 ];
