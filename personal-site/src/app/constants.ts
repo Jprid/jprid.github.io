@@ -6,7 +6,7 @@ export const EXPERIENCE: Experience[] = [
     title: 'Software Engineer',
     start: 'August 2018',
     end: 'now',
-    imgReference: '../../assets/relativity-logo-white.png',
+    imgReference: '../../assets/relativity-logo-white.webp',
     url: 'https://www.relativity.com/',
     summary: '',
     tags: ['C#', 'C++/CLI', 'MS-SQL', 'Powershell', 'Jenkins', 'Python', 'Azure', '.NET', 'Groovy'],
@@ -29,7 +29,7 @@ export const EXPERIENCE: Experience[] = [
     start: 'May 2018',
     end: 'August 2018',
     url: 'https://www.relativity.com/',
-    imgReference: '../../assets/relativity-logo-white.png',
+    imgReference: '../../assets/relativity-logo-white.webp',
     summary: '',
     tags: [],
     experienceContent: [
@@ -62,9 +62,9 @@ export const LINKS: Link[] = [
 ];
 
 export const CONTACTS: Contact[] = [
-  { description: 'Email', link: 'mailto:johnpridmore.lit@gmail.com', imgRef: '../assets/GmailLogo.png' },
-  { description: 'LinkedIn', link: 'https://LinkedIn.com/in/JPrid', imgRef: '../assets/LI-In-Bug.png' },
-  { description: 'Github', link: 'https://www.github.com/JPrid', imgRef: '../assets/GitHub-Mark-120px-plus.png' },
+  { description: 'Email', link: 'mailto:johnpridmore.lit@gmail.com', imgRef: '../assets/GmailLogo.webp' },
+  { description: 'LinkedIn', link: 'https://LinkedIn.com/in/JPrid', imgRef: '../assets/LI-In-Bug.webp' },
+  { description: 'Github', link: 'https://www.github.com/JPrid', imgRef: '../assets/GitHub-Mark-120px-plus.webp' },
 ];
 
 export const QUOTES: Quote[] = [
