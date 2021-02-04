@@ -21,6 +21,7 @@ li.welcome-btn {
 
 .linktree>* {
   background-color: var(--welcome-accent-color);
+  border: 1px solid white;
 }
 
 .linktree>*:hover,
@@ -174,8 +175,7 @@ li.welcome-btn {
   @media screen and (min-width: 300px) and (max-width: 699px) {
     .welcome-image>img {
       border-radius: 50%;
-      width: 90vw;
-      height: 350px;
+      overflow: auto;
     }
     .welcome-image {
       grid-area: wi;
@@ -202,8 +202,7 @@ li.welcome-btn {
       flex-flow: row nowrap;
       justify-content: center;
       align-items: center;
-      padding: 1vh 1vw;
-      height: 25px;
+      padding: 0.5vh 0.5vw;
       margin-left: 1vw;
       margin-right: 1vw;
       letter-spacing: 10px;
