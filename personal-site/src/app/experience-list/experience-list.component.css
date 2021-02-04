@@ -84,6 +84,9 @@
 }
 
 @supports (grid-area: auto) {
+  .list-container {
+    width: 100vw;
+  }
   .card-meta {
     grid-area: cm;
     margin-top: 1vh;
