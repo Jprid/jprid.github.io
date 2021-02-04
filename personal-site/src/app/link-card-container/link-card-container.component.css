@@ -27,6 +27,7 @@
   max-width: 200px;
   flex-flow: column nowrap;
   justify-content: center;
+  border: 1px solid white;
 }
 
 #bottom-contact-card-container>* {
@@ -114,7 +115,6 @@
   .icon>img {
     width: 150px;
   }
-  .contact-card-container {}
   .contact-card-container>div:first-of-type {
     margin-right: 0.5vw;
     margin-left: 0.5vw;
