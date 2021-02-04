@@ -1,6 +1,6 @@
 <h3 class="container-title">{{title}}:</h3>
 <ul class="position-tag-container">
-    <li *ngFor="let item of tags; index as i" class="tag-item" [ngStyle]="{'background-color': getTag(item)}">
+    <li *ngFor="let item of tags; index as i" class="tag-item" [ngStyle]="{'background-color': getTagColor(item)}">
         <div class="tag-container">{{item}}</div>
     </li>
 </ul>

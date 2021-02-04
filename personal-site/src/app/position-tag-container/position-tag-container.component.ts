@@ -3,7 +3,6 @@ import { ColorGeneratorService } from '../color-generator.service';
 import { Tag } from '../models';
 import { TagListService } from '../tag-list.service';
 
-
 @Component({
   selector: 'app-position-tag-container',
   templateUrl: './position-tag-container.component.html',
@@ -26,7 +25,7 @@ export class PositionTagContainerComponent implements OnInit {
     });
   }
 
-  public getTag(tagName) {
+  public getTagColor(tagName) {
     return this.tagModels.find(x => x.name === tagName).color;
   }
 }

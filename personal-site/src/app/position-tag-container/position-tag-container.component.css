@@ -15,8 +15,8 @@
 
 .tag-item {
   /* color: var(--experience-background-color); */
+  border: 1px solid white;
   color: white;
-  font-size: 2vh;
   font-weight: bold;
   border-radius: 5%;
   display: flex;
@@ -62,6 +62,20 @@
       height: fit-content;
       padding: 0.5vh 0.5vw;
       margin: 0.2vh 0.2vw;
+    }
+  }
+}
+
+@media screen and (orientation: landscape) {
+  @media screen and (min-height: 828px) and (max-height: 1182px) {
+    .tag-item {
+      font-size: 1.5vh;
+      padding: 0.5vh 0.5vw;
+    }
+  }
+  @media screen and (min-height: 1183px) {
+    .tag-item {
+      font-size: 1.75vh;
     }
   }
 }
