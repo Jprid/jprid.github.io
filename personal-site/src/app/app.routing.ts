@@ -3,6 +3,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 
 const appRoutes: Routes = [
     {path: 'resume', redirectTo: '', pathMatch: 'full'},
+    {path: 'From-LinkedIn', redirectTo: '', pathMatch: 'full'},
     {path: '', component: LandingPageComponent, pathMatch: 'full'}
 ];
 
