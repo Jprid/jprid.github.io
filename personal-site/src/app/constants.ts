@@ -1,7 +1,6 @@
 import { Experience, Link, Contact, Quote } from './models';
 
-export const EXPERIENCE: Experience[] = [
- {
+export const EXPERIENCE: Experience[] = [{
     company: 'Relativity',
     title: 'Software Engineer',
     start: 'August 2018',
@@ -58,7 +57,7 @@ export const EXPERIENCE: Experience[] = [
 export const LINKS: Link[] = [
   { description: 'Experience', link: '#experience' },
   { description: 'Contact', link: '#contact' },
-  //{ description: 'Quotes', link: 'quotes'}
+  { description: 'Quotes', link: 'quotes'}
 ];
 
 export const CONTACTS: Contact[] = [
@@ -74,16 +73,37 @@ export const QUOTES: Quote[] = [
   {author: 'Seneca', quote: 'As things are, there is about wisdom a nobility and magnifiicence in the fact that she doesn\'t just fall to a person\'s lot, that each man owes her to his own efforts, that one doesn\'t go to anyone other than oneself to find her'},
   {author: 'Seneca', quote: '[V]irtue only comes to a character which has been thoroughly schooled and trained and brought to a pitch of perfection by unremitting practice.'},
   {author: 'Seneca', quote: 'What have you said? How much longer are you going to serve under others\' orders? Assume authority yourself and utter something that may be handed down to posterity. Produce something from your own resources.'},
-  {author: '', quote: ''},
-  {author: '', quote: ''},
-  {author: '', quote: ''},
-  {author: '', quote: ''},
-  {author: '', quote: ''},
-  {author: '', quote: ''},
-  {author: '', quote: ''},
-  {author: '', quote: ''},
-  {author: '', quote: ''},
-  {author: '', quote: ''},
-].map((i, id) => ({ id: id + 1, author: i.author, quote: i.quote}));
-
+  {author: 'Seneca', quote: 'It is quite pathetic, after all, if one has put the will to die behind one, to be without the will to live.'},
+  {author: 'a', quote: 'badasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
+  {author: 'b', quote: 'adasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfc'}
+]
+.map((i, id) => ({ id: id + 1, author: i.author, quote: i.quote, numWords: i.quote.split(" ").length, numCharacters: i.quote.length}));
+/*, num_chars: i.quote.length */
 export const TRACKING_ID = 'G-R2TEH07MYV';

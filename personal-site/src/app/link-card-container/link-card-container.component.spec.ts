@@ -1,5 +1,6 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
+
 import { LinkCardContainerComponent } from './link-card-container.component';
 
 describe('LinkCardContainerComponent', () => {
@@ -8,7 +9,7 @@ describe('LinkCardContainerComponent', () => {
   let icons: HTMLDivElement[];
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ LinkCardContainerComponent ]
+      declarations: [ LinkCardContainerComponent ],
     })
     .compileComponents();
   }));

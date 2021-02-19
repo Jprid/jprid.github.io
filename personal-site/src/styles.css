@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 :root {
   --code-font-family: 'Consolas', monospace;
   --primary-color: #004ffc;
@@ -27,18 +28,18 @@
   transition: all 1s;
 }
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
-a > * {
+a>* {
   text-decoration: none;
 }
 
 .title-font,
-.title-font > * {
+.title-font>* {
   font-family: var(--title-font);
 }
 
@@ -112,7 +113,7 @@ hr {
   box-shadow: 0 2px 4px -4px rgba(0, 0, 0, 0.3);
 }
 
-.content-wrapper > * {
+.content-wrapper>* {
   display: grid;
 }
 
@@ -121,16 +122,16 @@ hr {
   filter: brightness(200%);
 }
 
-.icon > img {
+.icon>img {
   align-self: center;
 }
 
-.center > p,
-.card > * {
+.center>p,
+.card>* {
   margin: 1vw;
 }
 
 .no-text-decoration,
-.no-text-decoration > * {
+.no-text-decoration>* {
   text-decoration: none;
 }

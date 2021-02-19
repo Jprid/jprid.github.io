@@ -1,5 +1,6 @@
+<button class="back-button" (click)="goBack()">&laquo; {{backMessage}}</button>
+<h2 class="title">Quotes</h2>
 <ul class="quote-container">
-    <button class="back-button" [routerLink]="['']">&laquo;</button>
     <li *ngFor="let item of quotes">
         <blockquote tabindex="{{item.id}}">
             <p>{{item.quote}}</p>
@@ -9,3 +10,4 @@
         </blockquote>
     </li>
 </ul>
+<button class="forward-button" (click)="getNextSetOfQuotes()">{{nextMessage}} &raquo;</button>

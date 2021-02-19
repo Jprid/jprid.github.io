@@ -25,9 +25,16 @@ export interface Quote {
   id: number;
   quote: string;
   author: string;
+  numWords: number;
+  numCharacters: number;
 }
 
 export interface Tag {
   name: string;
   color: string;
+}
+
+export interface ElementDimension {
+  width: number;
+  height: number; 
 }
