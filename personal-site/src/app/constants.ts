@@ -1,15 +1,32 @@
 import { Experience, Link, Contact, Quote } from './models';
 
 export const EXPERIENCE: Experience[] = [
- {
+  {
     company: 'Relativity',
-    title: 'Software Engineer',
-    start: 'August 2018',
+    title: 'Advanced Software Engineer',
+    start: 'March 2020',
     end: 'now',
     imgReference: '../../assets/relativity-logo-white.webp',
     url: 'https://www.relativity.com/',
     summary: '',
     tags: ['C#', 'C++/CLI', 'MS-SQL', 'Powershell', 'Jenkins', 'Python', 'Azure', '.NET', 'Groovy'],
+    experienceContent: [
+      'Implemented Tenant-wide resource locking for Load jobs.',
+      'Implemented Locale retrieval and configuration on Azure VM on tenant assignment.',
+      'Integrated Azure Event Hub into multi-tenant worker code to produce events on job completion.',
+      'Decoupling custom metadata binding APIs from worker logic and making them tenant-agnostic',
+      'Moved infrastructure components into shared libraries and refactoring to use Azure Key Vault for secret management.'
+    ]
+  },
+  {
+    company: 'Relativity',
+    title: 'Software Engineer',
+    start: 'August 2018',
+    end: 'March 2020',
+    imgReference: '../../assets/relativity-logo-white.webp',
+    url: 'https://www.relativity.com/',
+    summary: '',
+    tags: [],
     experienceContent: [
       'Implemented the ability to remove documents from review, and re-calculate de-duplication for affected data sources.',
       'Designed, delivered, and Implemented a feature that enables clients to re-run the ETL pipeline. This allows them to process documents with updated settings, allowing for the extraction of new metadata, and easing a common client pain point.',
