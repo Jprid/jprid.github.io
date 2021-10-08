@@ -14,7 +14,7 @@ export const EXPERIENCE: Experience[] = [
       'Implemented Tenant-wide resource locking for Load jobs.',
       'Implemented Locale retrieval and configuration on Azure VM on tenant assignment.',
       'Integrated Azure Event Hub into multi-tenant worker code to produce events on job completion.',
-      'Decoupling custom metadata binding APIs from worker logic and making them tenant-agnostic',
+      'Decoupling custom metadata binding APIs from worker logic and making them tenant-agnostic.',
       'Moved infrastructure components into shared libraries and refactoring to use Azure Key Vault for secret management.'
     ]
   },
