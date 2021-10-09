@@ -55,12 +55,12 @@ export const EXPERIENCE: Experience[] = [
     ]
   },
   {
-    company: 'rMark Bio, LLC',
+    company: 'rMark Bio, LLC (now within3)',
     title: 'Software Engineer Intern',
     start: 'January 2017',
     end: 'May 2017',
     url: 'https://rmarkbio.com',
-    imgReference: 'https://rmarkbio.com/wp-content/themes/rmark/assets/logo.svg',
+    imgReference: '../../assets/rmarkbio.jpg',
     tags: ['Python', 'Google Cloud Platform', 'REST APIs'],
     summary: '',
     experienceContent: [
