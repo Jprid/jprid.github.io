@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Link, Contact } from '../models';
-import { CONTACTS, LINKS } from '../constants';
+import { LINKS } from '../constants';
+import {ExperienceService} from "../experience.service";
 @Component({
   selector: 'app-welcome-page',
   templateUrl: './welcome-page.component.html',
@@ -8,10 +9,13 @@ import { CONTACTS, LINKS } from '../constants';
 })
 export class WelcomePageComponent implements OnInit {
   public LINKS: Link[] = LINKS;
-  public CONTACTS: Contact[] = CONTACTS;
-  constructor() { }
+  public CONTACTS: Contact[];
+  constructor(private contentService: ExperienceService) {
+    this.contentService = contentService;
+  }
 
   ngOnInit(): void {
+    this.CONTACTS = this.contentService.getContactInformation();
   }
 
 }

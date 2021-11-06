@@ -17,13 +17,13 @@
             <!--PICTURE-->
             <div class="card-picture-container">
                 <a href="{{item.url}}" class="card-picture">
-                    <img id="{{item.company | trim}}" title="{{item.company | trim }} image" src="{{item.imgReference}}" alt="{{item.summary}}" loading="lazy">
+                    <img id="{{item.company | trim}}" title="{{item.company | trim }} image" src="{{item.img_reference}}" alt="{{item.summary}}" loading="lazy">
                 </a>
             </div>
             <app-position-tag-container *ngIf="!(item.company == 'Relativity' && item.title == 'Software Engineer Intern')" class="tag-container" title="Technologies" [tags]="item.tags"></app-position-tag-container>
             <!--PROJECT CONTENT-->
             <div class="project-content">
-                <p title="{{item.company | trim }} {{item.title | trim}} part {{i}}" *ngFor="let paragraph of item.experienceContent; index as i">
+                <p title="{{item.company | trim }} {{item.title | trim}} part {{i}}" *ngFor="let paragraph of item.experience_content; index as i">
                     {{paragraph}}
                 </p>
             </div>

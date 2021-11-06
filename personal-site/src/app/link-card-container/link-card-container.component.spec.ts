@@ -16,7 +16,7 @@ describe('LinkCardContainerComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(LinkCardContainerComponent);
     component = fixture.componentInstance;
-    component.contacts = [{link: 'a', description: 'b', imgRef: 'dongle'}];
+    component.contacts = [{link: 'a', description: 'b', img_ref: 'dongle'}];
     fixture.detectChanges();
   });
 

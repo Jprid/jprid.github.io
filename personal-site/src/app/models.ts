@@ -3,11 +3,11 @@ export interface Experience {
   title: string;
   start: string;
   end: string;
-  imgReference: string;
+  img_reference: string;
   url: string;
   tags: string[];
   summary: string;
-  experienceContent: string[];
+  experience_content: string[];
 }
 
 export interface Link {
@@ -18,7 +18,7 @@ export interface Link {
 export interface Contact {
   description: string;
   link: string;
-  imgRef: string;
+  img_ref: string;
 }
 
 export interface Quote {
@@ -30,4 +30,17 @@ export interface Quote {
 export interface Tag {
   name: string;
   color: string;
+}
+
+export interface ContactInfo {
+  first_name: string;
+  middle_name: string;
+  last_name: string;
+  contact: Contact[];
+  phone_number: string;
+}
+
+export interface PersonalInfo {
+  contact_info: ContactInfo;
+  experience: Experience[];
 }

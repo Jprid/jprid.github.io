@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CONTACTS } from '../constants';
 import { Contact } from '../models';
+import {ExperienceService} from "../experience.service";
 
 @Component({
   selector: 'app-contact-page',
@@ -8,10 +8,13 @@ import { Contact } from '../models';
   styleUrls: ['./contact-page.component.css']
 })
 export class ContactPageComponent implements OnInit {
-  public CONTACTS: Contact[] = CONTACTS;
-  constructor() { }
+  public CONTACTS: Contact[];
+  constructor(private contentService: ExperienceService) {
+    this.contentService = contentService;
+  }
 
   ngOnInit(): void {
+    this.CONTACTS = this.contentService.getContactInformation();
   }
 
 }
