@@ -67,7 +67,6 @@
 }
 
 .card-picture>img {
-  max-height: 50px;
   max-width: 90%;
 }
 
@@ -114,8 +113,16 @@
       font-size: 1.5vh;
       line-height: 2vh;
     }
+    img.card-picture {
+      min-height: 1vh;
+    }
   }
-  @media screen and (min-width: 300px) and (max-width: 699px) {
+  @media screen and (min-width: 18.75em) and (max-width: 699px) {
+    header {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+    }
     .relativity-experience-card {
       display: flex;
       flex-flow: column nowrap;
@@ -147,8 +154,11 @@
     .card-meta {
       grid-area: cm;
     }
-    .project-content {
+    .project-content,
+    .project-content>p {
       font-size: 1vh;
+    }
+    .project-content {
       line-height: 1vh;
     }
     .card-picture-container {
@@ -162,10 +172,10 @@
       margin-bottom: 1vh;
     }
     #Relativity {
-      padding: 0.5vh 0.5vw;
+      padding: 1vh 1vw;
     }
     #rMarkBioLLC {
-      margin: 1vh 1vw;
+      padding: 1vh 1vw;
     }
     .card-picture>img {
       width: 90%;
@@ -199,7 +209,7 @@
     }
   }
   /* Normal Sized Laptop */
-  @media screen and (min-width: 1200px) and (max-width: 1599px) {
+  @media screen and (orientation: landscape) and (min-width: 1200px) and (max-width: 1599px) {
     .list-container {
       height: fit-content;
     }
@@ -211,9 +221,6 @@
       padding-top: 1.25vh;
       line-height: 2.5ch;
       padding-bottom: 2vh;
-    }
-    .card-picture>img {
-      max-height: 50px;
     }
     .experience-list>* {
       width: 75vw;
@@ -239,10 +246,7 @@
       grid-area: tg;
     }
   }
-  @media screen and (min-width: 1600px) {
-    .card-picture>img {
-      max-height: 50px;
-    }
+  @media screen and (min-width: 100em) {
     .card-meta {
       grid-area: cm;
     }
@@ -259,7 +263,7 @@
       grid-area: cc;
     }
     #rMarkBioLLC {
-      margin: 0.75vh 0.5vw;
+      margin: 1vh 1vw;
     }
     .card-picture-container {
       grid-area: pc;

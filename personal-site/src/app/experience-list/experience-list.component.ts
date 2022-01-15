@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Experience } from '../models';
-import { EXPERIENCE } from '../constants';
+import {ExperienceService} from "../experience.service";
 
 @Component({
   selector: 'app-experience-list',
@@ -8,10 +8,12 @@ import { EXPERIENCE } from '../constants';
   styleUrls: ['./experience-list.component.css']
 })
 export class ExperienceListComponent implements OnInit {
-
-  public EXPERIENCE: Experience[] = EXPERIENCE;
-  constructor() { }
+  public EXPERIENCE: Experience[];
+  constructor(private contentService: ExperienceService) {
+    this.contentService = contentService;
+  }
 
   ngOnInit(): void {
+    this.EXPERIENCE = this.contentService.ExperienceList;
   }
 }

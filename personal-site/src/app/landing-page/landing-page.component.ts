@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
     <app-experience-list id="experience"></app-experience-list>
     <app-contact-page></app-contact-page>
   `,
-  styles: ['']
 })
 export class LandingPageComponent implements OnInit {
 

@@ -5,11 +5,11 @@ export const EXPERIENCE: Experience[] = [{
     title: 'Software Engineer',
     start: 'August 2018',
     end: 'now',
-    imgReference: '../../assets/relativity-logo-white.webp',
+    img_reference: '../../assets/relativity-logo-white.webp',
     url: 'https://www.relativity.com/',
     summary: '',
     tags: ['C#', 'C++/CLI', 'MS-SQL', 'Powershell', 'Jenkins', 'Python', 'Azure', '.NET', 'Groovy'],
-    experienceContent: [
+    experience_content: [
       'Implemented the ability to remove documents from review, and re-calculate de-duplication for affected data sources.',
       'Designed, delivered, and Implemented a feature that enables clients to re-run the ETL pipeline. This allows them to process documents with updated settings, allowing for the extraction of new metadata, and easing a common client pain point.',
       'Updated the functional test framework to be environment-aware: testing environments now clean up debug-resources that could cause noisy neighbor issues and/or potentially prevent full/accurate coverage of the codebase.',
@@ -28,10 +28,10 @@ export const EXPERIENCE: Experience[] = [{
     start: 'May 2018',
     end: 'August 2018',
     url: 'https://www.relativity.com/',
-    imgReference: '../../assets/relativity-logo-white.webp',
+    img_reference: '../../assets/relativity-logo-white.webp',
     summary: '',
     tags: [],
-    experienceContent: [
+    experience_content: [
       'During my internship in Processing, I developed an API Performance Testing framework.',
       'Consisted of several nunit test fixtures to automate common performance testing workflows and the assets necessary to deploy and run the tests.'
     ]
@@ -42,10 +42,10 @@ export const EXPERIENCE: Experience[] = [{
     start: 'January 2017',
     end: 'May 2017',
     url: 'https://rmarkbio.com',
-    imgReference: 'https://rmarkbio.com/wp-content/themes/rmark/assets/logo.svg',
+    img_reference: 'https://rmarkbio.com/wp-content/themes/rmark/assets/logo.svg',
     tags: ['Python', 'Google Cloud Platform', 'REST APIs'],
     summary: '',
-    experienceContent: [
+    experience_content: [
       'Built publish / subscription system to allow clients to subscribe to new pharmaceutical publications',
       'Used RESTful APIs to send and receive messages using google cloud\'s publication/subscription modules and documented and tested accordingly.',
       'Formatted production server to take appropriate HTTP calls via NGINX configuration',
@@ -59,13 +59,6 @@ export const LINKS: Link[] = [
   { description: 'Contact', link: '#contact' },
   { description: 'Quotes', link: 'quotes'}
 ];
-
-export const CONTACTS: Contact[] = [
-  { description: 'Email', link: 'mailto:johnpridmore.lit@gmail.com', imgRef: '../assets/GmailLogo.webp' },
-  { description: 'LinkedIn', link: 'https://LinkedIn.com/in/JPrid', imgRef: '../assets/LI-In-Bug.webp' },
-  { description: 'Github', link: 'https://www.github.com/JPrid', imgRef: '../assets/GitHub-Mark-120px-plus.webp' },
-];
-
 export const QUOTES: Quote[] = [
   {author: 'Seneca', quote: 'That which is of any use cannot be learned in the mere passing.'},
   {author: 'Seneca', quote: 'Each day...acquire something which will help you to face poverty, or death, and other ills as well.'},
@@ -73,37 +66,9 @@ export const QUOTES: Quote[] = [
   {author: 'Seneca', quote: 'As things are, there is about wisdom a nobility and magnifiicence in the fact that she doesn\'t just fall to a person\'s lot, that each man owes her to his own efforts, that one doesn\'t go to anyone other than oneself to find her'},
   {author: 'Seneca', quote: '[V]irtue only comes to a character which has been thoroughly schooled and trained and brought to a pitch of perfection by unremitting practice.'},
   {author: 'Seneca', quote: 'What have you said? How much longer are you going to serve under others\' orders? Assume authority yourself and utter something that may be handed down to posterity. Produce something from your own resources.'},
-  {author: 'Seneca', quote: 'It is quite pathetic, after all, if one has put the will to die behind one, to be without the will to live.'},
-  {author: 'a', quote: 'badasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'cadasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf'},
-  {author: 'b', quote: 'adasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfc'}
+  {author: 'Seneca', quote: 'It is quite pathetic, after all, if one has put the will to die behind one, to be without the will to live.'}
 ]
-.map((i, id) => ({ id: id + 1, author: i.author, quote: i.quote, numWords: i.quote.split(" ").length, numCharacters: i.quote.length}));
+.map((i, id) =>
+  ({ id: id + 1, author: i.author, quote: i.quote, numWords: i.quote.split(" ").length, numCharacters: i.quote.length}));
 /*, num_chars: i.quote.length */
 export const TRACKING_ID = 'G-R2TEH07MYV';
