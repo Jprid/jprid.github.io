@@ -113,8 +113,16 @@
       font-size: 1.5vh;
       line-height: 2vh;
     }
+    img.card-picture {
+      min-height: 1vh;
+    }
   }
-  @media screen and (min-width: 300px) and (max-width: 699px) {
+  @media screen and (min-width: 18.75em) and (max-width: 699px) {
+    header {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+    }
     .relativity-experience-card {
       display: flex;
       flex-flow: column nowrap;
@@ -201,7 +209,7 @@
     }
   }
   /* Normal Sized Laptop */
-  @media screen and (min-width: 1200px) and (max-width: 1599px) {
+  @media screen and (orientation: landscape) and (min-width: 1200px) and (max-width: 1599px) {
     .list-container {
       height: fit-content;
     }
@@ -213,9 +221,6 @@
       padding-top: 1.25vh;
       line-height: 2.5ch;
       padding-bottom: 2vh;
-    }
-    .card-picture>img {
-      max-height: 50px;
     }
     .experience-list>* {
       width: 75vw;
@@ -241,7 +246,7 @@
       grid-area: tg;
     }
   }
-  @media screen and (min-width: 1600px) {
+  @media screen and (min-width: 100em) {
     .card-meta {
       grid-area: cm;
     }

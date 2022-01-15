@@ -14,7 +14,7 @@ export class ContactPageComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.CONTACTS = this.contentService.getContactInformation();
+    this.CONTACTS = this.contentService.ContactInformation;
   }
 
 }

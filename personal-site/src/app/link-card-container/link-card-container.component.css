@@ -84,7 +84,7 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
   }
   .contact-card-container>* {
     margin-top: 0;
@@ -106,7 +106,7 @@
   }
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 64em) {
   .contact-card {
     margin-right: 1vw;
     margin-left: 0.5vw;

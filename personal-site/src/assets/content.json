@@ -63,20 +63,6 @@
       ]
     },
     {
-      "company": "Relativity",
-      "title": "Software Engineer Intern",
-      "start": "May 2018",
-      "end": "August 2018",
-      "url": "https://www.relativity.com/",
-      "img_reference": "../../assets/relativity-logo-white.webp",
-      "summary": "",
-      "tags": [],
-      "experience_content": [
-        "During my internship in Processing, I developed an API Performance Testing framework.",
-        "Consisted of several nunit test fixtures to automate common performance testing workflows and the assets necessary to deploy and run the tests."
-      ]
-    },
-    {
       "company": "rMark Bio, LLC (now within3)",
       "title": "Software Engineer Intern",
       "start": "January 2017",
@@ -90,6 +76,18 @@
         "Used RESTful APIs to send and receive messages using google cloud's publication/subscription modules and documented and tested accordingly.",
         "Formatted production server to take appropriate HTTP calls via NGINX configuration",
         "Developed individualized Pub / Sub connections to pipeline specific data to users."
+      ]
+    }
+  ],
+  "organizations": [
+    {
+      "name": "DePaul Computer Science Society",
+      "start_date": "2017",
+      "end_date": "2018",
+      "role": "Vice President",
+      "data": [
+        "Planned and ran the DemonHacks Hackathon in its inaugural year",
+        "Organized, Planned, and ran meetings in addition to; coordinating company visits"
       ]
     }
   ]

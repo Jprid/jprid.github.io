@@ -10,7 +10,7 @@ export class ExperienceService {
     this.info = ExperienceContent;
   }
 
-  public getAuthorName(): Array<string> {
+  get AuthorName(): Array<string> {
     return [
       this.info.contact_info.first_name,
       this.info.contact_info.middle_name[0],
@@ -18,15 +18,15 @@ export class ExperienceService {
     ]
   }
 
-  servePersonalInformation(): PersonalInfo {
+  get PersonalInformation(): PersonalInfo {
     return this.info;
   }
 
-  getExperienceList(): Experience[] {
+  get ExperienceList(): Experience[] {
     return this.info.experience;
   }
 
-  getContactInformation(): Contact[] {
+  get ContactInformation(): Contact[] {
     return this.info.contact_info.contact;
   }
 }

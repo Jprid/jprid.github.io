@@ -5,7 +5,6 @@ export const LINKS: Link[] = [
   { description: 'Contact', link: '#contact' },
   //{ description: 'Quotes', link: 'quotes'}
 ];
-
 export const QUOTES: Quote[] = [
   {author: 'Seneca', quote: 'That which is of any use cannot be learned in the mere passing.'},
   {author: 'Seneca', quote: 'Each day...acquire something which will help you to face poverty, or death, and other ills as well.'},
@@ -15,6 +14,7 @@ export const QUOTES: Quote[] = [
   {author: 'Seneca', quote: 'What have you said? How much longer are you going to serve under others\' orders? Assume authority yourself and utter something that may be handed down to posterity. Produce something from your own resources.'},
   {author: 'Seneca', quote: 'It is quite pathetic, after all, if one has put the will to die behind one, to be without the will to live.'}
 ]
-.map((i, id) => ({ id: id + 1, author: i.author, quote: i.quote, numWords: i.quote.split(" ").length, numCharacters: i.quote.length}));
+.map((i, id) =>
+  ({ id: id + 1, author: i.author, quote: i.quote, numWords: i.quote.split(" ").length, numCharacters: i.quote.length}));
 /*, num_chars: i.quote.length */
 export const TRACKING_ID = 'G-R2TEH07MYV';
