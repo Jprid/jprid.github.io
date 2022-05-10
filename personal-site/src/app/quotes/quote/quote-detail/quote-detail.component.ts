@@ -16,7 +16,9 @@ export class QuoteDetailComponent implements OnInit {
   @Input()
   author: string;
 
-  constructor(public activeModal: NgbActiveModal, private toastService: ToastService) {  }
+  constructor(
+    // public activeModal: NgbActiveModal,
+              private toastService: ToastService) {  }
 
   ngOnInit() {  }
 
@@ -27,7 +29,7 @@ export class QuoteDetailComponent implements OnInit {
   }
 
   async close() {
-    await this.activeModal.dismiss();
+    // await this.activeModal.dismiss();
   }
 
   async copy() {
