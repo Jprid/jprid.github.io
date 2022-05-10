@@ -40,6 +40,10 @@ export class TagListService {
   }
 
   private removeDuplicateTagNames(tagNames: string[]) {
-    return tagNames.filter((name) => !this.tags.find((s) => s.name === name));
+    if(tagNames !== undefined && tagNames.length > 0)
+    {
+      return tagNames.filter((name) => !this.tags.find((s) => s.name === name));
+    }
+    return [];
   }
 }

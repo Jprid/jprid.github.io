@@ -1,6 +1,8 @@
 <div class="contact-card-container">
     <a *ngFor="let contact of contacts" class="contact-card" href="{{contact.link}}">
-        <div (click)="logLinkCardClick(contact.link)" class="icon white-border-box" [ngStyle]="{'background-color': contrast ? contrastBackgroundColor : 'transparent'}">
+        <div (click)="logLinkCardClick(contact.link)"
+             class="icon white-border-box contact-card"
+             [ngStyle]="{'background-color': contrast ? contrastBackgroundColor : 'transparent'}">
             <img alt="{{contact.description}}" loading="lazy" src="{{contact.img_ref}}" />
         </div>
     </a>

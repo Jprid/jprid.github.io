@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+
 :root {
   --code-font-family: 'Consolas', monospace;
   --primary-color: #004ffc;
@@ -16,6 +17,20 @@
   box-sizing: content-box;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.flex-row-no-wrap {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.flex-column-no-wrap {
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .site {
@@ -27,18 +42,18 @@
   transition: all 1s;
 }
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
-a > * {
+a>* {
   text-decoration: none;
 }
 
 .title-font,
-.title-font > * {
+.title-font>* {
   font-family: var(--title-font);
 }
 
@@ -112,25 +127,43 @@ hr {
   box-shadow: 0 2px 4px -4px rgba(0, 0, 0, 0.3);
 }
 
-.content-wrapper > * {
+.content-wrapper>* {
   display: grid;
 }
 
-.icon:hover,
-#github:hover {
-  filter: brightness(200%);
+button.white-text-underline:hover {
+  text-decoration: none;
 }
 
-.icon > img {
+.font-size-1vh {
+  font-size: 1vh;
+}
+
+.font-size-2vh {
+  font-size: 2vh;
+}
+
+.font-size-4vh {
+  font-size: 4vh;
+}
+
+.white-text-underline {
+  text-decoration: underline white;
+}
+
+.icon>img {
   align-self: center;
 }
 
-.center > p,
-.card > * {
+.center>p,
+.card>* {
   margin: 1vw;
 }
 
 .no-text-decoration,
-.no-text-decoration > * {
+.no-text-decoration>* {
   text-decoration: none;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

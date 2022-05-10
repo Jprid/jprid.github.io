@@ -13,4 +13,11 @@ describe('TagListService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  it('addTags() should add tags', () => {
+    const tagNames = ['Dongle', 'Shbips'];
+    const addedTags = service.addTags(tagNames);
+    expect(addedTags).toBeGreaterThan(0);
+  });
+  
 });

@@ -9,15 +9,27 @@ import { ContactPageComponent } from './contact-page/contact-page.component';
 import { ExperienceListComponent } from './experience-list/experience-list.component';
 import { LinkCardContainerComponent } from './link-card-container/link-card-container.component';
 import { PositionTagContainerComponent } from './position-tag-container/position-tag-container.component';
+import { QuotesComponent } from './quotes/quotes.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import {ReactiveFormsModule} from "@angular/forms";
+import { QuoteComponent } from './quotes/quote/quote.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { QuoteDetailComponent } from './quotes/quote/quote-detail/quote-detail.component';
+import { ToastComponent } from './toast/toast.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
     AppComponent, TrimPipe, WelcomePageComponent, ContactPageComponent, ExperienceListComponent,
-    LinkCardContainerComponent, PositionTagContainerComponent, LandingPageComponent
+    LinkCardContainerComponent, PositionTagContainerComponent, LandingPageComponent,
+    QuoteDetailComponent,
+    QuotesComponent,
+    QuoteComponent,
+    ToastComponent
   ],
   imports: [
-    BrowserModule, RouterModule, Routing
+    BrowserModule, RouterModule, Routing, ReactiveFormsModule, NgbModule, BrowserAnimationsModule, MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,4 @@
-:host() {
+:host {
   display: grid;
   grid-template-areas: "tt ptg";
   font-family: var(--title-font);
@@ -11,6 +11,7 @@
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  margin-top: 0.5em;
 }
 
 .tag-item {
@@ -22,6 +23,8 @@
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 
 .container-title {

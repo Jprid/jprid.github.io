@@ -1,0 +1,30 @@
+<div class="quote-detail-container">
+  <div class="open-quote">
+    &#x201C;
+  </div>
+  <div class="modal-quote-detail">
+    <blockquote>
+      {{quote}}
+      <hr/>
+      <cite>
+        by {{author}}<br>
+        in {{citation}}
+      </cite>
+    </blockquote>
+    <div class="button-container">
+      <button class="copy-button" (click)="copy()">
+        <mat-icon>
+          content_copy
+        </mat-icon>
+      </button>
+      <button (click)="close()">
+        <mat-icon>
+          close
+        </mat-icon>
+      </button>
+    </div>
+  </div>
+  <div class="close-quote">
+    &#x201D;
+  </div>
+</div>

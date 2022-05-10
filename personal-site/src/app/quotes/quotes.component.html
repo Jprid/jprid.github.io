@@ -1,11 +1,56 @@
-<ul class="quote-container">
-    <button class="back-button" [routerLink]="['']">&laquo;</button>
-    <li *ngFor="let item of quotes">
-        <blockquote tabindex="{{item.id}}">
-            <p>{{item.quote}}</p>
-            <footer>
-                <cite>-{{item.author}}</cite>
-            </footer>
-        </blockquote>
-    </li>
-</ul>
+<div class="quote-page-container flex-column-no-wrap" [formGroup]="form">
+  <h2 class="title">Quotes</h2>
+  <h5 class="tight-column">{{pageDescriptor}}</h5>
+  <form  style="margin-top: 1em; margin-bottom: 1em; height: 2.5em; width: 100%; display: flex; flex-flow: row nowrap; justify-content: center; align-content: center">
+    <input
+      formControlName="searchBar"
+      (keydown)="handleKeydown($event)" style="text-align: center;font-size: 1.5vh; justify-self: center; width: 40%" type="search"/>
+    <button class="initiate-search">SEARCH</button>
+  </form>
+  <div *ngIf="showQuotes && !showAsTable" class="quote-container">
+    <app-quote *ngFor="let quote of quotes"
+               [ngClass]="quote.class"
+               [quote]="quote"
+                >
+    </app-quote>
+  </div>
+  <table *ngIf="showAsTable && showQuotes"
+    style="font-family: 'Lato'; color: white; height: 80%; width: 90vw; background-color: var(--welcome-background-color)">
+    <tr style="height: 1vh; text-align: center;background-color: #030e26;">
+      <td>Quote</td>
+      <td>Source</td>
+      <td>Author</td>
+      <td>Tags</td>
+    </tr>
+    <tr style="height: 1vh; background-color: #22356e"
+        *ngFor="let item of quotes"
+        tabindex="{{item.id}}">
+          <td style="width: 60%; text-align: justify; padding-left: 2em;">
+            {{item.quote}}
+          </td>
+          <td style="width: 13.33%; text-align: center">
+            {{item.citation}}
+          </td>
+          <td style="width: 13.33%; text-align: center; padding-left: 1vw; padding-right: 1vw;">
+              {{item.author}}
+          </td>
+          <td style="width: 13.33%; text-align: center">
+            {{(item.tags.join(', '))}}
+          </td>
+    </tr>
+  </table>
+  <div *ngIf="showQuotes" class="table-controls flex-row-no-wrap">
+    <button class="table-control"
+            [ngClass]="{'table-control-disabled': index === 0, 'table-control': index > 0}"
+            [disabled]="index === 0"
+            (click)="goBack()">&laquo;</button>
+    <button class="back-button"   (click)="router.navigateByUrl('')">
+      HOME
+    </button>
+    <button class="table-control" (click)="getNextSetOfQuotes()">&raquo;</button>
+  </div>
+<!--  <button class="forward-button" (click)="getNextSetOfQuotes()">-->
+<!--    {{nextMessage}} &raquo;-->
+<!--  </button>-->
+</div>
+
