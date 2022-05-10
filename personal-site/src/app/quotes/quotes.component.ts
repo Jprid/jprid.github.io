@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { QUOTES } from '../constants';
-import { ElementDimension, Quote } from '../models';
-import { QuoteService } from '../quote.service';
-import { SizeCalculatorService } from '../size-calculator.service';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+import {QUOTES} from '../constants';
+import {QueryParam, QueryType, Quote} from '../models';
+import {QuoteService} from '../quote.service';
+import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-quotes',
@@ -11,21 +11,26 @@ import { SizeCalculatorService } from '../size-calculator.service';
   styleUrls: ['./quotes.component.css'],
 })
 export class QuotesComponent implements OnInit {
-  private _numQuotesToDisplay = 10;
+  private _numQuotesToDisplay = 32;
   private _backMessage = 'Home';
   private _nextMessage = `Next ${this._numQuotesToDisplay} Quotes`;
+  private _quotes : Quote[] = QUOTES;
+  private endIndex: number = this._numQuotesToDisplay;
 
-  public quotes : Quote[] = QUOTES;
-  public startIndex = 0;
-  public endIndex: number;
-  public maxIndex: number;
-  
+  pageDescriptor = "This is a searchable collection of some of my favorite quotes. Hover over a quote to get more information about the author and source.";
+  quotes : Quote[];
+  index: number = 0;
+  queryText: string = '';
+  form: FormGroup;
+  showQuotes: boolean = true;
+  showAsTable: boolean = false;
+  private useAlgorithmToPopulate = true;m
   constructor(
-    private route: ActivatedRoute,
-    private router : Router,
-    private quoteService : QuoteService,
-    private sizeCalculatorService : SizeCalculatorService
-  ) { }
+    private route:        ActivatedRoute,
+    private quoteService: QuoteService,
+    public  router:       Router,
+    private fb: FormBuilder
+  ) {  }
 
   get nextMessage() {
     return this._nextMessage;
@@ -36,33 +41,36 @@ export class QuotesComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.calculateQuoteSize(this.quotes[0]);
-    this.route.params.subscribe(params => {
-      if(params['startIndex'] !== undefined && params['endIndex'] !== undefined) {
-        this.startup(params);
-      }}
-    );
-  }
-
-  calculateQuoteSize(quote : Quote) : ElementDimension {
-    let height = window.innerHeight, width = window.innerWidth;
-    let area = height * width;
-    let calculatedHeight = 0, calculatedWidth = 0;
-    let dimension : ElementDimension = {height: calculatedHeight, width: calculatedWidth};
-    let columnWidth = width / 4, rowWidth = width / 20;
-    console.log(`height: ${height}, width: ${width}, columnWidth: ${columnWidth}, rowWidth: ${rowWidth}`);
-    if(height > width) {
-      return this.calculatePortraitQuoteSize(height, width, quote);
-    } else {
-      return this.calculateLandscapeQuoteSize(height, width, quote);
+    this.form     = this.fb.group({searchBar: ['']});
+    this.route.queryParams.subscribe(params => {
+      if (params['author'] !== undefined) {
+        const authorQuery = params['author'];
+        console.log(authorQuery);
+        this.quotes = this.quoteService.getQuotesWithAuthor(authorQuery);
+      } else {
+        this.quotes = this.quoteService.quotes;
+      }
+    })
+    this.quotes = this.quoteService.quotes;//this._quotes.slice(0, this._numQuotesToDisplay);
+    console.log(this._quotes);
+    window.onload = (event) => {
+      if (this.useAlgorithmToPopulate) {
+        const element = document.getElementsByClassName('quote-container')[0];
+        if (element !== undefined) {
+          const quoteGridElement = getComputedStyle(element);
+          const {gridTemplateColumns, gridTemplateRows} = quoteGridElement;
+          const numColumns = gridTemplateColumns.split(" ").length;
+          const numRows = gridTemplateRows.split(" ").length;
+          const dimensions = numRows * numColumns;
+          this.quotes  = this.quoteService.getQuotesToMatchDimension(120);
+          console.log(dimensions);
+        }
+      }
     }
   }
-  calculatePortraitQuoteSize(height : number, width : number, quote : Quote) : ElementDimension {
-    return null;
-  }
 
-  calculateLandscapeQuoteSize(height : number, width : number, quote : Quote) : ElementDimension {
-    return null;
+  onPageLoad() {
+
   }
 
   /**
@@ -71,47 +79,59 @@ export class QuotesComponent implements OnInit {
    */
   getNextSetOfQuotes() {
     const limit = this.quoteService.maxQuoteId;
-    if(this._numQuotesToDisplay > 0 && this.startIndex < limit) {
-      const newVal : number = this.startIndex + this._numQuotesToDisplay;
+    if(this._numQuotesToDisplay > 0 && this.index < limit) {
+      const newVal : number = this.index + this._numQuotesToDisplay;
       if (newVal <= limit) { // don't navigate unless we are within bounds
-        this.router.navigateByUrl(`quotes/${newVal}/${newVal + this._numQuotesToDisplay}`);
-        this.startIndex = newVal;
+        this.index = newVal;
         this.endIndex = newVal + this._numQuotesToDisplay;
-        this.updateMessage();
+        this.quotes = this._quotes.slice(this.index, this.endIndex)
       }
     }
   }
 
   /**
-   * @method goBack() 
+   * @method goBack()
    * this method contains the logic used to navigate backwards in/on the quotes page
    */
   goBack() {
-    if (this.startIndex > 0) {
-      console.log(`start: ${this.startIndex} end: ${this.startIndex - this._numQuotesToDisplay}`);
-      const newVal = this.startIndex - this._numQuotesToDisplay;
+    if (this.index > 0) {
+      const newVal = (this.index - this._numQuotesToDisplay);
+      console.log(`end: ${this.index} start: ${newVal}`);
       if(newVal >= 0) {
-        this.router.navigateByUrl(`quotes/${newVal}/${this.startIndex}`);
+        this.quotes = this._quotes.slice(newVal, this.index);
+        this.index = newVal;
       }
-      this.updateMessage();
     } else {
-      this.router.navigateByUrl('');
-    } 
-  }
-
-  private updateMessage() {
-    if(this.startIndex <= 0) {
-      this._backMessage = 'Home';
-    } else {
-      this._backMessage = `Go Back ${this._numQuotesToDisplay} Quotes`
+      window.location.reload();
     }
   }
 
-  private startup(params) {
-    this.startIndex = +params['startIndex'];
-    this.endIndex = +params['endIndex'];
-    this.quoteService.getQuotesInRange(this.startIndex, this.startIndex + this._numQuotesToDisplay)
-      .subscribe(quotes => this.quotes = quotes);
-    this.updateMessage();
+  /**
+   *
+   * @param $event
+   */
+  handleKeydown($event: KeyboardEvent) {
+    switch ($event.key) {
+      case 'Enter':
+        const [type, param] = this.getQueryType(this.form.get('searchBar').value);
+        const query: QueryParam = new QueryParam(type, param);
+        console.log(query);
+        this._quotes = this.quoteService.getQuotesLike(query);
+        this.showQuotes = true;
+        break;
+    }
+    this.quotes = this._quotes.slice(this.index, this.endIndex);
   }
+
+  private getQueryType(text: string): [QueryType, string] {
+    if (text.includes('author=') || text.includes('Author=')) {
+      return [QueryType.AUTHOR, text.replace(/[Aa]uthor\=/g, '')];
+    } else if (text.includes('tag=')) {
+      return [QueryType.TAG, text.replace(/[Tt]ag\=/g, '')];
+    } else {
+      return [QueryType.TEXT, text.replace(/[Tt]ext\=/g, '')];
+    }
+  }
+
+
 }

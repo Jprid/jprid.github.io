@@ -15,7 +15,7 @@ export class MockActivatedRoute {
 class MockRouter {
   public navigateByUrl(url:string) {
     return url;
-  } 
+  }
 }
 describe('QuotesComponent', () => {
   let component: QuotesComponent;
@@ -60,13 +60,13 @@ describe('QuotesComponent', () => {
 
   it('Back button text should update on navigation away from first quotes page', () => {
     component.getNextSetOfQuotes();
-    activatedRouteMock.createParamMap(component.startIndex, component.endIndex);
+    //activatedRouteMock.createParamMap(component.startIndex, component.endIndex);
     TestBed.createComponent(QuotesComponent);
     const newComponent = fixture.componentInstance;
     expect(newComponent.backMessage).toEqual(`Go Back ${numQuotesToDisplay} Quotes`);
   });
 
   it('Should not let users navigate past the total number of quotes', () => {
-    expect(true);  
+    expect(true);
   });
 });

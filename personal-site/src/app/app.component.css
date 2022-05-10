@@ -1,12 +1,9 @@
 
 #experience {
   background-color: var(--experience-background-color);
-  padding-top: 0.5vh;
-  padding-bottom: 0.5vh;
   width: 100vw;
   display: flex;
   flex-flow: column nowrap;
-  padding-top: 5vh;
   padding-bottom: 5vh;
 }
 

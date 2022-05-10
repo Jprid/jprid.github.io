@@ -1,0 +1,14 @@
+<blockquote class="white-border-box" (click)="open()"
+  (mouseover)="hover = true" (mouseleave)="hover = false">
+  <p>{{quote.quote}}</p>
+</blockquote>
+<div class="overlay" *ngIf="hover">
+  <cite class="font-size-1vh" (click)="open()">
+    {{quote.author}}
+  </cite>
+  <button class="font-size-2vh white-text-underline" (click)="open()">
+    {{quote.numCharacters}}
+    &laquo; Details &raquo;
+  </button>
+</div>
+

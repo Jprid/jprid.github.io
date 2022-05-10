@@ -17,6 +17,20 @@
   box-sizing: content-box;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+}
+body::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.flex-row-no-wrap {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.flex-column-no-wrap {
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .site {
@@ -117,9 +131,24 @@ hr {
   display: grid;
 }
 
-.icon:hover,
-#github:hover {
-  filter: brightness(200%);
+button.white-text-underline:hover {
+  text-decoration: none;
+}
+
+.font-size-1vh {
+  font-size: 1vh;
+}
+
+.font-size-2vh {
+  font-size: 2vh;
+}
+
+.font-size-4vh {
+  font-size: 4vh;
+}
+
+.white-text-underline {
+  text-decoration: underline white;
 }
 
 .icon>img {
@@ -135,3 +164,6 @@ hr {
 .no-text-decoration>* {
   text-decoration: none;
 }
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

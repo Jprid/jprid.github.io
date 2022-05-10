@@ -1,7 +1,8 @@
-:host() {
+:host {
   background-color: var(--welcome-background-color);
   height: 100vh;
   width: 100vw;
+  overflow-x: hidden;
   display: flex;
   flex-flow: column nowrap;
 }
@@ -32,6 +33,7 @@ li.welcome-btn {
   color: var(--welcome-accent-color);
   border: 1px solid var(--welcome-accent-color);
   letter-spacing: 2vw;
+  text-decoration: none;
 }
 
 .relativity {
@@ -314,7 +316,7 @@ li.welcome-btn {
     .linktree>li:first-child {
       margin-top: 0;
     }
-     :host() {
+    :host {
       display: grid;
       grid-template: "wi wi wi wl" / 1fr 1fr 1fr 1fr;
     }
@@ -340,9 +342,11 @@ li.welcome-btn {
     }
   }
   @media screen and (min-width: 1600px) {
-     :host() {
+    :host {
       display: grid;
       grid-template: "wi wi wl wl" / 1fr 1fr 1fr 1fr;
+      width: 100vw;
+      overflow-x: hidden;
     }
     .welcome-btn {
       width: 29vw;
@@ -388,9 +392,14 @@ li.welcome-btn {
       padding: 0.5vh 0.5vw;
       text-align: center;
       margin: 0.5vh 0.5vw;
+      min-width: 14em;
     }
     .linktree>*:first-child {
       margin-top: 0;
+    }
+    app-link-card-container {
+      width: 21em;
+      height: 9em;
     }
   }
 }

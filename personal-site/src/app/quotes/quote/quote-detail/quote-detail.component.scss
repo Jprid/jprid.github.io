@@ -1,0 +1,82 @@
+:host {
+  background-color: var(--welcome-background-color);
+}
+
+:host, :host > * {
+  box-sizing: content-box;
+}
+
+.quote-detail-container {
+  display: flex;
+  flex-flow: row nowrap;
+  hr {
+    background-color: white;
+    height: 0px;
+  }
+  .open-quote, .close-quote {
+    color: white;
+    font-size: 8vh;
+    position: relative;
+  }
+  .close-quote {
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+  }
+
+  .open-quote {
+    padding-left: 1em;
+    padding-top: 1em;
+    height: 100%;
+    content: open-quote;
+    quotes: "\201C";
+  }
+
+  .modal-quote-detail {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 2vh;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+th {
+  border-bottom: 1px white solid;
+}
+.button-container {
+  padding: 1em;
+}
+
+blockquote:before {
+  position: relative;
+  left: -1em;
+}
+
+blockquote {
+  padding: 1em 5em;
+  display: flex;
+  flex-flow: column nowrap;
+  line-height: 3vh;
+  pointer-events: none;
+}
+
+.button-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  & > *:hover {
+    color: silver;
+  }
+  .copy-button {
+    padding: 0.25em 1em;
+    mat-icon {
+      color: inherit;
+    }
+
+  }
+}
+
+
