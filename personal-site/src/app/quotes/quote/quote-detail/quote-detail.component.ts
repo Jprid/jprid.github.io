@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Quote} from "../../../models";
-import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
+// import {NgbActiveModal} from "@ng-bootstrap/ng-bootstrap";
 import {ToastService} from "../../../toast.service";
 
 @Component({
