@@ -13,11 +13,11 @@ import { QuotesComponent } from './quotes/quotes.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import {ReactiveFormsModule} from "@angular/forms";
 import { QuoteComponent } from './quotes/quote/quote.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { QuoteDetailComponent } from './quotes/quote/quote-detail/quote-detail.component';
 import { ToastComponent } from './toast/toast.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from "@angular/material/icon";
+// import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -29,7 +29,10 @@ import {MatIconModule} from "@angular/material/icon";
     ToastComponent
   ],
   imports: [
-    BrowserModule, RouterModule, Routing, ReactiveFormsModule, NgbModule, BrowserAnimationsModule, MatIconModule
+    BrowserModule, RouterModule, Routing, ReactiveFormsModule,
+    // NgbModule,
+    BrowserAnimationsModule,
+    // MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
