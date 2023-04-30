@@ -20,7 +20,7 @@
   scrollbar-width: thin;
 }
 body::-webkit-scrollbar {
-  width: 0.5em;
+  width: 0;
 }
 
 .flex-row-no-wrap {
