@@ -4,6 +4,7 @@
 personal-site/dist
 personal-site/tmp
 personal-site/out-tsc
+personal-site/docs/**
 # Only exists if Bazel was run
 personal-site/bazel-out
 
